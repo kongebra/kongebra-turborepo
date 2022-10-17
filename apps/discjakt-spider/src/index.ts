@@ -124,6 +124,10 @@ cron.schedule("* * * * *", async () => {
   await queues.starframe.clean(0, "completed");
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("Ok");
+});
+
 app.listen(5000, () => {
   console.log("discjakt-spider is running!");
 });
