@@ -13,7 +13,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "generate": "turbo run generate",
     "lint": "turbo run lint",
-    "clean": "turbo run clean"
+    "clean": "turbo run clean",
+    "start:spider": "node ./apps/discjakt-spider/dist/index.js"
   },
   "devDependencies": {
     "prettier": "^2.7.1",

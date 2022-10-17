@@ -14,6 +14,8 @@ import { prisma } from "./lib/prisma";
 import spinnvilldg from "./processors/spinnvilldg";
 import starframe from "./processors/starframe";
 
+const port = process.env.PORT || "5000";
+
 const app = express();
 
 const opts: Queue.QueueOptions = {
@@ -128,6 +130,6 @@ app.get("/health", (req, res) => {
   res.status(200).send("Ok");
 });
 
-app.listen(5000, () => {
+app.listen(port, () => {
   console.log("discjakt-spider is running!");
 });
