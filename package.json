@@ -14,7 +14,8 @@
     "generate": "turbo run generate",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "start:spider": "node ./apps/discjakt-spider/dist/index.js"
+    "start:spider": "node ./apps/discjakt-spider/dist/index.js",
+    "start": "turbo run start"
   },
   "devDependencies": {
     "prettier": "^2.7.1",

@@ -115,7 +115,7 @@ commonQueue.process(async (job) => {
 queues.spinnvilldg.process(spinnvilldg);
 queues.starframe.process(starframe);
 
-cron.schedule("* * * * *", async () => {
+cron.schedule("*/15 * * * *", async () => {
   console.log("Cleaning up queue");
 
   // common
