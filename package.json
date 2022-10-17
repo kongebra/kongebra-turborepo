@@ -1,5 +1,5 @@
 {
-  "name": "kongebra-turborepo",
+  "name": "@kongebra/root",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -10,7 +10,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean"
   },
   "devDependencies": {
     "eslint-config-custom": "*",

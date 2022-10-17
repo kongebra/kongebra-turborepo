@@ -1,0 +1,140 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma-client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Store {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  description String    @default("") @db.Text
+  imageUrl    String    @default("") @db.VarChar(255)
+  baseUrl     String
+  sitemapUrl  String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  slug        String    @unique
+  products    Product[]
+}
+
+model Product {
+  id          Int            @id @default(autoincrement())
+  loc         String         @unique @db.VarChar(255)
+  lastmod     String
+  title       String
+  description String         @db.Text
+  imageUrl    String         @db.VarChar(255)
+  isDisc      Boolean?
+  storeId     Int
+  discId      Int?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  disc        Disc?          @relation(fields: [discId], references: [id])
+  store       Store          @relation(fields: [storeId], references: [id])
+  prices      ProductPrice[]
+  latestPrice Float          @default(0)
+}
+
+model ProductPrice {
+  id        Int      @id @default(autoincrement())
+  amount    Float
+  currency  String
+  productId Int
+  createdAt DateTime @default(now())
+  product   Product  @relation(fields: [productId], references: [id])
+}
+
+model Brand {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String   @db.Text
+  url         String
+  imageUrl    String   @db.VarChar(255)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  slug        String   @unique
+  discs       Disc[]
+}
+
+model Disc {
+  id          Int                 @id @default(autoincrement())
+  name        String
+  description String              @db.Text
+  imageUrl    String              @db.VarChar(255)
+  speed       Float
+  glide       Float
+  turn        Float
+  fade        Float
+  brandId     Int
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  type        String
+  slug        String              @unique
+  brand       Brand               @relation(fields: [brandId], references: [id])
+  products    Product[]
+  users       UserDiscFavorites[]
+  views       Int                 @default(0)
+}
+
+model UserDiscFavorites {
+  disc   Disc   @relation(fields: [discId], references: [id])
+  discId Int
+  User   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  @@id([discId, userId])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String              @id @default(cuid())
+  name          String?
+  email         String?             @unique
+  emailVerified DateTime?
+  image         String?             @db.VarChar(255)
+  accounts      Account[]
+  sessions      Session[]
+  role          String              @default("user")
+  favorites     UserDiscFavorites[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
