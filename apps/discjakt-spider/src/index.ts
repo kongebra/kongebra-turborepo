@@ -13,6 +13,7 @@ import { prisma } from "./lib/prisma";
 
 import spinnvilldg from "./processors/spinnvilldg";
 import starframe from "./processors/starframe";
+import prodisc from "./processors/prodisc";
 
 const port = process.env.PORT || "5000";
 
@@ -29,6 +30,7 @@ const opts: Queue.QueueOptions = {
 const queues: Record<StoreSlug, Queue.Queue> = {
   spinnvilldg: new Queue("spinnvilldg", config.redisUrl, opts),
   starframe: new Queue("starframe", config.redisUrl, opts),
+  prodisc: new Queue("prodisc", config.redisUrl, opts),
 };
 
 const commonQueue = new Queue<CommonJobItem>("common", config.redisUrl, opts);
@@ -65,7 +67,6 @@ commonQueue.process(async (job) => {
 
   const cached = productCache.get(data.loc);
   if (cached) {
-    console.log("cached", cached[0]);
     const [product, cacheTime] = cached;
 
     const now = new Date();
@@ -112,8 +113,10 @@ commonQueue.process(async (job) => {
   console.timeEnd(`common - ${job.id}`);
 });
 
+// Start process for each store
 queues.spinnvilldg.process(spinnvilldg);
 queues.starframe.process(starframe);
+queues.prodisc.process(prodisc);
 
 cron.schedule("*/15 * * * *", async () => {
   console.log("Cleaning up queue");
@@ -124,6 +127,7 @@ cron.schedule("*/15 * * * *", async () => {
   // stores
   await queues.spinnvilldg.clean(0, "completed");
   await queues.starframe.clean(0, "completed");
+  await queues.prodisc.clean(0, "completed");
 });
 
 app.get("/health", (req, res) => {

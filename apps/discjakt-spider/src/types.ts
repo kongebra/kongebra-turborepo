@@ -1,4 +1,4 @@
-export type StoreSlug = "spinnvilldg" | "starframe";
+export type StoreSlug = "spinnvilldg" | "starframe" | "prodisc";
 
 export type CommonJobItem = {
   store: {
