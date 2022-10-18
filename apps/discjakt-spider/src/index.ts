@@ -1,137 +1,62 @@
 import express from "express";
-
-import Queue from "bull";
-import config from "./config";
-
 import cron from "node-cron";
 
-import { CommonJobItem, StoreSlug } from "./types";
+import crawlStoreSitemaps from "./stores";
 
-import type { Product } from "@prisma/client";
-
-import { prisma } from "./lib/prisma";
+import { createQueues } from "./queue";
 
 import spinnvilldg from "./processors/spinnvilldg";
 import starframe from "./processors/starframe";
 import prodisc from "./processors/prodisc";
+import common from "./processors/common";
 
-const port = process.env.PORT || "5000";
+/**
+ * QUEUES
+ */
 
-const app = express();
+const { commonQueue, storeQueues } = createQueues();
 
-const opts: Queue.QueueOptions = {
-  defaultJobOptions: {
-    removeOnComplete: {
-      age: 60,
-    },
-  },
-};
+// common
+commonQueue.process(common(storeQueues));
 
-const queues: Record<StoreSlug, Queue.Queue> = {
-  spinnvilldg: new Queue("spinnvilldg", config.redisUrl, opts),
-  starframe: new Queue("starframe", config.redisUrl, opts),
-  prodisc: new Queue("prodisc", config.redisUrl, opts),
-};
+// stores
+storeQueues.spinnvilldg.process(spinnvilldg);
+storeQueues.starframe.process(starframe);
+storeQueues.prodisc.process(prodisc);
 
-const commonQueue = new Queue<CommonJobItem>("common", config.redisUrl, opts);
+/**
+ * CRON JOBS
+ */
 
-let productCache = new Map<string, [Product, Date]>();
-const cacheLimitInHours = 3;
-
-function checks({ lastmod }: CommonJobItem, product: Product) {
-  // product has changed
-  if (product.lastmod !== lastmod) {
-    return false;
-  }
-
-  // check when the product last changed
-  const now = new Date();
-  const then = product.updatedAt;
-  const isSameDay =
-    now.getFullYear() === then.getFullYear() &&
-    now.getMonth() === then.getMonth() &&
-    now.getDate() === then.getDate();
-
-  if (!isSameDay) {
-    return false;
-  }
-
-  // optimisticlly trust that this product is ok
-  // if not, we will check it again tomorrow
-  return true;
-}
-
-commonQueue.process(async (job) => {
-  console.time(`common - ${job.id}`);
-  const { data } = job;
-
-  const cached = productCache.get(data.loc);
-  if (cached) {
-    const [product, cacheTime] = cached;
-
-    const now = new Date();
-    const diff = now.getTime() - cacheTime.getTime();
-    const hours = diff / 1000 / 60 / 60;
-
-    if (hours < cacheLimitInHours) {
-      const ok = checks(data, product);
-      if (!ok) {
-        // let storehandler handle this
-        await queues[data.store.slug as StoreSlug].add(data);
-        console.timeEnd(`common - ${job.id}`);
-        return;
-      }
-    } else {
-      productCache.delete(data.loc);
-    }
-  }
-
-  const product = await prisma.product.findFirst({
-    where: {
-      loc: data.loc,
-    },
-  });
-
-  if (!product) {
-    // let storehandler handle this
-    await queues[data.store.slug as StoreSlug].add(data);
-    console.timeEnd(`common - ${job.id}`);
-    return;
-  }
-
-  // save to cache
-  productCache.set(data.loc, [product, new Date()]);
-
-  const ok = checks(data, product);
-  if (!ok) {
-    // let storehandler handle this
-    await queues[data.store.slug as StoreSlug].add(data);
-    console.timeEnd(`common - ${job.id}`);
-    return;
-  }
-
-  console.timeEnd(`common - ${job.id}`);
-});
-
-// Start process for each store
-queues.spinnvilldg.process(spinnvilldg);
-queues.starframe.process(starframe);
-queues.prodisc.process(prodisc);
-
-cron.schedule("*/15 * * * *", async () => {
+cron.schedule("*/30 * * * *", async () => {
   console.log("Cleaning up queue");
 
   // common
   await commonQueue.clean(0, "completed");
 
   // stores
-  await queues.spinnvilldg.clean(0, "completed");
-  await queues.starframe.clean(0, "completed");
-  await queues.prodisc.clean(0, "completed");
+  await storeQueues.spinnvilldg.clean(0, "completed");
+  await storeQueues.starframe.clean(0, "completed");
+  await storeQueues.prodisc.clean(0, "completed");
 });
 
+cron.schedule("* */1 * * *", async () => {
+  await crawlStoreSitemaps();
+});
+
+/**
+ * WEB API
+ */
+
+const port = process.env.PORT || "5000";
+const app = express();
+
 app.get("/health", (req, res) => {
-  res.status(200).send("Ok");
+  res.status(200).send("ok");
+});
+
+app.post("/crawlStoreSitemaps", async (req, res) => {
+  await crawlStoreSitemaps();
 });
 
 app.listen(port, () => {
