@@ -44,8 +44,10 @@ const SelectDiscDrawer: React.FC<Props> = ({
   const onSubmit = async () => {
     if (defaultValues && selectedDisc) {
       await updateProduct.mutateAsync({
-        ...defaultValues,
-        discId: selectedDisc.id,
+        record: {
+          ...defaultValues,
+          discId: selectedDisc.id,
+        },
       });
 
       onClose();
@@ -76,6 +78,7 @@ const SelectDiscDrawer: React.FC<Props> = ({
           return "";
         }}
         onItemSelected={setSelectedDisc}
+        autoFocus={true}
       />
 
       <div>

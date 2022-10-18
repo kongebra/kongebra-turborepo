@@ -54,7 +54,7 @@ const DataCleaningProduct: React.FC<Props> = ({
       isDisc: true,
     };
 
-    await updateProduct.mutateAsync(copy);
+    await updateProduct.mutateAsync({ record: copy });
   };
 
   const onNoDiscClicked = async (product: Product) => {
@@ -63,7 +63,7 @@ const DataCleaningProduct: React.FC<Props> = ({
       isDisc: false,
     };
 
-    await updateProduct.mutateAsync(copy);
+    await updateProduct.mutateAsync({ record: copy });
   };
 
   return (

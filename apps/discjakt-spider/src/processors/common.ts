@@ -2,9 +2,13 @@ import { Product } from "@prisma/client";
 import { CommonJobItem, StoreSlug } from "../types";
 import Queue from "bull";
 import { prisma } from "../lib/prisma";
+import { getRedisClient, redisClient } from "../redis";
 
-let productCache = new Map<string, [Product, Date]>();
-const cacheLimitInHours = 3;
+const redis = redisClient<Product>();
+
+const ONE_MINUTE = 60;
+const ONE_HOUR = ONE_MINUTE * 60;
+const ONE_DAY = ONE_HOUR * 24;
 
 function checks({ lastmod }: CommonJobItem, product: Product) {
   // product has changed
@@ -14,7 +18,7 @@ function checks({ lastmod }: CommonJobItem, product: Product) {
 
   // check when the product last changed
   const now = new Date();
-  const then = product.updatedAt;
+  const then = new Date(product.updatedAt);
   const isSameDay =
     now.getFullYear() === then.getFullYear() &&
     now.getMonth() === then.getMonth() &&
@@ -32,55 +36,52 @@ function checks({ lastmod }: CommonJobItem, product: Product) {
 export default function common(
   queues: Record<StoreSlug, Queue.Queue>
 ): Queue.ProcessCallbackFunction<CommonJobItem> {
-  return async (job) => {
-    console.time(`common - ${job.id}`);
-    const { data } = job;
+  return async ({ id, data }) => {
+    console.time(`common - ${id}`);
 
-    const cached = productCache.get(data.loc);
-    if (cached) {
-      const [product, cacheTime] = cached;
-
-      const now = new Date();
-      const diff = now.getTime() - cacheTime.getTime();
-      const hours = diff / 1000 / 60 / 60;
-
-      if (hours < cacheLimitInHours) {
-        const ok = checks(data, product);
-        if (!ok) {
-          // let storehandler handle this
-          await queues[data.store.slug as StoreSlug].add(data);
-          console.timeEnd(`common - ${job.id}`);
-          return;
-        }
-      } else {
-        productCache.delete(data.loc);
+    // get product from cache
+    const cachedProduct = await redis.get(data.loc);
+    // check if in cache
+    if (cachedProduct) {
+      // do checks on product
+      const ok = checks(data, cachedProduct);
+      // checks is not ok
+      if (!ok) {
+        // add to queue for specific store
+        await queues[data.store.slug as StoreSlug].add(data);
       }
+
+      console.timeEnd(`common - ${id}`);
+      // product was found i cache, not ok or ok, we dont know
+      return;
     }
 
+    // product not i cache, fetch from database
     const product = await prisma.product.findFirst({
       where: {
         loc: data.loc,
       },
     });
 
+    // check if in database
     if (!product) {
-      // let storehandler handle this
+      // not in database, add to queue for specific store
       await queues[data.store.slug as StoreSlug].add(data);
-      console.timeEnd(`common - ${job.id}`);
+
+      console.timeEnd(`common - ${id}`);
+      // stop here, let specific store-processor handle it
       return;
     }
 
     // save to cache
-    productCache.set(data.loc, [product, new Date()]);
-
+    await redis.set(data.loc, product, ONE_DAY);
+    // do checks on product from database
     const ok = checks(data, product);
     if (!ok) {
-      // let storehandler handle this
+      // add to queue for specific store
       await queues[data.store.slug as StoreSlug].add(data);
-      console.timeEnd(`common - ${job.id}`);
-      return;
     }
 
-    console.timeEnd(`common - ${job.id}`);
+    console.timeEnd(`common - ${id}`);
   };
 }

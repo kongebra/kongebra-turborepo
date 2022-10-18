@@ -1,8 +1,8 @@
 import config from "./config";
-import Queue from "bull";
+import Bull from "bull";
 import { CommonJobItem, StoreSlug } from "./types";
 
-export const queueOptions: Queue.QueueOptions = {
+export const queueOptions: Bull.QueueOptions = {
   defaultJobOptions: {
     removeOnComplete: {
       age: 60,
@@ -10,21 +10,35 @@ export const queueOptions: Queue.QueueOptions = {
   },
 };
 
-export function createQueues() {
-  const commonQueue = new Queue<CommonJobItem>(
-    "common",
-    config.redisUrl,
-    queueOptions
-  );
+let commonQueue: Bull.Queue;
+let storeQueues: Record<StoreSlug, Bull.Queue>;
 
-  const queues: Record<StoreSlug, Queue.Queue> = {
-    spinnvilldg: new Queue("spinnvilldg", config.redisUrl, queueOptions),
-    starframe: new Queue("starframe", config.redisUrl, queueOptions),
-    prodisc: new Queue("prodisc", config.redisUrl, queueOptions),
-  };
+export function getQueues() {
+  if (!commonQueue) {
+    commonQueue = new Bull<CommonJobItem>(
+      "common",
+      config.redisUrl,
+      queueOptions
+    );
+  }
+
+  if (!storeQueues["prodisc"]) {
+    storeQueues = {
+      frisbeebutikken: new Bull(
+        "frisbeebutikken",
+        config.redisUrl,
+        queueOptions
+      ),
+      spinnvilldg: new Bull("spinnvilldg", config.redisUrl, queueOptions),
+      krokholdgs: new Bull("krokholdgs", config.redisUrl, queueOptions),
+      starframe: new Bull("starframe", config.redisUrl, queueOptions),
+      prodisc: new Bull("prodisc", config.redisUrl, queueOptions),
+      aceshop: new Bull("aceshop", config.redisUrl, queueOptions),
+    };
+  }
 
   return {
     commonQueue,
-    storeQueues: queues,
+    storeQueues,
   };
 }

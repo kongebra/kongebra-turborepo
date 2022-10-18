@@ -45,7 +45,7 @@ const DashboardDataCleaingPage = () => {
   }, [data, discs]);
 
   const superpower = async () => {
-    if (data) {
+    if (data && allOneMatch) {
       data.forEach(async (product) => {
         const matches = findMatch(product, discs);
 
@@ -58,9 +58,11 @@ const DashboardDataCleaingPage = () => {
             isDisc: true,
           };
 
-          await mutations.update.mutateAsync(copy);
+          await mutations.update.mutateAsync({ record: copy, mass: true });
         }
       });
+
+      queryClient.invalidateQueries(["data-cleaning"]);
     }
   };
 
@@ -82,21 +84,22 @@ const DashboardDataCleaingPage = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-3">
-          {data?.map((product) => (
-            <DataCleaningProduct
-              key={product.id}
-              product={product}
-              onClickCreateDisc={(product) => {
-                setSelectedProduct(product);
-                createModal.setTrue();
-              }}
-              onClickSelectDisc={(product) => {
-                setSelectedProduct(product);
-                selectModal.setTrue();
-              }}
-              globalLoading={mutations.update.isLoading}
-            />
-          ))}
+          {data &&
+            [...data].reverse().map((product) => (
+              <DataCleaningProduct
+                key={product.id}
+                product={product}
+                onClickCreateDisc={(product) => {
+                  setSelectedProduct(product);
+                  createModal.setTrue();
+                }}
+                onClickSelectDisc={(product) => {
+                  setSelectedProduct(product);
+                  selectModal.setTrue();
+                }}
+                globalLoading={mutations.update.isLoading}
+              />
+            ))}
         </div>
       </DashboardLayout>
 

@@ -1,28 +1,31 @@
 import express from "express";
 import cron from "node-cron";
 
-import crawlStoreSitemaps from "./stores";
+import { getQueues } from "./queue";
+import crawlLatestStoreSitemap from "./sitemap-scrapers";
 
-import { createQueues } from "./queue";
-
-import spinnvilldg from "./processors/spinnvilldg";
-import starframe from "./processors/starframe";
-import prodisc from "./processors/prodisc";
 import common from "./processors/common";
+import prodisc from "./processors/prodisc";
+import aceshop from "./processors/aceshop";
+import starframe from "./processors/starframe";
+import krokholdgs from "./processors/krokholdgs";
+import spinnvilldg from "./processors/spinnvilldg";
 
 /**
  * QUEUES
  */
 
-const { commonQueue, storeQueues } = createQueues();
+const { commonQueue, storeQueues } = getQueues();
 
 // common
 commonQueue.process(common(storeQueues));
 
 // stores
 storeQueues.spinnvilldg.process(spinnvilldg);
+storeQueues.krokholdgs.process(krokholdgs);
 storeQueues.starframe.process(starframe);
 storeQueues.prodisc.process(prodisc);
+storeQueues.aceshop.process(aceshop);
 
 /**
  * CRON JOBS
@@ -32,16 +35,20 @@ cron.schedule("*/30 * * * *", async () => {
   console.log("Cleaning up queue");
 
   // common
-  await commonQueue.clean(0, "completed");
+  await commonQueue.clean(10, "completed");
 
   // stores
-  await storeQueues.spinnvilldg.clean(0, "completed");
-  await storeQueues.starframe.clean(0, "completed");
-  await storeQueues.prodisc.clean(0, "completed");
+  await storeQueues.spinnvilldg.clean(10, "completed");
+  await storeQueues.starframe.clean(10, "completed");
+  await storeQueues.prodisc.clean(10, "completed");
+  await storeQueues.aceshop.clean(10, "completed");
 });
 
-cron.schedule("* */1 * * *", async () => {
-  await crawlStoreSitemaps();
+cron.schedule("*/10 * * * *", async () => {
+  // run every 10 minute
+
+  // will do the store that was
+  await crawlLatestStoreSitemap();
 });
 
 /**
@@ -56,7 +63,7 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/crawlStoreSitemaps", async (req, res) => {
-  await crawlStoreSitemaps();
+  await crawlLatestStoreSitemap();
 });
 
 app.listen(port, () => {

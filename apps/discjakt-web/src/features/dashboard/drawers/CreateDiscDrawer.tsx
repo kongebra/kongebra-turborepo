@@ -48,8 +48,10 @@ const CreateDiscDrawer: React.FC<Props> = ({
 
     if (defaultValues && disc) {
       await updateProduct.mutateAsync({
-        ...defaultValues,
-        discId: disc.id,
+        record: {
+          ...defaultValues,
+          discId: disc.id,
+        },
       });
     }
 

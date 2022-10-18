@@ -4,6 +4,7 @@ import axios from "axios";
 import { load } from "cheerio";
 import { parsePriceString } from "../utils/price";
 import { prisma } from "../lib/prisma";
+import path from "path";
 
 export default async function processor({
   id,
@@ -13,13 +14,11 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`spinnvilldg - ${id}`);
+  console.time(`${path.basename(__filename, ".ts")} - ${id}`);
 
-  console.time(`spinnvilldg - ${id} - axios+load`);
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
-  console.timeEnd(`spinnvilldg - ${id} - axios+load`);
 
   const priceStr =
     $('meta[property="product:price:amount"]').attr("content")?.trim() || "";
@@ -33,7 +32,6 @@ export default async function processor({
     imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
   };
 
-  console.time(`spinnvilldg - ${id} - prisma.upsert`);
   const product = await prisma.product.upsert({
     where: {
       loc,
@@ -68,8 +66,7 @@ export default async function processor({
       },
     },
   });
-  console.timeEnd(`spinnvilldg - ${id} - prisma.upsert`);
 
-  console.timeEnd(`spinnvilldg - ${id}`);
+  console.timeEnd(`${path.basename(__filename, ".ts")} - ${id}`);
   return product;
 }

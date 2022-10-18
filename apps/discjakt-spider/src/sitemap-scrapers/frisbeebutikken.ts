@@ -1,13 +1,16 @@
 import axios from "axios";
-import Bull from "bull";
 import { load } from "cheerio";
-import config from "../config";
+import path from "path";
 import { prisma } from "../lib/prisma";
-import { queueOptions } from "../queue";
-import { CommonJobItem } from "../types";
+import { getQueues } from "../queue";
+import { checkLastmodUnderAge } from "../utils/lastmod";
+
+const { commonQueue } = getQueues();
 
 export default async function sitemap() {
-  console.time("starframe");
+  const now = new Date();
+  console.time(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+
   const store = await prisma.store.upsert({
     where: {
       slug: "starframe",
@@ -25,8 +28,7 @@ export default async function sitemap() {
 
   let sitemaps: string[] = [store.sitemapUrl];
 
-  const queue = Bull("common", config.redisUrl, queueOptions);
-  const promises = new Array<Promise<Bull.Job<CommonJobItem>>>();
+  const promises = new Array<any>();
 
   for (const sitemap of sitemaps) {
     const response = await axios.get(sitemap);
@@ -37,9 +39,13 @@ export default async function sitemap() {
       const loc = $(el).find("loc").text().trim();
       const lastmod = $(el).find("lastmod").text().trim();
 
-      if (loc.includes("/products/")) {
+      if (checkLastmodUnderAge(lastmod, 365) && loc.includes("/products/")) {
         promises.push(
-          queue.add({ loc, lastmod, store: { id: store.id, slug: store.slug } })
+          commonQueue.add({
+            loc,
+            lastmod,
+            store: { id: store.id, slug: store.slug },
+          })
         );
       }
     });
@@ -47,5 +53,5 @@ export default async function sitemap() {
 
   await Promise.all(promises);
 
-  console.timeEnd("starframe");
+  console.timeEnd(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
 }

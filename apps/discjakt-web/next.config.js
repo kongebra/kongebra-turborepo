@@ -16,6 +16,7 @@ const nextConfig = {
       "aceshopas-i04.mycdn.no",
       "aceshopas-i05.mycdn.no",
       "aceshopas-i06.mycdn.no",
+      "aceshop.no",
       "discjakt.blob.core.windows.net",
       "www.krokholdgs.no",
       "frisbeebutikke-i01.mycdn.no",

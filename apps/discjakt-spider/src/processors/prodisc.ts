@@ -4,6 +4,7 @@ import axios from "axios";
 import { load } from "cheerio";
 import { parsePriceString } from "../utils/price";
 import { prisma } from "../lib/prisma";
+import path from "path";
 
 export default async function processor({
   id,
@@ -13,7 +14,7 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`prodisc - ${id}`);
+  console.time(`${path.basename(__filename, ".ts")} - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
@@ -66,6 +67,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`prodisc - ${id}`);
+  console.timeEnd(`${path.basename(__filename, ".ts")} - ${id}`);
   return product;
 }

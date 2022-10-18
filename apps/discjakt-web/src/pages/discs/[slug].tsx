@@ -30,6 +30,8 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
 
   const { stores, isLoading } = useStores();
 
+  console.log({ stores });
+
   const getStoreName = useCallback(
     (id: number) => {
       return stores.find((x) => x.id === id)?.name || "";

@@ -15,28 +15,7 @@ export default async function handler(
 }
 
 async function GET(req: NextApiRequest, res: NextApiResponse) {
-  const stores = await prisma.store.findMany({
-    take: 1,
-    orderBy: {
-      updatedAt: "asc",
-    },
-  });
+  const stores = await prisma.store.findMany();
 
-  const store = [...stores].pop();
-  if (store) {
-    if (store.slug === "gurudiscgolf") {
-      await fetch(`${config.baseUrl}/api/stores/crawl/${store.slug}/1`);
-      await fetch(`${config.baseUrl}/api/stores/crawl/${store.slug}/2`);
-      await fetch(`${config.baseUrl}/api/stores/crawl/${store.slug}/3`);
-      await fetch(`${config.baseUrl}/api/stores/crawl/${store.slug}/4`);
-    } else {
-      await fetch(`${config.baseUrl}/api/stores/crawl/${store.slug}`);
-    }
-
-    res.status(200).json({ message: "scrape started", store: store.slug });
-
-    return;
-  }
-
-  res.status(500).json({ message: "could not start scraping" });
+  res.status(200).json(stores);
 }

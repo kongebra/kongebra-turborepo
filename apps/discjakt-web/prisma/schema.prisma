@@ -1,12 +1,11 @@
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity", "filteredRelationCount"]
+  previewFeatures = ["filteredRelationCount"]
 }
 
 datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Store {
@@ -38,6 +37,7 @@ model Product {
   store       Store          @relation(fields: [storeId], references: [id])
   prices      ProductPrice[]
   latestPrice Float          @default(0)
+  disabled    Boolean        @default(false)
 }
 
 model ProductPrice {

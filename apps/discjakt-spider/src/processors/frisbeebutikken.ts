@@ -20,14 +20,14 @@ export default async function processor({
   const html = response.data;
   const $ = load(html);
 
-  const priceStr = $(".product-price").first()?.text()?.trim() || "";
+  const priceStr = $(".product-price")?.text()?.trim() || "";
 
   const price = parsePriceString(priceStr);
 
   const data = {
-    title: $("h1.product-title-v1").text()?.trim() || "",
+    title: $("h1").text()?.trim() || "",
     description: $('meta[name="description"]').attr("content")?.trim() || "",
-    imageUrl: $(".product_page_slider img").first().attr("src")?.trim() || "",
+    imageUrl: $(".product_image_price_row img").attr("src")?.trim() || "",
   };
 
   const product = await prisma.product.upsert({

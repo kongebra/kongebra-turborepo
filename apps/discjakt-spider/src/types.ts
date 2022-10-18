@@ -1,4 +1,10 @@
-export type StoreSlug = "spinnvilldg" | "starframe" | "prodisc";
+export type StoreSlug =
+  | "spinnvilldg"
+  | "starframe"
+  | "prodisc"
+  | "aceshop"
+  | "krokholdgs"
+  | "frisbeebutikken";
 
 export type CommonJobItem = {
   store: {

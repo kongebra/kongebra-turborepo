@@ -1,13 +1,16 @@
 import axios from "axios";
-import Bull from "bull";
 import { load } from "cheerio";
-import config from "../config";
+import path from "path";
 import { prisma } from "../lib/prisma";
-import { queueOptions } from "../queue";
-import { CommonJobItem } from "../types";
+import { getQueues } from "../queue";
+import { checkLastmodUnderAge } from "../utils/lastmod";
+
+const { commonQueue } = getQueues();
 
 export default async function sitemap() {
-  console.time("spinnvilldg");
+  const now = new Date();
+  console.time(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+
   const store = await prisma.store.upsert({
     where: {
       slug: "spinnvilldg",
@@ -23,9 +26,8 @@ export default async function sitemap() {
     },
   });
 
-  const queue = Bull("common", config.redisUrl, queueOptions);
+  const promises = new Array<any>();
 
-  const promises = new Array<Promise<Bull.Job<CommonJobItem>>>();
   const response = await axios.get(
     "https://www.spinnvilldg.no/store-products-sitemap.xml"
   );
@@ -36,14 +38,18 @@ export default async function sitemap() {
     const loc = $(el).find("loc").text().trim();
     const lastmod = $(el).find("lastmod").text().trim();
 
-    if (loc.includes("/product-page/")) {
+    if (checkLastmodUnderAge(lastmod, 365) && loc.includes("/product-page/")) {
       promises.push(
-        queue.add({ loc, lastmod, store: { id: store.id, slug: store.slug } })
+        commonQueue.add({
+          loc,
+          lastmod,
+          store: { id: store.id, slug: store.slug },
+        })
       );
     }
   });
 
   await Promise.all(promises);
 
-  console.timeEnd("spinnvilldg");
+  console.timeEnd(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
 }
