@@ -26,7 +26,18 @@ export default async function sitemap() {
     },
   });
 
+  // const sitemapRes = await axios.get(store.sitemapUrl);
+  // const xml = await sitemapRes.data;
+  // const $$ = load(xml);
+
   let sitemaps: string[] = [store.sitemapUrl];
+  // $$("sitemap").each((i, el) => {
+  //   const loc = $$(el).find("loc").text().trim();
+
+  //   if (loc.includes("store-products-sitemap")) {
+  //     sitemaps.push(loc.trim());
+  //   }
+  // });
 
   const promises = new Array<any>();
 

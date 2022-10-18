@@ -1,17 +1,19 @@
 import { prisma } from "../lib/prisma";
 import { StoreSlug } from "../types";
 
-import aceshop from "./aceshop";
-import prodisc from "./prodisc";
-import starframe from "./starframe";
-import krokholdgs from "./krokholdgs";
-import spinnvilldg from "./spinnvilldg";
-import frisbeebutikken from "./frisbeebutikken";
+import aceshop from "./aceshop.sitemap";
+import prodisc from "./prodisc.sitemap";
+import starframe from "./starframe.sitemap";
+import krokholdgs from "./krokholdgs.sitemap";
+import spinnvilldg from "./spinnvilldg.sitemap";
+import discoverdiscs from "./discoverdiscs.sitemap";
+import frisbeebutikken from "./frisbeebutikken.sitemap";
 
 type Fn = () => Promise<void>;
 
 const stores: Record<StoreSlug, Fn> = {
   frisbeebutikken: frisbeebutikken,
+  discoverdiscs: discoverdiscs,
   spinnvilldg: spinnvilldg,
   krokholdgs: krokholdgs,
   starframe: starframe,

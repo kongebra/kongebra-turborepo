@@ -1,8 +1,8 @@
 import config from "./config";
-import Bull from "bull";
+import Q from "bull";
 import { CommonJobItem, StoreSlug } from "./types";
 
-export const queueOptions: Bull.QueueOptions = {
+export const queueOptions: Q.QueueOptions = {
   defaultJobOptions: {
     removeOnComplete: {
       age: 60,
@@ -10,30 +10,27 @@ export const queueOptions: Bull.QueueOptions = {
   },
 };
 
-let commonQueue: Bull.Queue;
-let storeQueues: Record<StoreSlug, Bull.Queue>;
+let commonQueue: Q.Queue;
+let storeQueues: Record<StoreSlug, Q.Queue>;
 
 export function getQueues() {
   if (!commonQueue) {
-    commonQueue = new Bull<CommonJobItem>(
-      "common",
-      config.redisUrl,
-      queueOptions
-    );
+    commonQueue = new Q<CommonJobItem>("common", config.redisUrl, queueOptions);
   }
 
   if (!storeQueues["prodisc"]) {
     storeQueues = {
-      frisbeebutikken: new Bull(
-        "frisbeebutikken",
-        config.redisUrl,
-        queueOptions
-      ),
-      spinnvilldg: new Bull("spinnvilldg", config.redisUrl, queueOptions),
-      krokholdgs: new Bull("krokholdgs", config.redisUrl, queueOptions),
-      starframe: new Bull("starframe", config.redisUrl, queueOptions),
-      prodisc: new Bull("prodisc", config.redisUrl, queueOptions),
-      aceshop: new Bull("aceshop", config.redisUrl, queueOptions),
+      frisbeebutikken: new Q("frisbeebutikken", config.redisUrl, queueOptions),
+      discoverdiscs: new Q("discoverdiscs", config.redisUrl, queueOptions),
+      frisbeefeber: new Q("frisbeefeber", config.redisUrl, queueOptions),
+      gurudiscgolf: new Q("gurudiscgolf", config.redisUrl, queueOptions),
+      spinnvilldg: new Q("spinnvilldg", config.redisUrl, queueOptions),
+      krokholdgs: new Q("krokholdgs", config.redisUrl, queueOptions),
+      frisbeesor: new Q("frisbeesor", config.redisUrl, queueOptions),
+      starframe: new Q("starframe", config.redisUrl, queueOptions),
+      prodisc: new Q("prodisc", config.redisUrl, queueOptions),
+      aceshop: new Q("aceshop", config.redisUrl, queueOptions),
+      dgshop: new Q("dgshop", config.redisUrl, queueOptions),
     };
   }
 

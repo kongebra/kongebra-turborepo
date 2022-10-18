@@ -13,20 +13,31 @@ export default async function sitemap() {
 
   const store = await prisma.store.upsert({
     where: {
-      slug: "starframe",
+      slug: "frisbeesor",
     },
     create: {
-      slug: "starframe",
-      name: "Starframe Discgolf Shop AS",
-      baseUrl: "https://starframe.no",
-      sitemapUrl: "https://www.starframe.no/sitemap.xml",
+      name: "Frisbee Sør",
+      slug: "frisbeesor",
+      baseUrl: "https://www.frisbeesor.no",
+      sitemapUrl: "https://www.frisbeesor.no/sitemap.xml",
     },
     update: {
       updatedAt: new Date(),
     },
   });
 
-  let sitemaps: string[] = [store.sitemapUrl];
+  const sitemapRes = await axios.get(store.sitemapUrl);
+  const xml = await sitemapRes.data;
+  const $$ = load(xml);
+
+  let sitemaps: string[] = [];
+  $$("sitemap").each((i, el) => {
+    const loc = $$(el).find("loc").text().trim();
+
+    if (loc.includes("/product-sitemap")) {
+      sitemaps.push(loc.trim());
+    }
+  });
 
   const promises = new Array<any>();
 
@@ -39,7 +50,7 @@ export default async function sitemap() {
       const loc = $(el).find("loc").text().trim();
       const lastmod = $(el).find("lastmod").text().trim();
 
-      if (checkLastmodUnderAge(lastmod, 365) && loc.includes("/products/")) {
+      if (checkLastmodUnderAge(lastmod, 365) && loc.includes("/produkt/")) {
         promises.push(
           commonQueue.add({
             loc,

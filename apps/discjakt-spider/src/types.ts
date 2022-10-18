@@ -1,10 +1,15 @@
 export type StoreSlug =
-  | "spinnvilldg"
-  | "starframe"
-  | "prodisc"
   | "aceshop"
+  | "dgshop"
+  | "discoverdiscs"
+  | "frisbeebutikken"
+  | "frisbeefeber"
+  | "frisbeesor"
+  | "gurudiscgolf"
   | "krokholdgs"
-  | "frisbeebutikken";
+  | "prodisc"
+  | "spinnvilldg"
+  | "starframe";
 
 export type CommonJobItem = {
   store: {

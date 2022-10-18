@@ -10,6 +10,7 @@ const { commonQueue } = getQueues();
 export default async function sitemap() {
   const now = new Date();
   console.time(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+
   const store = await prisma.store.upsert({
     where: {
       slug: "prodisc",
