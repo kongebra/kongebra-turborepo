@@ -25,7 +25,7 @@ import starframe from "./processors/starframe.processor";
 const { commonQueue, storeQueues } = getQueues();
 
 // common
-commonQueue.process(common(storeQueues));
+commonQueue.process(common);
 
 // stores
 storeQueues.aceshop.process(aceshop);
@@ -84,6 +84,8 @@ app.get("/health", (req, res) => {
 
 app.post("/crawlStoreSitemaps", async (req, res) => {
   await crawlLatestStoreSitemap();
+
+  res.status(200).json({ messge: "crawl began" });
 });
 
 app.listen(port, () => {

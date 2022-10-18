@@ -18,7 +18,7 @@ export function getQueues() {
     commonQueue = new Q<CommonJobItem>("common", config.redisUrl, queueOptions);
   }
 
-  if (!storeQueues["prodisc"]) {
+  if (!storeQueues) {
     storeQueues = {
       frisbeebutikken: new Q("frisbeebutikken", config.redisUrl, queueOptions),
       discoverdiscs: new Q("discoverdiscs", config.redisUrl, queueOptions),

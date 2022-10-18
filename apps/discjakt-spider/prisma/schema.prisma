@@ -1,8 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-    provider = "prisma-client-js"
+    provider        = "prisma-client-js"
+    previewFeatures = ["filteredRelationCount"]
 }
 
 datasource db {
@@ -39,6 +37,7 @@ model Product {
     store       Store          @relation(fields: [storeId], references: [id])
     prices      ProductPrice[]
     latestPrice Float          @default(0)
+    disabled    Boolean        @default(false)
 }
 
 model ProductPrice {

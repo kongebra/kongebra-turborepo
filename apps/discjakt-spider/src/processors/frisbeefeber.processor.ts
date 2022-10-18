@@ -14,7 +14,7 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`${path.basename(__filename, ".ts")} - ${id}`);
+  console.time(`frisbeefeber - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
@@ -66,6 +66,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`${path.basename(__filename, ".ts")} - ${id}`);
+  console.timeEnd(`frisbeefeber - ${id}`);
   return product;
 }

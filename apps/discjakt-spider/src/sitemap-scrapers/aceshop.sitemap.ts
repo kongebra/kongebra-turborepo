@@ -10,7 +10,7 @@ const { commonQueue } = getQueues();
 export default async function sitemap() {
   const now = new Date();
 
-  console.time(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+  console.time(`aceshop - ${now.getTime()}`);
   const store = await prisma.store.upsert({
     where: {
       slug: "aceshop",
@@ -53,5 +53,5 @@ export default async function sitemap() {
 
   await Promise.all(promises);
 
-  console.timeEnd(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+  console.timeEnd(`aceshop - ${now.getTime()}`);
 }

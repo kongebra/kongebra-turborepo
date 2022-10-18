@@ -9,11 +9,11 @@ const { commonQueue } = getQueues();
 
 export default async function sitemap() {
   const now = new Date();
-  console.time(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+  console.time(`krokholdgs - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
-      slug: "starframe",
+      slug: "krokholdgs",
     },
     create: {
       name: "Krokhold Disc Golf Shop",
@@ -62,7 +62,9 @@ export default async function sitemap() {
     });
   }
 
+  console.log("krokholdgs promises.length", promises.length);
+
   await Promise.all(promises);
 
-  console.timeEnd(`${path.basename(__filename, ".ts")} - ${now.getTime()}`);
+  console.timeEnd(`krokholdgs - ${now.getTime()}`);
 }
