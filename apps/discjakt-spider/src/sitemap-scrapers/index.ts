@@ -36,25 +36,20 @@ export default async function handler() {
   console.time("store sitemap crawl");
 
   // Pick store that latest updated
-  // const store = await prisma.store.findFirst({
-  //   take: 1,
-  //   orderBy: {
-  //     updatedAt: "asc",
-  //   },
-  // });
-  for (const key of keys) {
-    const fn = stores[key];
-    await fn();
-    console.log(`running sitemap: ${key}`);
-  }
+  const store = await prisma.store.findFirst({
+    take: 1,
+    orderBy: {
+      updatedAt: "asc",
+    },
+  });
 
-  // if (store) {
-  //   const func = stores[store.slug as StoreSlug];
-  //   if (func) {
-  //     // run stores function
-  //     await func();
-  //   }
-  // }
+  if (store) {
+    const func = stores[store.slug as StoreSlug];
+    if (func) {
+      // run stores function
+      await func();
+    }
+  }
 
   console.timeEnd("store sitemap crawl");
 }

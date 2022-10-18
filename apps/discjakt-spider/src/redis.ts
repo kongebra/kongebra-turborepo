@@ -1,4 +1,4 @@
-import Redis from "ioredis";
+import { default as Redis } from "ioredis";
 import config from "./config";
 
 let redis: Redis;
