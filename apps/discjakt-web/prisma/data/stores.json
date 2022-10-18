@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Krokhold Disc Golf Shop",
+    "description": "",
+    "imageUrl": "",
+    "slug": "krokholdgs",
+    "sitemapUrl": "https://krokholdgs.no/sitemap.xml",
+    "baseUrl": "https://krokholdgs.no/"
+  },
+  {
+    "name": "Aceshop",
+    "description": "",
+    "imageUrl": "",
+    "slug": "aceshop",
+    "sitemapUrl": "https://www.aceshop.no/sitemap.xml",
+    "baseUrl": "https://www.aceshop.no"
+  },
+  {
+    "name": "Frisbeebutikken",
+    "description": "",
+    "imageUrl": "",
+    "slug": "frisbeebutikken",
+    "sitemapUrl": "https://frisbeebutikken.no/sitemap.xml",
+    "baseUrl": "https://frisbeebutikken.no/"
+  },
+  {
+    "name": "Disc Golf Dynasty",
+    "description": "",
+    "imageUrl": "",
+    "slug": "discgolfdynasty",
+    "sitemapUrl": "https://discgolfdynasty.no/sitemap.xml",
+    "baseUrl": "https://discgolfdynasty.no/"
+  },
+  {
+    "name": "Discover Discs",
+    "description": "",
+    "imageUrl": "",
+    "slug": "discoverdiscs",
+    "sitemapUrl": "https://www.discoverdiscs.no/sitemap.xml",
+    "baseUrl": "https://www.discoverdiscs.no"
+  },
+  {
+    "name": "Frisbee Sør",
+    "description": "",
+    "imageUrl": "",
+    "slug": "frisbeesor",
+    "sitemapUrl": "https://www.frisbeesor.no/sitemap.xml",
+    "baseUrl": "https://www.frisbeesor.no"
+  },
+  {
+    "name": "Guru Disc Golf",
+    "description": "",
+    "imageUrl": "",
+    "slug": "gurudiscgolf",
+    "sitemapUrl": "https://www.gurudiscgolf.no/sitemap.xml",
+    "baseUrl": "https://www.gurudiscgolf.no"
+  },
+  {
+    "name": "Starframe",
+    "description": "",
+    "imageUrl": "",
+    "slug": "starframe",
+    "sitemapUrl": "https://starframe.no/sitemap.xml",
+    "baseUrl": "https://starframe.no/"
+  },
+  {
+    "name": "Spinnvill Disc Golf",
+    "description": "",
+    "imageUrl": "",
+    "slug": "spinnvilldg",
+    "sitemapUrl": "https://spinnvilldg.no/sitemap.xml",
+    "baseUrl": "https://spinnvilldg.no/"
+  },
+  {
+    "name": "DGShop",
+    "description": "",
+    "imageUrl": "",
+    "slug": "dgshop",
+    "sitemapUrl": "https://www.dgshop.no/sitemap.xml",
+    "baseUrl": "https://www.dgshop.no"
+  },
+  {
+    "name": "Prodisc",
+    "description": "",
+    "imageUrl": "",
+    "slug": "prodisc",
+    "sitemapUrl": "https://prodisc.no/sitemap.xml",
+    "baseUrl": "https://prodisc.no/"
+  }
+]

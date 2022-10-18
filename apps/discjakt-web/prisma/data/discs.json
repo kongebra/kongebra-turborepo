@@ -1,0 +1,6428 @@
+[
+  {
+    "name": "Mentor",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/48418_Discmania_Active_Premium_Mentor_1.jpg",
+    "slug": "mentor",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Swan 2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/33693_Westside_Discs_BT_Hard_Burst_Swan_2_1.jpg",
+    "slug": "swan-2",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Justice",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/gkwic_Lucid_Ice_Justice_Macie_Velediaz_Team_Series_1.jpg",
+    "slug": "justice",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 4,
+    "speed": 5,
+    "turn": 0.5,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "P2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/21934_Discmania_D-Line_Flex_2_P2_2.jpg",
+    "slug": "p2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Berg",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/87334_Kastaplast_K3_Berg_Scott_Stokely_Tour_Series_1.jpg",
+    "slug": "berg",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 2,
+    "speed": 1,
+    "turn": 0,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Dark Rebel",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/9qtQ1_Innova_Star_Fairway_Disc_Dark_Rebel_1.png/w1200h1069.png",
+    "slug": "dark-rebel",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -1,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Link",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/65591_Discmania_Geo_Link_1.jpg",
+    "slug": "link",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Construct",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/5za1a_Thought_Space_Athletics_Ethereal_Construct_1.jpg",
+    "slug": "construct",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 2,
+    "speed": 10,
+    "turn": -1,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "PX-3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/44862_Prodigy_Disc_300_Plastic_PX-3_Prototype_2.jpg",
+    "slug": "px-3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2.5,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Interceptor",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Hk7FM_Elevation_Disc_Golf_Elevation_ecoFLOP_Interc_1.jpg",
+    "slug": "interceptor",
+    "brand": {
+      "slug": "elevation-disc-golf"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Havoc",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/IsK8z_Latitude_64_Opto-X_Havoc_1.jpg",
+    "slug": "havoc",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "H4 V2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/71614_Prodigy_Disc_500_Plastic_H4_V2_1.jpg",
+    "slug": "h4-v2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1.5,
+    "speed": 10,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Roc",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/12961_Innova_Disc_Golf_DX_Roc_1.jpg",
+    "slug": "roc",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "H7",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Wzkx1_Prodigy_Disc_400_Plastic_H7_1.jpg",
+    "slug": "h7",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -4,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "JOKERi",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/16039_Basic_JOKERi_1.jpg",
+    "slug": "jokeri",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 2,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Destroyer",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/28829_Innova_Disc_Golf_G-Star_Destroyer_1.jpg",
+    "slug": "destroyer",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Göte",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/lf97n_Kastaplast_K1_G_te_X-Out_1.jpg",
+    "slug": "gote",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Grace",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hlEYL_Latitude_64_Grand_Orbit_Grace_-_Kristin_Tatt_1.jpg",
+    "slug": "grace",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "F5",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/9KhbZ_Prodigy_Disc_500_Plastic_F5_Casey_Hanemayer__1.jpg",
+    "slug": "f5",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Lots",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/01384_Kastaplast_K1_Lots_1.jpg",
+    "slug": "lots",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Firebird",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/YeV6y_Innova_Disc_Golf_DX_Firebird_1.jpg",
+    "slug": "firebird",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Narwhal",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/94276_Divergent_Discs_Ace_Plastic_Narwhal_1.jpg",
+    "slug": "narwhal",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 0.5,
+    "speed": 3,
+    "turn": -2,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "D Model US",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Iyh7t_Prodigy_Disc_DuraFlex_D_Model_US_1.jpg",
+    "slug": "d-model-us",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 13,
+    "turn": -3,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "River",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/77263_Latitude_64_Retro_River_1.jpg",
+    "slug": "river",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -1,
+    "glide": 7,
+    "type": "fairway"
+  },
+  {
+    "name": "A3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/A4Xei_Prodigy_Disc_750_Plastic_A3_Luke_Humphries_S_1.jpg",
+    "slug": "a3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Majesty",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/67455_Discmania_Active_Premium_Majesty_1.jpg",
+    "slug": "majesty",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Svea",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/65NSf_Kastaplast_K3_Hard_Svea_X-Out_1.jpg",
+    "slug": "svea",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": -1,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "FX-2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/VjuYI_Prodigy_Disc_500_Plastic_FX-2_Thomas_Gilbert_1.jpg",
+    "slug": "fx-2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": -1,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "PA-5",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/4SQhs_Prodigy_Disc_500_Plastic_Pa-5_1.jpg",
+    "slug": "pa-5",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 0.5,
+    "speed": 3,
+    "turn": -2,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Sparta",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/08747_Prodiscus_Basic_Sparta_1.jpg",
+    "slug": "sparta",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 0.5,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "PA-2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/78792_Prodigy_Disc_300_Plastic_Pa-2_Big_Star_Stamp_1.jpg",
+    "slug": "pa-2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "PA-3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/48175_Prodigy_Disc_350G_Plastic_Pa-3_1.jpg",
+    "slug": "pa-3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Kaxe",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/63311_Kastaplast_K1_Soft_Kaxe_4.jpg",
+    "slug": "kaxe",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 6,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Reko X",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/r8fNk_Kastaplast_K1_Reko_X_1.jpg",
+    "slug": "reko-x",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Envy",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/41156_Axiom_Discs_Electron_Envy_James_Conrad_1.jpg",
+    "slug": "envy",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Luna",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/62043_Discraft_Paul_McBeth_Luna_2.jpg",
+    "slug": "luna",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "X3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Ej4BC_Prodigy_Disc_400_Air_Plastic_X3_Preserve_Cha_1.jpg",
+    "slug": "x3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Splice",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/trOnp_Discmania_Neo_Splice_1.jpg",
+    "slug": "splice",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Guard",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/21365_Dynamic_Discs_Prime_Burst_Guard_1.jpg",
+    "slug": "guard",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 0.5,
+    "speed": 2,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Trust",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/96062_Latitude_64_Royal_Grand_Trust_2.jpg",
+    "slug": "trust",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Challenger",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/77869_Discraft_Jawbreaker_Challenger_1.jpg",
+    "slug": "challenger",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Aviar",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/29605_Innova_Disc_Golf_Star_Aviar_1.jpg",
+    "slug": "aviar",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Thunderbird",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/58284_Innova_Disc_Golf_Champion_Thunderbird_1.jpg",
+    "slug": "thunderbird",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Omen",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/MHyAI_Thought_Space_Athletics_Aura_Omen_1.jpg",
+    "slug": "omen",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "PD",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/ZV5RS_Discmania_C-Line_PD_1.jpg",
+    "slug": "pd",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Snoopy",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hRvmL_Alfa_Discs_Crystal_Line_Snoopy_First_Run_1.jpg",
+    "slug": "snoopy",
+    "brand": {
+      "slug": "alfa-discs"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Kaxe Z",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/or7AJ_Kastaplast_K1_Soft_Kaxe_Z_X-Out_1.jpg",
+    "slug": "kaxe-z",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 2,
+    "speed": 6,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Aviar3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/39387_Innova_Disc_Golf_Star_Aviar3_1.jpg",
+    "slug": "aviar3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Järn",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/zHAv1_Kastaplast_K1_Glow_J_rn_Team_Fundraiser_2022_1.jpg",
+    "slug": "jarn",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 4.5,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Reko",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/01374_Kastaplast_K3_Reko_1.jpg",
+    "slug": "reko",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Enigma",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/54212_Discmania_Neo_Enigma_1.jpg",
+    "slug": "enigma",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "MD3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/91189_Discmania_C-Line_MD3_1.jpg",
+    "slug": "md3",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Cosmic",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hP5Kb_Alfa_Discs_Crystal_Line_Cosmic_1.jpg",
+    "slug": "cosmic",
+    "brand": {
+      "slug": "alfa-discs"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": 0,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Instinct",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/53895_Discmania_Neo_Instinct_1.jpg",
+    "slug": "instinct",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Xing",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/27557_Yikun_Discs_Tiger_Line_Xing_1.jpg",
+    "slug": "xing",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Slaidi",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/21165_Prodiscus_Premium_Slaidi_1.jpg",
+    "slug": "slaidi",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Soft Focus",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/43057_Discraft_Putter_Line_Soft_Focus_1.jpg",
+    "slug": "soft-focus",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": -1,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Wraith",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/59912_Innova_Disc_Golf_Star_Wraith_1.jpg",
+    "slug": "wraith",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "PA-4",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/015Ft_Prodigy_Disc_300_Plastic_Pa-4_1.jpg",
+    "slug": "pa-4",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Ra",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/17537_Infinite_Discs_I-Blend_Ra_1.jpg",
+    "slug": "ra",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 2.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "F2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/36850_Prodigy_Disc_400_Plastic_F2_1.jpg",
+    "slug": "f2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 7,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "F1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/25283_Prodigy_Disc_400G_Plastic_F1_Sam_Lee_1.jpg",
+    "slug": "f1",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 7,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "F3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/19453_Prodigy_Disc_400_Plastic_F3_1.jpg",
+    "slug": "f3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Sapphire",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/97229_Latitude_64_Gold_Sapphire_1.jpg",
+    "slug": "sapphire",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1.5,
+    "speed": 10,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Grym X",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/75711_Kastaplast_K1_Glow_Grym_X_2022_Edition_1.jpg",
+    "slug": "grym-x",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Glory",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/J2lV8_Latitude_64_Royal_Grand_Glory_Prototype_1.jpg",
+    "slug": "glory",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "FX-4",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/sK19U_Prodigy_Disc_400_Plastic_FX-4_1.jpg",
+    "slug": "fx-4",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Nice!",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/09310_Momentum_Disc_Golf_Hard_Basic_Plastic_Nice___1.jpg",
+    "slug": "nice!",
+    "brand": {
+      "slug": "momentum-disc-golf"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -2,
+    "glide": 7,
+    "type": "fairway"
+  },
+  {
+    "name": "Shadowfax",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/d4Mp3_Prodigy_Disc_400_Plastic_Airborn_Shadowfax_-_1.jpg",
+    "slug": "shadowfax",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "M2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/01447_Prodigy_Disc_300_Plastic_M2_1.jpg",
+    "slug": "m2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Keystone",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/y1u8c_Latitude_64_Zero_Hybrid_Moonshine_Glow_Keyst_1.jpg",
+    "slug": "keystone",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": -1,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Synapse",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/oluHh_Thought_Space_Athletics_Ethos_Synapse_1.jpg",
+    "slug": "synapse",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Roc3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/86599_Innova_Disc_Golf_Champion_Roc3_1.jpg",
+    "slug": "roc3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Rockstar",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/m6C9k_Discmania_SE_Premium_Rockstar_1.jpg",
+    "slug": "rockstar",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Wasp",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/13800_Discraft_Z_Line_Wasp_1.jpg",
+    "slug": "wasp",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Genius",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/3B5he_Discmania_Active_Premium_Genius_1.jpg",
+    "slug": "genius",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -4,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Evader",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/83746_Dynamic_Discs_Lucid_Evader_1.jpg",
+    "slug": "evader",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2.5,
+    "speed": 7,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Binx",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/WzuLF_Elevation_Disc_Golf_Elevation_Binx_1.jpg",
+    "slug": "binx",
+    "brand": {
+      "slug": "elevation-disc-golf"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Teebird3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hJBAJ_Innova_Disc_Golf_Champion_Teebird3_1.jpg",
+    "slug": "teebird3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Sidewinder",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/5O7r6_Innova_Disc_Golf_DX_Sidewinder_1.jpg",
+    "slug": "sidewinder",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -3,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Bounty",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/21601_Dynamic_Discs_Lucid_Bounty_1.jpg",
+    "slug": "bounty",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 0.5,
+    "speed": 4,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Raider",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hcN4V_Dynamic_Discs_Lucid_Ice_Raider_Ricky_Wysocki_1.jpg",
+    "slug": "raider",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Mercy",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/54625_Latitude_64_Zero_Mercy_1.jpg",
+    "slug": "mercy",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "D2 Pro",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/53550_Prodigy_Disc_500_Plastic_D2_Pro_1.jpg",
+    "slug": "d2-pro",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Razeri",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/12770_Prodiscus_Ultrium_Razeri_1.jpg",
+    "slug": "razeri",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Underworld",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/57494_Westside_Discs_VIP_Underworld_1.jpg",
+    "slug": "underworld",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -3,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "TL3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/67036_Innova_Disc_Golf_Star_TL3_1.jpg",
+    "slug": "tl3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -1,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "H3 V2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/06925_Prodigy_Disc_400_Plastic_H3v2_1.jpg",
+    "slug": "h3-v2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Pathfinder",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/4k0am_Thought_Space_Athletics_Ethereal_Pathfinder_1.jpg",
+    "slug": "pathfinder",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Diamond",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/68436_Latitude_64_Opto_Diamond_1.jpg",
+    "slug": "diamond",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -3,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Bolt",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Bc8AI_Latitude_64_Opto_Bolt_1.jpg",
+    "slug": "bolt",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Votum",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/TvXJE_Thought_Space_Athletics_Ethos_Votum_1.jpg",
+    "slug": "votum",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 3,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "F Model S",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/74936_Prodigy_Disc_Base_Grip_F_Model_S_1.jpg",
+    "slug": "f-model-s",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Mutant",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/PQ3tZ_Discmania_Neo_Mutant_1.jpg",
+    "slug": "mutant",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 4,
+    "speed": 5,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Falk",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/36588_Kastaplast_K1_Falk_1.jpg",
+    "slug": "falk",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -2,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Teebird",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/61810_Innova_Disc_Golf_Star_Teebird_1.jpg",
+    "slug": "teebird",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Stål",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/bOhiT_Kastaplast_K1_Glow_St_l_1.jpg",
+    "slug": "stal",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Grym",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/10654_Kastaplast_K1_Grym_Glow_2022_Edition_2.jpg",
+    "slug": "grym",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Sockibomb Slammer",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Yt4hV_Dynamic_Discs_Classic_Supreme_Orbit_Sockibom_1.jpg",
+    "slug": "sockibomb-slammer",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 4,
+    "speed": 3,
+    "turn": 0.5,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Method",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/00157_Discmania_Exo_Method_1.jpg",
+    "slug": "method",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "D2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/OaA2e_Prodigy_Disc_400_Plastic_D2_1.jpg",
+    "slug": "d2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -0.5,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Alter",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/6oaHQ_Thought_Space_Athletics_Nerve_Alter_1.jpg",
+    "slug": "alter",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Trespass",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/93182_Dynamic_Discs_Lucid_Trespass_1.jpg",
+    "slug": "trespass",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Shryke",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/10936_Innova_Disc_Golf_Star_Shryke_1.jpg",
+    "slug": "shryke",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Pure",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/27356_Latitude_64_Zero_Soft_Pure_1.jpg",
+    "slug": "pure",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Animus",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/XqeQx_Thought_Space_Athletics_Ethos_Animus_1.jpg",
+    "slug": "animus",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Sensei",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/94718_Discmania_Active_Premium_Sensei_1.jpg",
+    "slug": "sensei",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Compass",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/kGYsM_Latitude_64_Gold_Compass_1.jpg",
+    "slug": "compass",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Leopard3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/59786_Innova_Disc_Golf_Star_Leopard3_1.jpg",
+    "slug": "leopard3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Core",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/fA9ry_Latitude_64_Opto_Chameleon_Core_1.jpg",
+    "slug": "core",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 6,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Tactic",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/50467_Discmania_Exo_Hard_Tactic_1.jpg",
+    "slug": "tactic",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Shield",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/06239_Westside_Discs_BT_Medium_Shield_1.jpg",
+    "slug": "shield",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Cohort",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/41587_Infinite_Discs_P-Blend_Cohort_1.jpg",
+    "slug": "cohort",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 1,
+    "speed": 3.5,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Phi",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/05334_EV-7_Disc_Golf_OG_Base_Phi_1.jpg",
+    "slug": "phi",
+    "brand": {
+      "slug": "ev-7-disc-golf"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Flow",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/iOBSr_Latitude_64_Opto_Flow_1.jpg",
+    "slug": "flow",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -0.5,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "FD",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/OQwRk_Discmania_C-Line_FD_1.jpg",
+    "slug": "fd",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": 0,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "M1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hsddW_Prodigy_Disc_400_Plastic_M1_1.jpg",
+    "slug": "m1",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Rask",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/25951_Kastaplast_K1_Rask_1.jpeg",
+    "slug": "rask",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 4,
+    "speed": 14,
+    "turn": 0,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Harp",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/37306_Westside_Discs_BT_Hard_Harp_1.jpg",
+    "slug": "harp",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Myth",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/35850_Infinite_Discs_D-Blend_Myth_1.jpg",
+    "slug": "myth",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Dragon",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/9VwDY_Innova_Disc_Golf_DX_Dragon_1.jpg",
+    "slug": "dragon",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Shogun",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/scWEr_Discmania_Active_Shogun_1.jpg",
+    "slug": "shogun",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Distortion",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/l7Qt8_Prodigy_Disc_400_Plastic_Kevin_Jones_Distort_1.jpg",
+    "slug": "distortion",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Kui",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/29738_Yikun_Discs_Tiger_Line_Kui_1.jpg",
+    "slug": "kui",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Fuse",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/78265_Latitude_64_Opto_Fuse_1.jpg",
+    "slug": "fuse",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": -1,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "A5",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/zbwXU_Prodigy_Disc_400_Plastic_A5_First_Run_1.jpg",
+    "slug": "a5",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -1,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Jade",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/48716_Latitude_64_Opto_Jade_1.jpg",
+    "slug": "jade",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -2,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "H5",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/46793_Prodigy_Disc_400_Plastic_H5_3.jpg",
+    "slug": "h5",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 10,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Truth",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/56368_Dynamic_Discs_Prime_Burst_EMAC_Truth_1.jpg",
+    "slug": "truth",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Maestro",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/65305_Discmania_Active_Maestro_1.jpg",
+    "slug": "maestro",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Pig",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/30638_Innova_Disc_Golf_R-Pro_Pig_1.jpg",
+    "slug": "pig",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Xero",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/98WmY_Innova_Disc_Golf_DX_Xero_1.jpg",
+    "slug": "xero",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Ion",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/77826_MVP_Disc_Sports_Electron_Soft_Ion_1.jpg",
+    "slug": "ion",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 2.5,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Challenger OS",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/26965_Discraft_Putter_Line_Challenger_OS_1.jpg",
+    "slug": "challenger-os",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "P Model US",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/CPtsj_Prodigy_Disc_BaseGrip_P_Model_US_Big_Star_St_1.jpg",
+    "slug": "p-model-us",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -1,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Apollo",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/39720_Alfa_Discs_Crystal_Line_Apollo_X-Out_1.jpg",
+    "slug": "apollo",
+    "brand": {
+      "slug": "alfa-discs"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "M4",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/11629_Prodigy_Disc_350G_Plastic_M4_1.jpg",
+    "slug": "m4",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Gui",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/27706_Yikun_Discs_Tiger_Line_Gui_1.jpg",
+    "slug": "gui",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Hawkeye",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/9h0at_Innova_Disc_Golf_Star_Hawkeye_1.jpg",
+    "slug": "hawkeye",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Chariot",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/22755_Infinite_Discs_I-Blend_Chariot_1.jpg",
+    "slug": "chariot",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "PA-1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/35658_300_Plastic_Pa-1_1.jpg",
+    "slug": "pa-1",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Logic",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/33879_Discmania_Exo_Soft_Logic_1.jpg",
+    "slug": "logic",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "A2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/MqQl7_Prodigy_Disc_300_Plastic_A2_1.jpg",
+    "slug": "a2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "H1 V2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/L1n6v_Prodigy_Disc_750_Plastic_H1_V2_1.jpg",
+    "slug": "h1-v2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "M3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/ScAx6_Prodigy_Disc_300_Plastic_M3_1.jpg",
+    "slug": "m3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Rhyno",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/qYEz8_Innova_Disc_Golf_DX_Rhyno_1.jpg",
+    "slug": "rhyno",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 2,
+    "turn": 0,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Rive",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/87504_Latitude_64_Royal_Grand_Rive_1.jpg",
+    "slug": "rive",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3.5,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "A1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/vG6s9_Prodigy_Disc_400_Plastic_A1_1.jpg",
+    "slug": "a1",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Deputy",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/02363_Dynamic_Discs_Prime_Deputy_1.jpg",
+    "slug": "deputy",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -1.5,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Pioneer",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/DDmbs_Latitude_64_Opto_Pioneer_1.jpg",
+    "slug": "pioneer",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Faith",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/57792_Latitude_64_Royal_Sense_Faith_1.jpg",
+    "slug": "faith",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Magician",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/82157_Discmania_Active_Premium_Magician_1.gif",
+    "slug": "magician",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 6,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "D Model OS",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/xZjxX_Prodigy_Disc_DuraFlex_D_Model_OS_1.jpg",
+    "slug": "d-model-os",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Roadrunner",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/10608_Innova_Disc_Golf_Star_Roadrunner_1.jpg",
+    "slug": "roadrunner",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -4,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Culverin",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/3Kg5r_Latitude_64_Opto-X_Culverin_1.jpg",
+    "slug": "culverin",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Shu",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/26773_Yikun_Discs_Tiger_Line_Shu_1.jpg",
+    "slug": "shu",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": -2,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Temple",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/SJz3v_Thought_Space_Athletics_Nerve_Temple_First_R_1.jpg",
+    "slug": "temple",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Pearl",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/79190_Latitude_64_Opto_Pearl_1.jpg",
+    "slug": "pearl",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 0,
+    "speed": 4,
+    "turn": -4,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "Praxis",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/81523_Thought_Space_Athletics_Ethos_Praxis_1.jpg",
+    "slug": "praxis",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Leopard",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/43570_Innova_Disc_Golf_Champion_Leopard_1.jpg",
+    "slug": "leopard",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 6,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Enforcer",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/ZvbCK_Dynamic_Discs_Lucid_Ice_Enforcer_Ricky_Wysoc_1.jpg",
+    "slug": "enforcer",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 4,
+    "speed": 12,
+    "turn": 0.5,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Ballista",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/QNzzg_Latitude_64_Gold_Ballista_1.jpg",
+    "slug": "ballista",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Saint",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/wYz9d_Latitude_64_Retro_Saint_1.jpg",
+    "slug": "saint",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 7,
+    "type": "fairway"
+  },
+  {
+    "name": "P1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/sG4bo_Discmania_D-Line_Flex2_P1_1.jpg",
+    "slug": "p1",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Tursas",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/96053_Westside_Discs_Origo_Tursas_1.jpg",
+    "slug": "tursas",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -2,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "AviarX3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/ORrb7_Innova_Disc_Golf_Star_AviarX3_1.jpg",
+    "slug": "aviarx3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Maul",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/JfQMH_Latitude_64_Opto_Glimmer_Maul_1.jpg",
+    "slug": "maul",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 7,
+    "type": "fairway"
+  },
+  {
+    "name": "Silicon",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/o7CcZ_L_ft_Discs_Alpha-Solid_Silicon_1.jpg",
+    "slug": "silicon",
+    "brand": {
+      "slug": "loft-discs"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Anode",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/76683_MVP_Disc_Sports_Electron_Anode_1.jpg",
+    "slug": "anode",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0,
+    "speed": 2.5,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "D3 Max",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/GsoWd_Prodigy_Disc_400_Plastic_D3_Max_1.jpg",
+    "slug": "d3-max",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -3,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Valkyrie",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/43446_Innova_Disc_Golf_Star_Valkyrie_1.jpg",
+    "slug": "valkyrie",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -2,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Judge",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/25424_Dynamic_Discs_Prime_Judge_1.jpg",
+    "slug": "judge",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Knife",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/24274_Viking_Discs_Ground_Plastic_Knife_1.jpg",
+    "slug": "knife",
+    "brand": {
+      "slug": "viking-discs"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "P Model S",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/91413_Prodigy_Disc_BaseGrip_P_Model_S_1.jpg",
+    "slug": "p-model-s",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Escape",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/q3VD0_Dynamic_Discs_Fuzion_Orbit_Escape_Kona_Panis_1.jpg",
+    "slug": "escape",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Orc",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/UXY4D_Innova_Disc_Golf_DX_Orc_1.jpg",
+    "slug": "orc",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": -1,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Undertaker",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/75587_Discraft_Z_Line_Paige_Pierce_Undertaker_1.jpg",
+    "slug": "undertaker",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Hydra",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/78196_Innova_Disc_Golf_R-Pro_Hydra_1.jpg",
+    "slug": "hydra",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Titan",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/18847_Prodiscus_Premium_Titan_1.jpg",
+    "slug": "titan",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Adder",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/32182_Westside_Discs_VIP_Adder_1.jpg",
+    "slug": "adder",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Guld",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/H3GuK_Kastaplast_K1_Guld_1.jpg",
+    "slug": "guld",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Hydrogen",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/11774_Alpha-Solid_Hydrogen__1.jpg",
+    "slug": "hydrogen",
+    "brand": {
+      "slug": "loft-discs"
+    },
+    "fade": 0,
+    "speed": 1,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "D Model S",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/1O6pz_Prodigy_Disc_DuraFlex_D_Model_S_1.jpg",
+    "slug": "d-model-s",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": 0,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Origin",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/73108_Discmania_Neo_Origin_1.jpg",
+    "slug": "origin",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Eagle",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/YJZAu_Innova_Disc_Golf_DX_Eagle_1.jpg",
+    "slug": "eagle",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 7,
+    "turn": -1,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Hu",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/58771_Yikun_Discs_Phoenix_Line_Hu_1.jpg",
+    "slug": "hu",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Dagger",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/74299_Latitude_64_Zero_Dagger_1.jpg",
+    "slug": "dagger",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Explorer",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/72652_Latitude_64_Opto_Explorer_1.jpg",
+    "slug": "explorer",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Stiletto",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/hgmIX_Latitude_64_Opto_Stiletto_1.jpg",
+    "slug": "stiletto",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 5,
+    "speed": 13,
+    "turn": 0.5,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Musket",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/siw7b_Latitude_64_Opto_Musket_1.jpg",
+    "slug": "musket",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 10,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Felon",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/5Od5n_Dynamic_Discs_Fuzion_Orbit_Felon_Ricky_Wysoc_1.jpg",
+    "slug": "felon",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0.5,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Astronaut",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/PjBwN_Discmania_Active_Premium_Astronaut_1.jpg",
+    "slug": "astronaut",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 12,
+    "turn": -4,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Reverb",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/YuWn6_Prodigy_Disc_400_Plastic_Reverb_Kevin_Jones_1.jpg",
+    "slug": "reverb",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3.5,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Excite",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/68251_Axiom_Neutron_Excite_1.jpg/w1200h1200.jpg",
+    "slug": "excite",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 14.5,
+    "turn": -2,
+    "glide": 5.5,
+    "type": "distance"
+  },
+  {
+    "name": "Anax",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/80212_Discraft_ESP_Anax_1.jpeg/w1200h1200.jpeg",
+    "slug": "anax",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Katana",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/83335_Innova_Star_Katana_1.jpeg/w1200h1200.jpeg",
+    "slug": "katana",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Xcaliber",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/10268_Innova_Champion_Xcaliber_1.jpg/w1200h1200.jpg",
+    "slug": "xcaliber",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 12,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Nuke",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/L0KYw_Discraft_Z-Line_Nuke_1.jpg/w1200h1200.jpg",
+    "slug": "nuke",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Wizard",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/84079_Gateway_Wizard_Eraser__1.jpg/w1200h1200.jpg",
+    "slug": "wizard",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Anchor",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/RMxh1_Latitude_Opto_Glimmer_Anchor_1.jpg/w1200h1200.jpg",
+    "slug": "anchor",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Zone",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/28909_Discraft_Z_FLX_Zone_1.jpg/w1200h1200.jpg",
+    "slug": "zone",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Zeus",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/81472_Discraft_PAUL_MCBETH_ZEUS_DRIVER_1.jpg/w1200h1200.jpg",
+    "slug": "zeus",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Fierce",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/9YDBp_Discraft_Paige_Pierce_Crystal_Sparkle_Fierce_1.jpg/w1200h1200.jpg",
+    "slug": "fierce",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -2,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Defy",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/LXaEF_Axiom_Discs_Axiom_Neutron_Defy_1.jpg/w1200h1044.jpg",
+    "slug": "defy",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Tantrum",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/69494_Axiom_Neutron_Tantrum_1.jpg/w1200h1200.jpg",
+    "slug": "tantrum",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 14.5,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Atom",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/75939_MVP_MVP_Electron_Atom_Soft_1.jpg/w1200h1200.jpg",
+    "slug": "atom",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -0.5,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Insanity",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/72704_Axiom_Cosmic_Neutron_Insanity_1.jpg/w1200h1200.jpg",
+    "slug": "insanity",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1.5,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Wave",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/92537_MVP_MVP_Fission_Wave_1.jpg/w1200h1200.jpg",
+    "slug": "wave",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -2.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Resistor",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/74878_MVP_MVP_Neutron_Resistor_1.jpg/w1200h1200.jpg",
+    "slug": "resistor",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3.5,
+    "speed": 6.5,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Corvette",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/82994_Innova_Star_Corvette_1.jpeg/w1200h1200.jpeg",
+    "slug": "corvette",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 14,
+    "turn": -1,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Force",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/23906_Discraft_Z_Force_1.jpg/w1200h1200.jpg",
+    "slug": "force",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Virus",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/74021_Axiom_Discs_Axiom_Neutron_Virus_1.jpg/w1200h988.jpg",
+    "slug": "virus",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -3.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Warrior",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/43037_Gateway_Warrior_Diamond_1.png/w1200h1200.png",
+    "slug": "warrior",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Vanish",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/UT2kh_Axiom_Discs_Axiom_Neutron_Vanish_Uten_Stamp_1.png/w1200h1200.png",
+    "slug": "vanish",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Proxy",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/69661_Axiom_Discs_Axiom_Cosmic_Electron_Firm_1.jpg/w1200h1086.jpg",
+    "slug": "proxy",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0.5,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3.5,
+    "type": "putter"
+  },
+  {
+    "name": "Pilot",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/82181_Streamline_Streamline_Electron_Pilot_1.jpg/w1200h1200.jpg",
+    "slug": "pilot",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": -1,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Panic",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/68803_Axiom_Neutron_Panic_1.jpg/w1200h1123.jpg",
+    "slug": "panic",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Tesla",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/PFpNK_MVP_MVP_Fission_Tesla_Special_Edition_1.jpg/w1200h1200.jpg",
+    "slug": "tesla",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Scorch",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/30511_Discraft_ESP_Scorch_1.jpg/w1200h1200.jpg",
+    "slug": "scorch",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Flare",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/73633_Streamline_Streamline_Neutron_Flare_1.jpg/w1200h1200.jpg",
+    "slug": "flare",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 3.5,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Inertia",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/XPhBQ_MVP_MVP_Neutron_Inertia_Uten_Stamp_1.png/w1200h1200.png",
+    "slug": "inertia",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Uplink",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/IfQ9W_MVP_MVP_Neutron_Uplink_1.jpg/w1200h1200.jpg",
+    "slug": "uplink",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0.5,
+    "speed": 5,
+    "turn": -3,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Mayhem",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/73315_Axiom_Discs_Axiom_Neutron_Mayhem_1.jpg/w1200h945.jpg",
+    "slug": "mayhem",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Energy",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/73890_MVP_Neutron_Energy_1.jpg/w1200h1117.jpg",
+    "slug": "energy",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Maiden",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/88146_Westside_discs_BT_Maiden_Medium_1.jpeg/w1200h1200.jpeg",
+    "slug": "maiden",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Pyro",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/PFQa3_Axiom_Discs_Axiom_Prism_Neutron_Pyro_1.jpg/w1200h1200.jpg",
+    "slug": "pyro",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Buzzz SS",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/94560_Discraft_Z_LINE_BUZZZ_SS_1.jpg/w1200h1200.jpg",
+    "slug": "buzzz-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -2,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Jet",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/84uHs_Streamline_SL_Neutron_Jet_1.jpg/w1200h1200.jpg",
+    "slug": "jet",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Drift",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/75069_Streamline_Streamline_Cosmic_Neutron_Drift_1.jpg/w1200h1200.jpg",
+    "slug": "drift",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Phantom Sword",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/IPLjh_Innova_Champion_Power_Disc_Phantom_Sword_1.png/w1200h1200.png",
+    "slug": "phantom-sword",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Zenith",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/6hBxg_MVP_MVP_Neutron_Zenith_Special_Edition_1.jpg/w1200h1200.jpg",
+    "slug": "zenith",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": 0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Cirrus",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/47731_Guru_Safty_Line_Cirrus_1.jpg/w1200h1200.jpg",
+    "slug": "cirrus",
+    "brand": {
+      "slug": "guru"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Archer",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/24673_Discraft_Z_Line_Archer_1.jpg/w1200h1200.jpg",
+    "slug": "archer",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -4,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Stalker",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/92756_Discraft_Z_Stalker_1.jpg/w1200h1200.jpg",
+    "slug": "stalker",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Raptor",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/94745_Discraft_Z_LINE_RAPTOR_1.jpg/w1200h1200.jpg",
+    "slug": "raptor",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Stag",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/92544_Westside_discs_VIP_Stag_1.jpeg/w1200h1200.jpeg",
+    "slug": "stag",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 8,
+    "turn": 0,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Crank",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/zO1p0_Innova_ESP_Crank_1.jpg/w1200h1200.jpg",
+    "slug": "crank",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Runway",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/77482_Streamline_Streamline_Cosmic_Neutron_Runway_1.jpg/w1200h1200.jpg",
+    "slug": "runway",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 3.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Warden",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/14064_Dynamic_discs_Hybrid_Moonshine_Warden___AJ_R_1.jpg/w1200h1200.jpg",
+    "slug": "warden",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 0.5,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Dart",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/28791_Innova_R-Pro_Dart_1.jpg/w1200h1200.jpg",
+    "slug": "dart",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Octane",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/59905_MVP_MVP_Neutron_Octane_1.gif/w1200h1200.gif",
+    "slug": "octane",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Paradox",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/26266_Axiom_Discs_Axiom_Neutron_Paradox_1.jpg/w1200h1200.jpg",
+    "slug": "paradox",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": -4,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Toro",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/SUw5d_Innova_Champion_Color_Glow_Toro_Calvin_Heimb_1.jpg/w1200h900.jpg",
+    "slug": "toro",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 4,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Reactor",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/qirig_MVP_MVP_Neutron_Reactor_Uten_Stamp_1.png/w1200h1200.png",
+    "slug": "reactor",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1.5,
+    "speed": 5,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Crave",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/MDegi_Axiom_Discs_Axiom_Proton_Crave_1.jpg/w1200h1200.jpg",
+    "slug": "crave",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 6.5,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Voodoo",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/66586_Gateway_Voodoo_SSSS_1.jpg/w1200h1200.jpg",
+    "slug": "voodoo",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Swan 1",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/87615_Westside_discs_BT_Burst_Swan_1_Reborn_Hard_1.jpeg/w1200h1200.jpeg",
+    "slug": "swan-1",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -2.5,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Basilisk",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/94619_Divergent_Discs_Driver_Basilisk_1.png/w1200h1200.png",
+    "slug": "basilisk",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 1,
+    "speed": 14,
+    "turn": -4,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Daedalus",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/78052_Innova_Champion_Daedalus_1.png/w1200h1200.png",
+    "slug": "daedalus",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -3,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Catalyst",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/07256_MVP_MVP_Neutron_Catalyst_1.jpg/w1200h1200.jpg",
+    "slug": "catalyst",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5.5,
+    "type": "distance"
+  },
+  {
+    "name": "Meteor",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/45200_Discraft__1.jpg/w1200h1200.jpg",
+    "slug": "meteor",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -3,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Sergeant",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/94412_Dynamic_discs_Lucid-X_Glimmer_Sergeant_-_Pai_1.jpg/w1200h1196.jpg",
+    "slug": "sergeant",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2.5,
+    "speed": 11,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Firefly",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/27741_Innova_Nexus_Firefly_Nate_Sexton_2021_1.jpg/w1200h1200.jpg",
+    "slug": "firefly",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Hope",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/cZePp_Latitude_Royal_Prototype_Sense_Hope_1.png/w1200h1200.png",
+    "slug": "hope",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Terra",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/FLrN2_MVP_MVP_Neutron_Terra_Uten_Stamp_1.png/w1200h1200.png",
+    "slug": "terra",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 8,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Aviar-X",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/kxfyj_Innova_JK_Pro_Aviar-X_1.jpg/w1200h1200.jpg",
+    "slug": "aviar-x",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Crown",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/87738_Westside_discs_BT_Crown_Medium_1.jpeg/w1200h1200.jpeg",
+    "slug": "crown",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Spin",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/29201_MVP_MVP_Electron_Spin_1.jpg/w1200h1200.jpg",
+    "slug": "spin",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 0,
+    "speed": 2.5,
+    "turn": -2,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Gator3",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/2Amoj_Innova_Champion_Glow_Gator3_Joel_Freeman_202_1.jpg/w1200h1200.jpg",
+    "slug": "gator3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 2,
+    "type": "midrage"
+  },
+  {
+    "name": "Lift",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/MicVn_Streamline_SL_Cosmic_Neutron_Lift_1.jpg/w1200h1200.jpg",
+    "slug": "lift",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 1.5,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Rask Z-version",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/88060_Kastaplast_K1_Rask_Z-version_1.jpg/w1200h1200.jpg",
+    "slug": "rask-z-version",
+    "brand": {
+      "slug": "kastaplast"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -1,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Viking",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/Pn4Dc_Innova_DX_Viking_1.jpg/w1200h1200.jpg",
+    "slug": "viking",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Leviathan",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/96369_Midrange_Leviathan_1.jpg/w1200h1200.jpg",
+    "slug": "leviathan",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": -4,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Slayer",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/45696_Gateway_Slayer_Diamond_1.jpg/w1197h1200.jpg",
+    "slug": "slayer",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Avenger SS",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/93816_Discraft_Z_LINE_AVENGER_SS_1.jpg/w1200h1200.jpg",
+    "slug": "avenger-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 10,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Kraken",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/95766_Divergent_Discs_Driver_Kraken_1.jpg/w1200h1200.jpg",
+    "slug": "kraken",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 1,
+    "speed": 6,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Ape",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/WCaYA_Innova_Champion_Ape_1.jpg/w1200h1200.jpg",
+    "slug": "ape",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Hades",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/66286_Discraft_DISCRAFT_PAUL_MCBETH_BIG_Z_HADES_1.png/w1200h1200.png",
+    "slug": "hades",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -3,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Gatekeeper",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/91756_Westside_discs_VIP_Gatekeeper_First_Run_1.jpeg/w1200h1200.jpeg",
+    "slug": "gatekeeper",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 2,
+    "speed": 4,
+    "turn": 0,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Buzzz",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/80539_Discraft_ESP_BUZZZ_PAUL_MCBETH_SIGNATURE_SER_1.jpg/w1200h1200.jpg",
+    "slug": "buzzz",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Banger GT",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/23472_Discraft_Jawbreaker_Banger-GT_1.jpg/w1200h1200.jpg",
+    "slug": "banger-gt",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Max",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/fp29Q_Innova_Metal_Flake_Champion_Max_James_Procto_1.png/w1200h1200.png",
+    "slug": "max",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 5,
+    "speed": 11,
+    "turn": 0,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Shaman",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/41411_Gateway_Shaman_Super_Stupid_Soft_1.png/w1200h1200.png",
+    "slug": "shaman",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Rhyno X",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/rDJhN_Innova_XT_Rhyno_X_1.jpg/w1200h1200.jpg",
+    "slug": "rhyno-x",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 2,
+    "turn": 0,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Fireball",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/QlSS0_Axiom_Discs_Axiom_Proton_Fireball_1.jpg/w1200h1200.jpg",
+    "slug": "fireball",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3.5,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3.5,
+    "type": "fairway"
+  },
+  {
+    "name": "Thrasher",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/tds5z_Discraft_2022_Missy_Ganon_Tour_Series_Thrash_1.png/w1200h1200.png",
+    "slug": "thrasher",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Nitro",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/46478_MVP_MVP_Neutron_Nitro_1.jpg/w1200h1200.jpg",
+    "slug": "nitro",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Delirium",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/66071_Axiom_Neutron_Delirium_1.jpg/w1200h1200.jpg",
+    "slug": "delirium",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 14.5,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Invader",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/86491_DX_Invader_1.jpg/w1200h1200.jpg",
+    "slug": "invader",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Relativity",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/74684_MVP_Neutron_Relativity_1.jpg/w1200h1200.jpg",
+    "slug": "relativity",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1.5,
+    "speed": 14.5,
+    "turn": -3,
+    "glide": 5.5,
+    "type": "distance"
+  },
+  {
+    "name": "Spirit",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/44099_Gateway_Spirit_Diamond_1.png/w1200h1200.png",
+    "slug": "spirit",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 4,
+    "speed": 12,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Tenacity",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/70241_Axiom_Neutron_Tenacity_1.jpg/w1200h1200.jpg",
+    "slug": "tenacity",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Kapre",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/98311_Divergent_Discs_Midrange_Kapre_1.png/w1200h1200.png",
+    "slug": "kapre",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Relay",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/45560_MVP_MVP_Neutron_Relay_1.jpg/w1200h1200.jpg",
+    "slug": "relay",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 6,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Surge",
+    "description": "",
+    "imageUrl": "https://aceshopas-i01.mycdn.no/mysimgprod/aceshopas_mystore_no/images/Oh257_Discraft_2022_Chandler_Fry_Tour_Series_Surge_1.png/w1200h1200.png",
+    "slug": "surge",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Teleport",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/88384_MVP_MVP_Neutron_Teleport_1.jpg/w1200h1023.jpg",
+    "slug": "teleport",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 2.5,
+    "speed": 14.5,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Koi",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/WKYB0_Elevation_Disc_Golf_Elevation_ecoFLOP_Koi_1.jpg",
+    "slug": "koi",
+    "brand": {
+      "slug": "elevation-disc-golf"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": -1,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Essence",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/01228_Discmania_Neo_Essence_1.jpg",
+    "slug": "essence",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -2,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Archangel",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/27753_Innova_DX_Archangel_1.jpeg/w1200h1200.jpeg",
+    "slug": "archangel",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -4,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "MX-3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/11394_Prodigy_Disc_500_Plastic_MX-3_1.jpg",
+    "slug": "mx-3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Mako3",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/98849_Innova_Disc_Golf_Champion_Mako3_1.jpg",
+    "slug": "mako3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "H2 V2",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/o5xzK_Prodigy_Disc_750_Plastic_H2v2_1.jpg",
+    "slug": "h2-v2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2.5,
+    "speed": 11,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Mantra",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/uXgtA_Thought_Space_Athletics_Ethereal_Mantra_1.jpg",
+    "slug": "mantra",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Nomad",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/80551_MVP_Disc_Sports_Electron_Nomad_James_Conrad_1.jpg",
+    "slug": "nomad",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "M Model S",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/2OVkS_Prodigy_Disc_BaseGrip_M_Model_S_1.jpg",
+    "slug": "m-model-s",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 6,
+    "turn": -1,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "D1",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/D4BNC_Prodigy_Disc_500_Plastic_D1_1.jpg",
+    "slug": "d1",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Gator",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/84918_Innova_Disc_Golf_DX_Gator_1.jpg",
+    "slug": "gator",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 2,
+    "type": "midrage"
+  },
+  {
+    "name": "Roach",
+    "description": "",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/XH1KH_Discraft_Putter_Line_Roach_1.jpg",
+    "slug": "roach",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Cheetah",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/FcuqM_Innova_DX_Cheetah_1.jpg/w1200h1200.jpg",
+    "slug": "cheetah",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 6,
+    "turn": -2,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Matrix",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/6kOUN_MVP_MVP_Electron_Matrix_1.jpg/w1200h1200.jpg",
+    "slug": "matrix",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1.5,
+    "speed": 5,
+    "turn": -1,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Magic",
+    "description": "",
+    "imageUrl": "https://aceshopas-i02.mycdn.no/mysimgprod/aceshopas_mystore_no/images/30387_Gateway_Magic_S-Glow_Super_Soft_m__Aceshop_l_1.png/w1200h1200.png",
+    "slug": "magic",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Jun",
+    "description": "",
+    "imageUrl": "https://aceshopas-i03.mycdn.no/mysimgprod/aceshopas_mystore_no/images/90144_Yikun_Discs_Dragon_Line_Jun_1.jpg/w1200h1200.jpg",
+    "slug": "jun",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Hex",
+    "description": "",
+    "imageUrl": "https://aceshopas-i04.mycdn.no/mysimgprod/aceshopas_mystore_no/images/DVo50_Axiom_Discs_Axiom_Neutron_Hex_Uten_Stamp_1.png/w1200h1200.png",
+    "slug": "hex",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Entropy",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/69589_MVP_Cosmic_Neutron_Entropy_1.jpeg/w1200h1200.jpeg",
+    "slug": "entropy",
+    "brand": {
+      "slug": "axiom-discs"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Comet",
+    "description": "",
+    "imageUrl": "https://aceshopas-i05.mycdn.no/mysimgprod/aceshopas_mystore_no/images/94326_Discraft_Z_LINE_COMET_1.jpg/w1200h1200.jpg",
+    "slug": "comet",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": -2,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Heat",
+    "description": "Heat er en understabil fairway driver perfekt til nybegynnere. Fungerer også fint til store turnovers og rollere for mer erfarne spillere!",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CPqkq_Discraft_ESP_Heat_1.jpg/w1014h1200.jpg",
+    "slug": "heat",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -3,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Yan",
+    "description": "Dragon Line Yan er en rettflyvende putter med god glide.\n\n\nAnbefalt bruksområde:\nPutt, innspill og drive\n\n\nFlight Rating:\nSpeed 3\nGlide 6\nTurn 0\nFade 0\n\n\nDragon plast:\nDragon",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/84569_Yikun___8202_Dragon_Line_Yan_1.png/w1200h1200.png",
+    "slug": "yan",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 0,
+    "speed": 3,
+    "turn": 0,
+    "glide": 6,
+    "type": "putter"
+  },
+  {
+    "name": "Malta",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/83210_Discraft___8202_Big_Z_Malta_1.png/w1200h1200.png",
+    "slug": "malta",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 1,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Sword",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/67979_Westside_Discs___8202_VIP_Sword_X-Out_1.jpeg/w1200h1200.jpeg",
+    "slug": "sword",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Sol",
+    "description": "En understabil midrange - kast den flatt og se den gli forsiktig ut mot høyre. Den perfekte disken til beine og anhyzer kast.",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/AsbLC_Discraft_Z_Sol_1.jpg/w1014h1200.jpg",
+    "slug": "sol",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 0,
+    "speed": 4,
+    "turn": -3,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Maverick",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/OHzu7_Dynamic_Discs_Fuzion-X_Maverick_Zach_Melton_1.jpg/w1014h1200.jpg",
+    "slug": "maverick",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": -1.5,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Passion",
+    "description": "Denne 8 speed driveren byr på en nøytral flyvning med mye glide som kan gi alle armhastigeter god kontroll.",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/OgjQS_Discraft_ESP_Passion__1.jpg/w1014h1200.jpg",
+    "slug": "passion",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 8,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Nuke SS",
+    "description": "Nuke SS er en mindre stabil utgave av den populære Nuke, laget for maks lengde og store, S-linjekast.",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/78u2N_Discraft_Z_Nuke_SS_1.jpg/w1014h1200.jpg",
+    "slug": "nuke-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Surge SS",
+    "description": "Surge SS er en 11 speed distance driver som går langt for de med litt mindre kraft i arma. Den er ganske flat og ligger godt i hånda - lett å kontrollere.",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/sdfme_Discraft_Z_Surge_SS_1.jpg/w1014h1200.jpg",
+    "slug": "surge-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Machete",
+    "description": "Machete er en superoverstabil 11 speed driver! Denne kan kastet i all slags vind og fortsatt ha en pålitelig fade.",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/6y8S9_Discraft_Z_Machete_1.jpg/w1014h1200.jpg",
+    "slug": "machete",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 11,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Predator",
+    "description": "En arbeidshest som en god forehand eller overhåndskaster vil elske. Rask nok til å fly en god distanse og stabil nok til å trosse vind.",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/DMcie_Discraft_Big_Z_Predator_1.jpg/w1014h1200.jpg",
+    "slug": "predator",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Wombat3",
+    "description": "Wombat3 er en noe understabil midrange med mye glide. Rette kast vil gå rett og turnovers vil holde linja og flate fint ut før den treffer bakken.",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/OlkF8_Innova_DX_Wombat3_1.jpg/w1014h1200.jpg",
+    "slug": "wombat3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 5,
+    "turn": -1,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "Captain",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ENsks_Dynamic_Discs_Lucid_Air_Captain_1.jpg/w1014h1200.jpg",
+    "slug": "captain",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Vandal",
+    "description": "Vandal er en fairway driver du kan gjøre mye med. Den er relativt lett å flippe opp, har masse glide og kan gå utrolig langt!",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0Wnkm_Dynamic_Discs_Lucid_Vandal_1.jpg/w1014h1200.jpg",
+    "slug": "vandal",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Mantis",
+    "description": "Mantis er perfekt til lange S-linjekast. De fleste spillere kan hyzerflippe denne for ekstra lengde!",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/x25wx_Discraft_Z_Mantis_1.jpg/w1014h1200.jpg",
+    "slug": "mantis",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -2,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "View",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TxGhD_Dragon_Line_View_1.jpeg/w1200h1200.jpeg",
+    "slug": "view",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -3.5,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Qi",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fglc1_Yikun_Dragon_Line_Qi_1.jpeg/w1200h900.jpeg",
+    "slug": "qi",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "DD3",
+    "description": "Endelig har vi fått inn DD3 igjen - i den nye \\\"italian blend\\\" C-line-plasten!",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/4DrQd_Discmania_C-Line_DD3_1.jpg/w1014h1200.jpg",
+    "slug": "dd3",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "M Model US",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ic8Mk_Prodigy_ACE_Line_M_Model_US_ProFlex_1.jpeg/w1200h1200.jpeg",
+    "slug": "m-model-us",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Verdict",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/YuNo2_Dynamic_Discs_Fuzion-X_Verdict_Chris_Clemons_1.jpg/w1014h1200.jpg",
+    "slug": "verdict",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 3.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Deflector",
+    "description": "MVP Deflector er en av de mest overstabile midrangene du får. Denne takler den verste motvind! Perfekt for de som ønsker en treigere disk med mye fade.",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/llx8c_Neutron_Deflector_1.jpg/w1014h1200.jpg",
+    "slug": "deflector",
+    "brand": {
+      "slug": "mvp-disc-sports"
+    },
+    "fade": 4,
+    "speed": 5,
+    "turn": 0,
+    "glide": 3.5,
+    "type": "midrage"
+  },
+  {
+    "name": "Photon",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/a2h2B_MVP_Neutron_Photon_1.jpg/w1014h1200.jpg",
+    "slug": "photon",
+    "brand": {
+      "slug": "mvp-disc-sports"
+    },
+    "fade": 2.5,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Volt",
+    "description": "MVP Volt er en stabil og kontrollerbar fairwaydriver. Den er i stand til å holde lange linjer, med en sakte fremoverfade. God å ha når man skal kaste lange presise kast.",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Wa18R_MVP_Neutron_Volt_1.jpg/w1014h1200.jpg",
+    "slug": "volt",
+    "brand": {
+      "slug": "mvp-disc-sports"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Trace",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3d3lX_Streamline_Neutron_Trace_1.jpg/w1014h1200.jpg",
+    "slug": "trace",
+    "brand": {
+      "slug": "streamline-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Muse",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/APWit_Thought_Space_Athletics_Nerve_Muse_1.jpg/w1014h1200.jpg",
+    "slug": "muse",
+    "brand": {
+      "slug": "though-space-athletics"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Beast",
+    "description": "",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/zRqzr_Innova_Champion_Beast_1.jpg/w1014h1200.jpg",
+    "slug": "beast",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 10,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Tern",
+    "description": "Akkurat som navnet hinter til, er Tern en disk med naturlig high speed turn. Tern er en rask og understabil disk designet for lange kast du kan forme etter behov",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ocVno_Innova_Champion_Tern_1.jpg/w1014h1200.jpg",
+    "slug": "tern",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Boatman",
+    "description": "Boatman er en superglidey driver med solid stabilitet!",
+    "imageUrl": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1mKkO_VIP_Glimmer_Boatman_Halloween_1.jpg/w1014h1200.jpg",
+    "slug": "boatman",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Hatchet",
+    "description": "Stag er en lettanvendelig fairway driver fra Westside Discs med nøytral stabilitet som passer spillere i alle ferdighetsnivåer!",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/pThWo_Westside_Discs_VIP_Hatchet_1.jpg/w1014h1200.jpg",
+    "slug": "hatchet",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -2,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Stryder",
+    "description": "Prodigy Airborn Stryder er en kontrollerbar midrange med et lite knepp av stabilitet. Den takler å bli kastet med litt kraft og er god på linjer hvor man ikke ønsker mye bevegelse mot h",
+    "imageUrl": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/GbJ0p_Prodigy_500_Airborn_Stryder_-_Proto_Stamp_1.jpg/w1013h1200.jpg",
+    "slug": "stryder",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 3,
+    "speed": 6,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Sheriff",
+    "description": "Disc Informasjon  Speed: 13.0 Glide: 5.0 Turn: -1.0 Fade: 2.0 Stabilitet: Stabil  Sheriff Dimensions: Diameter: 21.2 cm Høyde: 1.6 cm Rim Dybde: 1.1 cm Rim Bredde: 2.2 cm Max Vekt: 175 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_178e92fa-37df-4bbf-81bf-c46d166d1479_1200x1200.jpg?v=1647336120",
+    "slug": "sheriff",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Scarab",
+    "description": "Disc Informasjon  Speed: 2.0 Glide: 4.0 Turn: 0.0 Fade: 1.0 Stabilitet: Stabil  Scarab Dimensjoner Diameter: 21.2 cm Høyde: 2.1 cm Rim Dybde: 1.5 cm Rim Bredde: 1.0 cm Max Vekt: 175.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_ead8c609-6bd2-4f87-ab9b-26c957446b9d_1200x1200.jpg?v=1619086555",
+    "slug": "scarab",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Ruin",
+    "description": "Disc Informasjon  Speed: 3.0 Glide: 3.0 Turn: 0.0 Fade: 3.0 Stabilitet: Stabil  Ruin Dimensjoner Diameter: 21.2 cm Høyde: 1.8 cm Rim Dybde: 1.4 cm Rim Bredde: 1.3 cm Max Vekt: 176.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_64bdedbd-de5e-460e-8b0a-e0baa0b17614_1200x1200.jpg?v=1619086577",
+    "slug": "ruin",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Inca",
+    "description": "Disc Informasjon  Speed: 5.0 Glide: 5.0 Turn: 0.0 Fade: 3.0 Stabilitet: Overstabil  Inca Dimensjoner Diameter: 21.7 cm Høyde: 1.9 cm Rim Dybde: 1.4 cm Rim Bredde: 1.3 cm Max Vekt: 180.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_a56c55fb-b279-4a14-a782-457a7b579239_1200x1200.jpg?v=1619086779",
+    "slug": "inca",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Slab",
+    "description": "Disc Informasjon  Speed: 12.0 Glide: 3.0 Turn: 0.0 Fade: 4.0 Stabilitet: Veldig OVerstabil Slab Dimensjoner Diameter: 21.2 cm Høyde: 1.6 cm Rim Dybde: 1.2 cm Rim Bredde: 2.3 cm Max Vekt: 177.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_52543fb4-ee60-414d-acd3-f43569f2d657_1200x1200.jpg?v=1619086820",
+    "slug": "slab",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 4,
+    "speed": 11,
+    "turn": 0,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Yao",
+    "description": "Speed: 4.0 Glide: 4.0 Turn: 0.0 Fade: 3.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_8c8d39f0-1851-4b19-9997-818d1e5b982b_1200x1200.jpg?v=1619617177",
+    "slug": "yao",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "FL",
+    "description": "Disc Informasjon  Speed: 9.0 Glide: 3.0 Turn: 0.0 Fade: 2.0 Stabilitet Overstabil",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_1879c9e7-a89b-4241-8d66-68b64d0b46ae_1200x1200.jpg?v=1644245406",
+    "slug": "fl",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Cro",
+    "description": "Disc Informasjon  Speed: 5.0 Glide: 3.0 Turn: 0.0 Fade: 2.0 Stabilitet: Overstabil",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_7d4cd3e9-7066-4b76-bd92-fec9904dfb1c_1200x1200.jpg?v=1644243755",
+    "slug": "cro",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Ballista Pro",
+    "description": "Speed: 14.0 Glide: 4.0 Turn: 0.0 Fade: 3.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_8a2c91f7-83df-4cb4-8878-916cc0e32104_1200x1200.jpg?v=1633687118",
+    "slug": "ballista-pro",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "FU",
+    "description": "Rettflyvende fairway driver som også gir god kontroll og lengde. Typisk yikun discs form som \"domey\" altså at oversiden buler oppover istede for at den er flat. Meget god å kaste forehands med, på grunn av grepet.    Phoenix-plasten er hard og meget slitesterk.",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0592/0879/4292/products/FY3-50008131-800x800.jpg?v=1642444885",
+    "slug": "fu",
+    "brand": {
+      "slug": "yikun-discs"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Buzzz OS",
+    "description": "Den overstabile varianten av Buzzz som er en av verdens mest populære midranges",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0592/0879/4292/products/bigz_undertaker_f4fa5301-d9a5-402e-bb93-a6656c8c5773.webp?v=1660585477",
+    "slug": "buzzz-os",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Golem",
+    "description": "Dette er en veldig spesiell putt/approach disc som er laget i et silikonmateriale som gjør den veldig myk. Hensikten er at den ikke skal rulle etter den lander.",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0592/0879/4292/products/Golem-800x800.jpg?v=1664439263",
+    "slug": "golem",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 3.5,
+    "speed": 4,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Challenger SS",
+    "description": "Speed: 2.0 Glide: 3.0 Turn: -1 Fade: 2.0",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/05/challengerss_1.png",
+    "slug": "challenger-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Takapu",
+    "description": "Enorm deilig putter uten bead. Den har god glide og tåler masse uten å oppleves som veldig overstabil. Speed: 2  Glide: 3  Turn: 0  Fade: 2",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2022/07/Takapu-HS-L-pdf.jpg",
+    "slug": "takapu",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Kotuku",
+    "description": "A good reliable stable to straight disc with a fade, this will easily hold a line and with the glide is sneaky long.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/Kotuku-Final.png",
+    "slug": "kotuku",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Pekapeka",
+    "description": "Endelig kom RPM med en understabil driver. Denne gir det fort noen ekstra lengde meter om du ikke har en veldig stor arm.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/08/Pekapeka-DGFD2.png",
+    "slug": "pekapeka",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -3,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Piwakawaka",
+    "description": "Piwakawaka  En pålitelig rett flyvende disk med veldig god glid, den flyter langt og holder linjen fint.  Dette er en glow som lyser i mørket noe som passer utmerket til når det mørkner.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/12/Glow-Piwakawaka.png",
+    "slug": "piwakawaka",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 0,
+    "speed": 6,
+    "turn": -3,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "Flick",
+    "description": "For extreme wind conditions and maximum overstability grab meat hook flying Flick! Ideal for powerful forehand shots or precision hyzer flex",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/10/zflick_max-br_1.jpg",
+    "slug": "flick",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 5,
+    "speed": 12,
+    "turn": 1,
+    "glide": 3,
+    "type": "distance"
+  },
+  {
+    "name": "Tui",
+    "description": "Tui er en fantastisk putt and approach disk. Kastes den med hardere kraft turner den fint uten å fade tilbake.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/02/20210215_093727825_iOS-1024x768.jpg",
+    "slug": "tui",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 0.5,
+    "speed": 3,
+    "turn": -1,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "D3",
+    "description": "D3 is a very fast, moderately stable driver with a unique flight path. It is designed for all players and flies extremely far. What separates the D3 is its ability to flip up and then glide without the extreme drift to the right or the hard finish back to the left.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/09/d3_400.jpg",
+    "slug": "d3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Rainmaker",
+    "description": "",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2022/07/289977192_10166414989345324_2229919847809456241_n.jpg",
+    "slug": "rainmaker",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 0.5,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Kotare",
+    "description": "Katore er en høy speed overstabil driver fra RPM, den kan være ekstra fin de dagene det blåser.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/11/Atomic-Kotare-red.png",
+    "slug": "kotare",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 3,
+    "speed": 12,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Huia",
+    "description": "Huia  Huia blir fort din favoritt fairway driver i baggen din, den gir rett flyve bane med en forsiktig fade på slutten.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/11/pixlr-bg-result-4.png",
+    "slug": "huia",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Kahu",
+    "description": "Kahu er en fantastisk høy hastighet driver. Den har litt turn og en hardere fade på slutten. Den passer også veldig godt til forehand kast.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/11/pixlr-bg-result-7.png",
+    "slug": "kahu",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Kea",
+    "description": "Kea er en overstabil midrange som passer ypperlig til kast 30-80 Den er pålitelig sin uansett vind og vær.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/02/20210215_093414509_iOS-1024x768.jpg",
+    "slug": "kea",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Savant",
+    "description": "Speed: 9   |   Glide: 5   |   Turn: -1   |   Fade: 2   |   PDGA Approved",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2022/03/Background.png",
+    "slug": "savant",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Ruru",
+    "description": "",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/12/ruruglow-1067x800.jpg",
+    "slug": "ruru",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Lander",
+    "description": "En herlig putter som en også veldig fint kan drive med. Disse er i glow plast som lyser i mørket.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/11/launch-disc-golf-omega-code-x.jpg",
+    "slug": "lander",
+    "brand": {
+      "slug": "disc-golf-uk"
+    },
+    "fade": 2,
+    "speed": 4,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Boss",
+    "description": "The Star Boss has been Alex's disc of choice for smashing controlled forehand shots down the middle or hyzering over trees, no one should be surprised that Alex is sticking with the Star Boss. A substantial portion of each sale will benefit Alex and his touring efforts.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/t-ch-boss-alex-red.jpg",
+    "slug": "boss",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Kiwi",
+    "description": "Kiwi er RPMs første driver. Den var tidligere kjent som the Raptor. Det er en overstabil disk som holder en bestemt vinkel med høy hastighet med en hard fade på slutten.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/11/Atomic-KKiwi-Yellow.png",
+    "slug": "kiwi",
+    "brand": {
+      "slug": "rpm-discs"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Tilt",
+    "description": "9-1-1-6",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/07/Lizotte_Meta_Tilt_Grey_DMStore_2048x2048-1024x1024.jpg",
+    "slug": "tilt",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 6,
+    "speed": 9,
+    "turn": 1,
+    "glide": 1,
+    "type": "fairway"
+  },
+  {
+    "name": "X2",
+    "description": "The Prodigy Disc X2 is a consistent, long flying, overstable distance driver designed for any skill level. Players who are looking for a solid distance driver in windy conditions or long, right to left hyzer shots will feel that the X2 fits perfectly in their lineup. The X2 will be a go-to for top professionals looking for a reliable finish on their long drives and will be an accurate right to left distance disc for those with lower arm speed. For fans of the X1, the X2 matches in consistency but exceeds in speed and glide. Stamp color may vary. Shade of disc color may vary",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/10/prodigy-x2-400g-plastic-998347_2000x.jpg",
+    "slug": "x2",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Duke",
+    "description": "ur very first disc that came on the market in early 2019. It’s made an immediate impact in the market and is quickly becoming a staple in players bags. A great disc for all levels of ability with top players reaching for it as their go to overstable midrange and newer players revelling in the predictable flight paths in all conditions. Available in our Noble or Glow in the Dark plastics",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/Duke-Blue-scaled-1-1024x1024.jpg",
+    "slug": "duke",
+    "brand": {
+      "slug": "disc-golf-uk"
+    },
+    "fade": 3.5,
+    "speed": 5.5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Baron",
+    "description": "The Baron is the first putter from Disc Golf UK and like all our discs made right here in the UK! It’s a stable fast putter, great for putting, holding a straight true line but even better for driving. It will handle a headwind with great stability and surprising glide. It’s been described as a cross between a Wizard and a Jokeri and has been universally liked by players from first timers through to the most experienced.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/Baron-White-scaled-1-1024x1024.jpg",
+    "slug": "baron",
+    "brand": {
+      "slug": "disc-golf-uk"
+    },
+    "fade": 2.5,
+    "speed": 4,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Captain's Raptor",
+    "description": "[embed]https://www.youtube.com/watch?v=p1gejRkGd_A[/embed] Antatt levering 04.02.2022 usikker farge på disken på forhåndsbestilte disker.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/12/cru.jpg",
+    "slug": "captains-raptor",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 1,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Sting",
+    "description": "Speed: 7  Glide: 5  Turn: -2  Fade: 1",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2022/01/zsting_1.jpg",
+    "slug": "sting",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Vulture",
+    "description": "When the Predator finishes with its prey, the Vulture comes in to play. The Vulture is described as a well seasoned Predator, with less overstability and more glide. The Vulture is predictable in wind",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/37425_Discraft_Z_Line_Vulture_1.jpg",
+    "slug": "vulture",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 10,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Ram",
+    "description": "The DX Ram has been brought back from the grave! Disc Golfers can now pick up a brand new DX Ram and relive some of disc golf's early days. The Ram is like a large diameter Griffin, working  dependably as an overstable fairway driver.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/dx-ra-red.png",
+    "slug": "ram",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 6,
+    "turn": 1,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Firestorm",
+    "description": "Fade 3",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/04/firestorm_featured.jpg",
+    "slug": "firestorm",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -1,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Nuke OS",
+    "description": "The Nuke OS is the extremely overstable version of the popular max speed Nuke distance driver, perfect for full power shots and high winds.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/10/znukeos_max-br_1.jpg",
+    "slug": "nuke-os",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 13,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Ringer GT",
+    "description": "The Ringer GT is our overstable low profile putter, perfect off the tee or for technical approach shots. The Ringer GT has exceptional grip due to",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/10/jringergt_max-br_1.jpg",
+    "slug": "ringer-gt",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Mace",
+    "description": "Mace is the midrange for the masses. Being the fifth Latitude 64° mid, the Mace has taken the best of our previous molds to end up as a very solid ”all you need” midrange. The Mace can handle a big arm and also be controlled by players with less power. It will hold a hyzer line, fly reliably straight or work its way back on a long anhyzer drive. One disc challenge? Look no further.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/08/mace_op_b.png",
+    "slug": "mace",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Mjølner",
+    "description": "Guru Mjølner er som hammeren til den norrøne guden Thor, som sørger for lyn og torden. Den flyr rett og er en veldig forutsigbar putt- og innspilldisc som holder enhver vinkel i alle forhold. Mjølner kommer til å være din beste venn på banen og et fryktinngytende våpen mot dine fiender. Passer alle type spillere.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/08/d-plastic_mjølner_2-run-800x800-1.jpg",
+    "slug": "mjolner",
+    "brand": {
+      "slug": "guru"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Nova",
+    "description": "Rettflygende Overmold Putter med en stivere plastblanding i flygeplaten og en myk, grepsvennlig ytterkant. Nova er en unik putter designet med overmoldteknologien. Flygeplaten er laget av et fast plastmateriale som er fusjonert til en myk ytterkant (rim). Den myke plastblandingen i ytterkanten absorberer støt og sørger for at discen stopper der den lander mens den stivere flygeplaten gjør at mer av kraften i kastet blir overført til discen.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/08/overmold_nova_blue-800x800-1.jpg",
+    "slug": "nova",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "TL",
+    "description": "The TL is the brother of the reliable Teebird. The \"L\" stands for \"Less Overstable\" and \"Longer\". This disc has the same great speed and glide as the Teebird, but is straighter flying with less fade at the end of the flight. If you are looking for a straight flying maximum fairway driver, the TL is the answer.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2020/08/star_tl_orange-800x800-1.jpg",
+    "slug": "tl",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": 0,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Crank SS",
+    "description": "The Crank SS is a straighter flying version of the popular Crank distance driver, perfect for slower arm speeds looking to maximize distance potential!Just because you don't have a lot of power, doe",
+    "imageUrl": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/06325_Discraft_Z_Line_Crank_SS_1.jpg",
+    "slug": "crank-ss",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 2,
+    "speed": 3,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Rat",
+    "description": "The Rat is a low profile, fast flying mid-range that thrives on forehand approach shots.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/04/15085_Innova_Star_Rat_1.jpeg",
+    "slug": "rat",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 4,
+    "turn": 0,
+    "glide": 2,
+    "type": "midrage"
+  },
+  {
+    "name": "Magnet",
+    "description": "The Magnet has been a staple putter in our line up since 1993 for it's feel and understable flights. The Magnet is a domey putter with a beveled bottom rim and micro bead designed to be controlled on any line it's released with minimal fade.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/04/magnet_1.png",
+    "slug": "magnet",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Whale",
+    "description": "A limited number of some extra special Whales right here! The Whale is the best putter you've never tried! With a VTech rim, the Whale holds true for low and high power throws. The Whale is not only straight at low speeds, but is superior in the wind and at high speeds. Make sure you take it with you on windy days at the course. The KC Pro plastic material is stiff and durable and will maintain it's feel in almost all temperatures.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/FactoryStore_KcPro_Whale_2.png",
+    "slug": "whale",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Hawg",
+    "description": "Innova Hawg er en veldig overstabil putt og approach disk litt som Piggen. lite glide og dette raskt ned.",
+    "imageUrl": "https://usercontent.one/wp/www.frisbeesor.no/wp-content/uploads/2021/06/Ch_Hawg.png",
+    "slug": "hawg",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3.5,
+    "speed": 2,
+    "turn": 0,
+    "glide": 1,
+    "type": "putter"
+  },
+  {
+    "name": "Alpas",
+    "description": "Speed: 4.0 Glide: 4.0 Turn: -2.0 Fade: 1.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_c9d58223-37d3-4329-a0a2-95bb233372f2_1200x1200.jpg?v=1647335642",
+    "slug": "alpas",
+    "brand": {
+      "slug": "divergent-discs"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": -2,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Exodus",
+    "description": "Eric Oakley´s signatur Metal Flake Glow C-Blend Exodus  Speed: 7.0 Glide: 5.0 Turn: -0.5 Fade: 2.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_99557f86-4058-48ae-9a4e-d7d66cb0e2a4_1200x1200.jpg?v=1643981821",
+    "slug": "exodus",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Penrose",
+    "description": "Speed: 2.0 Glide: 4.0 Turn: 0.0 Fade: 2.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_cea9a0c9-3520-42ea-80a1-1111329fb502_1200x1200.jpg?v=1647607647",
+    "slug": "penrose",
+    "brand": {
+      "slug": "ev-7-disc-golf"
+    },
+    "fade": 2,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Illusion",
+    "description": "Disc Informasjon  Speed: 12.0 Glide: 5.0 Turn: -0.5 Fade: 2.5",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_9b0944fb-f803-4cf1-9b2f-66b03ce365a8_1200x1200.jpg?v=1647686436",
+    "slug": "illusion",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 2.5,
+    "speed": 12,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Element",
+    "description": "Speed: 5.0 Glide: 5.0 Turn: -1.0 Fade: 1.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_077e45fb-b687-44e5-ad75-00cd0b6ca12f_1200x1200.jpg?v=1647859098",
+    "slug": "element",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Troija",
+    "description": "Disc Informasjon  Speed: 5.0 Glide: 3.0 Turn: 1.0 Fade: 4.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_965b0002-9030-4876-96c4-4eb6fec76756_1200x1200.jpg?v=1652690610",
+    "slug": "troija",
+    "brand": {
+      "slug": "prodiscus"
+    },
+    "fade": 4,
+    "speed": 5,
+    "turn": 1,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "Rune",
+    "description": "Disc Informasjon  Speed: 2.0 Glide: 4.0 Turn: 0.0 Fade: 0.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_9ef3f4e1-6353-45ab-904b-37ba69055f8d_1200x1200.jpg?v=1652690553",
+    "slug": "rune",
+    "brand": {
+      "slug": "viking-discs"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 4,
+    "type": "putter"
+  },
+  {
+    "name": "Alpaca",
+    "description": "Disc Informasjon  Speed: 3.0 Glide: 3.0 Turn: 0.0 Fade: 1.0 Stabilitet: Stabil  Alpaca Dimensjoner Diameter: 21.1 cm Høyde: 2.1 cm Rim Dybde: 1.5 cm Rim Bredde: 1.0 cm Max Vekt: 176.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_b604a9b2-2912-443a-85e7-51f4016439a4_1200x1200.jpg?v=1652690914",
+    "slug": "alpaca",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Dynasty",
+    "description": "Disc Informasjon  Speed: 9.0 Glide: 5.0 Turn: -1.0 Fade: 2.0 Stabilitet: Stabil",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_75621cbe-d555-477d-8f66-b19ba1d94539_1200x1200.jpg?v=1652691173",
+    "slug": "dynasty",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Pharaoh",
+    "description": "Disc Informasjon  Speed: 13.0 Glide: 6.0 Turn: -1.0 Fade: 2.0 Stabilitet: Stabil Pharaoh Dimensjoner Diameter: 21.1 cm Høyde: 1.4 cm Rim Dybde: 1.1 cm Rim Bredde: 2.3 cm Max Høyde: 176.00 g",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_f66704e9-38b1-458a-8073-24eeacad131b_1200x1200.jpg?v=1652691243",
+    "slug": "pharaoh",
+    "brand": {
+      "slug": "infinite-discs"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Loki",
+    "description": "Disc Informasjon  Speed: 4.0 Glide: 2.0 Turn: 0.0 Fade: 4.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_b0d65144-6739-441c-9eee-2eb43ea60e42_1200x1200.jpg?v=1652690217",
+    "slug": "loki",
+    "brand": {
+      "slug": "viking-discs"
+    },
+    "fade": 4,
+    "speed": 4,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Prophecy",
+    "description": "Speed: 5.0 Glide: 5.0 Turn: 0.0 Fade: 2.0",
+    "imageUrl": "http://cdn.shopify.com/s/files/1/0564/5824/8377/products/image_1622bd89-57da-45da-97ed-fd6e5a5c17d4_1200x1200.jpg?v=1648037914",
+    "slug": "prophecy",
+    "brand": {
+      "slug": "gateway-disc-sports"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Dominator",
+    "description": "Speed: 13.0 Glide: 5.0 Turn: -1.0 Fade: 2.0",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/9eb0570f590343386359c1ce277bebe8/b/l/blizzard_dominator_purple-420x420.jpg",
+    "slug": "dominator",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "XXX",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/o/gold_xxx_yellow-420x420_3.jpg",
+    "slug": "xxx",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 4,
+    "speed": 7,
+    "turn": 0,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Krait",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/s/gs_krait_b.jpg",
+    "slug": "krait",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Wahoo",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/w/a/wahoo_rpro_b.jpg",
+    "slug": "wahoo",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Colossus",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/s/t/starcol_b.jpg",
+    "slug": "colossus",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Giant",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/i/giant_vip_b.jpg",
+    "slug": "giant",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3.5,
+    "speed": 13,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "King",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/k/i/king_vip_b.jpg",
+    "slug": "king",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -1.5,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Wordl",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/w/s/ws_world_b.png",
+    "slug": "wordl",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Warship",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/w/a/warship_vip_b.jpg",
+    "slug": "warship",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": 0,
+    "glide": 6,
+    "type": "midrage"
+  },
+  {
+    "name": "Bard",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/b/a/bard_tourna_b_1.jpg",
+    "slug": "bard",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Fury",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/f/u/fury-op.jpg",
+    "slug": "fury",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -2,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "Saint Pro",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/s/a/saintpro_opto_b.jpg",
+    "slug": "saint-pro",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Gladiator",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/l/gladiator_opto_b.jpg",
+    "slug": "gladiator",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3.5,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Defender",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/e/defender_lucid_b.jpg",
+    "slug": "defender",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 3,
+    "speed": 13,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Convict",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/o/convictlucid_b.jpg",
+    "slug": "convict",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Queen",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/q/u/queen_vip_b.jpg",
+    "slug": "queen",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 2,
+    "speed": 14,
+    "turn": -3,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Avenger",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/a/v/avenger_z_b.jpg",
+    "slug": "avenger",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 3,
+    "speed": 10,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "XL",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/_/d_xl_b.jpg",
+    "slug": "xl",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -2,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "DDX",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/d/ddx_s_b_1_1.jpg",
+    "slug": "ddx",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -1,
+    "glide": 6,
+    "type": "fairway"
+  },
+  {
+    "name": "FD3",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/l/i/lizotte_fd3_1_1.png",
+    "slug": "fd3",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Gobi",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/o/gobi2_b.jpg",
+    "slug": "gobi",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 6,
+    "turn": -0.5,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Ahti",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/a/h/ahti_tou_b.jpg",
+    "slug": "ahti",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 4,
+    "speed": 9,
+    "turn": 0,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "Mystere",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/-/g-star_mystere_firstrun-800x800.jpg",
+    "slug": "mystere",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Spike",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/p/i/pike_zero_b.jpg",
+    "slug": "spike",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 4,
+    "turn": -1,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "Drone",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/b/i/big_z_drone_b.jpg",
+    "slug": "drone",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 5,
+    "turn": 1,
+    "glide": 3,
+    "type": "midrage"
+  },
+  {
+    "name": "TD",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/t/d/td_dm.jpg",
+    "slug": "td",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 10,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Crush",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/i/dis_disc_esp_crush.jpg",
+    "slug": "crush",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 4,
+    "speed": 11,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "MD2",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/r/e/reinventyourgame_b_1_.jpg",
+    "slug": "md2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 4,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "DD2",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/r/e/reinventyourgame_b_1__1.jpg",
+    "slug": "dd2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 13,
+    "turn": -2,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "CD3",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/d/cd3c_b.jpg",
+    "slug": "cd3",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Mamba",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/-/g-star_mamba_purple-420x420.jpg",
+    "slug": "mamba",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 1,
+    "speed": 11,
+    "turn": -5,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "MD4",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/l/i/lizmd4_b.jpg",
+    "slug": "md4",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "P1X",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/p/x/px1_d-line-420x420.jpg",
+    "slug": "p1x",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 0,
+    "speed": 2,
+    "turn": 0,
+    "glide": 3,
+    "type": "putter"
+  },
+  {
+    "name": "P3",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/p/3/p3_c-line-800x800.jpg",
+    "slug": "p3",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "PD2",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/r/driver_store_6102f4de-6fb4-425c-9198-3f204e2fccf2_1024x1024.png",
+    "slug": "pd2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 4,
+    "speed": 12,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "DD",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/d/d/dd__c_line_b.png",
+    "slug": "dd",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 11,
+    "turn": 0,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "CD2",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/d/cd2_c_b.jpg",
+    "slug": "cd2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "FD2",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/_/c_fd2_blue_2400px_144ppi_2048x2048_1.jpg",
+    "slug": "fd2",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 2,
+    "speed": 7,
+    "turn": 0,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "RocX3",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/h/champion_rocx3_blue-800x800.jpg",
+    "slug": "rocx3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 3.5,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "TeeDevil",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/t/e/teedevilspec_b.jpg",
+    "slug": "teedevil",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 12,
+    "turn": -1,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Ruby",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/o/p/opto_ruby_blue-800x800.jpg",
+    "slug": "ruby",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 3,
+    "turn": -3,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Teerex",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/t/e/teerex_star_b.jpg",
+    "slug": "teerex",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 11,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Zion",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/2/k/2k_zion_blue-420x420.jpg",
+    "slug": "zion",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 9,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "Trident",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/g/o/gold_trident_burst-blue-420x420.jpg",
+    "slug": "trident",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 3,
+    "speed": 6,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "P3X",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/p/3/p3x-s_b.jpg",
+    "slug": "p3x",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 3,
+    "turn": 0,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "TDx",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/t/d/tdx_s_b.jpg",
+    "slug": "tdx",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -3,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Limit",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/l/i/limitsp_b.jpg",
+    "slug": "limit",
+    "brand": {
+      "slug": "mvp-disc-sports"
+    },
+    "fade": 4,
+    "speed": 14,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Falchion",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/o/p/opto_falchion_orange-800x800.jpg",
+    "slug": "falchion",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 2,
+    "speed": 8,
+    "turn": -1,
+    "glide": 5,
+    "type": "fairway"
+  },
+  {
+    "name": "Claymore",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/r/e/retro_burst_claymore_wine-red-420x420.jpg",
+    "slug": "claymore",
+    "brand": {
+      "slug": "latitude-64"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": -1,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Criminal",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/r/crimse.jpg",
+    "slug": "criminal",
+    "brand": {
+      "slug": "dynamic-discs"
+    },
+    "fade": 4,
+    "speed": 10,
+    "turn": 1,
+    "glide": 3,
+    "type": "fairway"
+  },
+  {
+    "name": "PDx",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/p/d/pdxc_b.jpg",
+    "slug": "pdx",
+    "brand": {
+      "slug": "discmania"
+    },
+    "fade": 3,
+    "speed": 11,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Destiny",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/2/5/2512-2.jpg",
+    "slug": "destiny",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -2,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "Catapult",
+    "description": "",
+    "imageUrl": "https://www.dgshop.no/pub/media/catalog/product/cache/873ab35ce770a8e6abb698435365a0d0/c/a/catapult_vip.jpg",
+    "slug": "catapult",
+    "brand": {
+      "slug": "westside-discs"
+    },
+    "fade": 3,
+    "speed": 14,
+    "turn": -0.5,
+    "glide": 4,
+    "type": "distance"
+  },
+  {
+    "name": "Buzzz GT",
+    "description": "",
+    "imageUrl": "https://static.wixstatic.com/media/b30feb_053f4a389db642a2ac03a7be59547d7a~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+    "slug": "buzzz-gt",
+    "brand": {
+      "slug": "discraft"
+    },
+    "fade": 1,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "F7",
+    "description": "Om molden:The Prodigy Disc F7 is a medium speed, understable fairway driver with substantial glide. It is a great choice for recreational and beginner players. It is also excellent for turn-over shots and rollers.\t\tFlight Numbers: 7 | 5 | -3 | 1\t \tOm plasten:400 Plastic is a premium blend of material that is extremely durable. The unique blend of plastics feels as good as it looks and will be able to be broken in over time. This tour quality plastic gives the thrower impeccable grip, even when it is wet.",
+    "imageUrl": "https://static.wixstatic.com/media/b30feb_837105e456d54a07881a0de4a85d4836~mv2.png/v1/fit/w_500,h_500,q_90/file.png",
+    "slug": "f7",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 7,
+    "turn": -3,
+    "glide": 5,
+    "type": "putter"
+  },
+  {
+    "name": "Falcor",
+    "description": "The Falcor is our collaboration with Cale Leiviska. It is an overstable driver that also packs in a lot of glide. It's a disc players will be able to lean on, and players with higher arm speeds will be able to get a max distance flight out of it.400 Plastic400 Plastic is a premium blend of material that is extremely durable. The unique blend of plastics feels as good as it looks and will be able to be broken in over time. This tour quality plastic gives the thrower impeccable grip, even when it is wet.",
+    "imageUrl": "https://static.wixstatic.com/media/ed9f0c_463714147e0c4fdd8f66a4e747abeaf6~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+    "slug": "falcor",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2.5,
+    "speed": 13,
+    "turn": -1,
+    "glide": 6,
+    "type": "distance"
+  },
+  {
+    "name": "FX-3",
+    "description": "FX-3 is a workable fairway driver for players of all skill levels. Newer players will have a straight disc with a reliable fade, while more experienced players will have something they can hyzer-flip through the woods or throw beautiful S-lines with in the open.400 Plastic400 Plastic is a premium blend of material that is extremely durable. The unique blend of plastics feels as good as it looks and will be able to be broken in over time. This tour quality plastic gives the thrower impeccable grip, even when it is wet.",
+    "imageUrl": "https://static.wixstatic.com/media/ed9f0c_b74f1a4f605f4d578834927bc069935f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+    "slug": "fx-3",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 2,
+    "speed": 9,
+    "turn": -1.5,
+    "glide": 4,
+    "type": "fairway"
+  },
+  {
+    "name": "X5",
+    "description": "Om molden:The Prodigy Disc X5 is an understable, low profile, high-speed distance driver. It is great for all players. Players with lower arm speed will get a lot more glide and distance. Players with moderate arm speed will be able to get a long flight out of this disc by throwing a slight hyzer flip. (Left edge down about 20% from flat at release). For players with faster arm speed, the X5 will flip early in its flight path and will turn right, with a soft finish to the left making it useful for wooded holes that require shaping the shot. It will also be great for long controlled rollers. The X5 performs very well at low heights and in tunnel shots.\t\tFlight Numbers: 9 | 5 | -4 | 1\t \tOm plasten:400 Plastic is a premium blend of material that is extremely durable. The unique blend of plastics feels as good as it looks and will be able to be broken in over time. This tour quality plastic gives the thrower impeccable grip, even when it is wet.",
+    "imageUrl": "https://static.wixstatic.com/media/b30feb_24a8d763b72f439081872e7c8bf6da5e~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+    "slug": "x5",
+    "brand": {
+      "slug": "prodigy-disc"
+    },
+    "fade": 1,
+    "speed": 9,
+    "turn": -4,
+    "glide": 5,
+    "type": "distance"
+  },
+  {
+    "name": "Mid Disc3",
+    "description": "The Innova Star Metal Warrior Mid Disc3 is an overstable midrange made with premium plastic. The Innova Metal Warrior was originally part of the old Discmania Originals before they left Innova.",
+    "imageUrl": "https://starframedisc-i01.mycdn.no/mysimgprod/starframedisc_mystore_no/images/Zvpwc_Innova_Disc_Star_Mid_Disc3__Metal_Warrior__1.png/w1200h1200.png",
+    "slug": "mid-disc3",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 5,
+    "type": "midrage"
+  },
+  {
+    "name": "Lion",
+    "description": "Tame your mid-range shots. Defined by its stable flight, the Lion will attack at any angle-hyzer, flat, or anhyzer. The convex rim, small bead and flat flight plate give the Lion a comfortable grip and create a neutral flight.",
+    "imageUrl": "https://starframedisc-i01.mycdn.no/mysimgprod/starframedisc_mystore_no/images/O2GqD_Innova_Disc_Halo_Star_Lion_1.png/w1200h1200.png",
+    "slug": "lion",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 2,
+    "speed": 5,
+    "turn": 0,
+    "glide": 4,
+    "type": "midrage"
+  },
+  {
+    "name": "Sonic",
+    "description": "The Sonic has a comfortable low profile grip with great thumb traction. As a putter, the Sonic has a nice straight flight and sticks well in the chains. The Sonic also makes a versatile short range approach and escape disc when thrown sidearm or backhand.",
+    "imageUrl": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/SeVnL_Innova_Disc_Halo_Star_Sonic__Garrett_Gurthie_1.png/w1200h1200.png",
+    "slug": "sonic",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 0,
+    "speed": 1,
+    "turn": -4,
+    "glide": 2,
+    "type": "putter"
+  },
+  {
+    "name": "Power Disc2",
+    "description": "Power Disc 2 &#8211; If you are looking for beefy fairway drivers then the Power Disc 2 is the disc for you. They are extremely overstable but if you can get it up to speed, they absolutely bomb. Perf",
+    "imageUrl": "https://starframedisc-i01.mycdn.no/mysimgprod/starframedisc_mystore_no/images/imtQG_Innova_Disc_Star_Power_Disc2__Elixer__1.png/w1200h1200.png",
+    "slug": "power-disc2",
+    "brand": {
+      "slug": "innova-disc-golf"
+    },
+    "fade": 4,
+    "speed": 12,
+    "turn": 0,
+    "glide": 4,
+    "type": "distance"
+  }
+]
