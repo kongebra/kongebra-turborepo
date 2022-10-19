@@ -16,7 +16,7 @@ const ONE_DAY = ONE_HOUR * 24;
 function checks({ lastmod }: CommonJobItem, product: Product) {
   // product has changed
   if (product.lastmod !== lastmod) {
-    return false;
+    return [false, "lastmod"];
   }
 
   // check when the product last changed
@@ -28,12 +28,12 @@ function checks({ lastmod }: CommonJobItem, product: Product) {
     now.getDate() === then.getDate();
 
   if (!isSameDay) {
-    return false;
+    return [false, "product.updatedAt"];
   }
 
   // optimisticlly trust that this product is ok
   // if not, we will check it again tomorrow
-  return true;
+  return [true, "none"];
 }
 
 export default async function common({ id, data }: Bull.Job<CommonJobItem>) {
@@ -44,9 +44,30 @@ export default async function common({ id, data }: Bull.Job<CommonJobItem>) {
   // check if in cache
   if (cachedProduct) {
     // do checks on product
-    const ok = checks(data, cachedProduct);
+    const [ok, reason] = checks(data, cachedProduct);
     // checks is not ok
     if (!ok) {
+      if (reason === "product.updatedAt") {
+        // we are a bit optimistic
+        await prisma.product.update({
+          where: {
+            id: cachedProduct.id,
+          },
+          data: {
+            updatedAt: new Date(),
+
+            prices: {
+              create: {
+                amount: cachedProduct.latestPrice,
+                currency: "NOK",
+              },
+            },
+          },
+        });
+
+        console.timeEnd(`common - ${id}`);
+        return;
+      }
       // add to queue for specific store
       await storeQueues[data.store.slug as StoreSlug].add(data);
     }
@@ -76,8 +97,30 @@ export default async function common({ id, data }: Bull.Job<CommonJobItem>) {
   // save to cache
   await redis.set(data.loc, product, ONE_DAY);
   // do checks on product from database
-  const ok = checks(data, product);
+  const [ok, reason] = checks(data, product);
   if (!ok) {
+    if (reason === "product.updatedAt") {
+      // we are a bit optimistic
+      await prisma.product.update({
+        where: {
+          id: product.id,
+        },
+        data: {
+          updatedAt: new Date(),
+
+          prices: {
+            create: {
+              amount: product.latestPrice,
+              currency: "NOK",
+            },
+          },
+        },
+      });
+
+      console.timeEnd(`common - ${id}`);
+      return;
+    }
+
     // add to queue for specific store
     await storeQueues[data.store.slug as StoreSlug].add(data);
   }

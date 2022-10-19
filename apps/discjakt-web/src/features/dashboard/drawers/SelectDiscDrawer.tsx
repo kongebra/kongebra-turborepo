@@ -23,7 +23,7 @@ const SelectDiscDrawer: React.FC<Props> = ({
   const { discs } = useDiscs();
   const {
     mutations: { update: updateProduct },
-  } = useProducts();
+  } = useProducts({ enabled: false });
 
   const [selectedDisc, setSelectedDisc] = useState<DiscDetails | undefined>();
   const [value, setValue] = useState<string>("");

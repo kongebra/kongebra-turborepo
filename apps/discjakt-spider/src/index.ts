@@ -17,6 +17,7 @@ import krokholdgs from "./processors/krokholdgs.processor";
 import prodisc from "./processors/prodisc.processor";
 import spinnvilldg from "./processors/spinnvilldg.processor";
 import starframe from "./processors/starframe.processor";
+import { StoreSlug } from "./types";
 
 /**
  * QUEUES
@@ -44,31 +45,23 @@ storeQueues.starframe.process(starframe);
  * CRON JOBS
  */
 
-cron.schedule("*/30 * * * *", async () => {
-  console.log("Cleaning up queue");
+cron.schedule("*/1 * * * *", async () => {
+  console.log("## CLEAN UP QUEUE SCHEDULE");
 
   // common
-  await commonQueue.clean(10, "completed");
+  await commonQueue.clean(0, "completed");
 
   // stores
-  await storeQueues.aceshop.clean(10, "completed");
-  await storeQueues.dgshop.clean(10, "completed");
-  await storeQueues.discoverdiscs.clean(10, "completed");
-  await storeQueues.frisbeebutikken.clean(10, "completed");
-  await storeQueues.frisbeefeber.clean(10, "completed");
-  await storeQueues.frisbeesor.clean(10, "completed");
-  await storeQueues.gurudiscgolf.clean(10, "completed");
-  await storeQueues.krokholdgs.clean(10, "completed");
-  await storeQueues.prodisc.clean(10, "completed");
-  await storeQueues.spinnvilldg.clean(10, "completed");
-  await storeQueues.starframe.clean(10, "completed");
+  const keys = Object.keys(storeQueues) as StoreSlug[];
+  for (const key of keys) {
+    await storeQueues[key].clean(5 * 60 * 1000, "completed");
+  }
 });
 
 cron.schedule("*/10 * * * *", async () => {
   // run every 10 minute
-
   // will do the store that was
-  await crawlLatestStoreSitemap();
+  // await crawlLatestStoreSitemap();
 });
 
 /**

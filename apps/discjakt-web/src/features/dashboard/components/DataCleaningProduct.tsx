@@ -38,7 +38,7 @@ const DataCleaningProduct: React.FC<Props> = ({
   const { discs } = useDiscs();
   const {
     mutations: { update: updateProduct },
-  } = useProducts();
+  } = useProducts({ enabled: false });
 
   const findMatches = useCallback(
     (product: Product) => {

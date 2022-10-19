@@ -20,15 +20,17 @@ const CreateDiscModal: React.FC<Props> = ({ show, onClose, defaultValues }) => {
   } = useDiscs();
   const {
     mutations: { update: updateProduct },
-  } = useProducts();
+  } = useProducts({ enabled: false });
 
   const onSubmit = async (data: Disc) => {
     const disc = await createDisc.mutateAsync(data);
 
     if (defaultValues && disc) {
       await updateProduct.mutateAsync({
-        ...defaultValues,
-        discId: disc.id,
+        record: {
+          ...defaultValues,
+          discId: disc.id,
+        },
       });
     }
 

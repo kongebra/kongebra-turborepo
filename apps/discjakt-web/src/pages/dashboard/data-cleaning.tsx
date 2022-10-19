@@ -29,7 +29,7 @@ const DashboardDataCleaingPage = () => {
   const { data } = useQuery<Product[]>(["data-cleaning"], fetchData, {});
 
   const { discs } = useDiscs();
-  const { mutations } = useProducts();
+  const { mutations } = useProducts({ enabled: false });
 
   const [selectedProduct, setSelectedProduct] = useState<Product | undefined>();
 

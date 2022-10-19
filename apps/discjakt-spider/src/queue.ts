@@ -4,9 +4,7 @@ import { CommonJobItem, StoreSlug } from "./types";
 
 export const queueOptions: Q.QueueOptions = {
   defaultJobOptions: {
-    removeOnComplete: {
-      age: 60,
-    },
+    removeOnComplete: 10,
   },
 };
 

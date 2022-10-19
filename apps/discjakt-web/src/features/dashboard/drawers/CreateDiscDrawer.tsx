@@ -24,7 +24,7 @@ const CreateDiscDrawer: React.FC<Props> = ({
   } = useDiscs();
   const {
     mutations: { update: updateProduct },
-  } = useProducts();
+  } = useProducts({ enabled: false });
 
   const onSubmit = async (data: Disc) => {
     const record = {

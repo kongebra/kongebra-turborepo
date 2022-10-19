@@ -25,12 +25,19 @@ const updateProduct = async ({
   return resp.data;
 };
 
-export default function useProducts() {
+type UseProductsProps = {
+  enabled?: boolean;
+};
+
+export default function useProducts(
+  { enabled }: UseProductsProps = { enabled: true }
+) {
   const queryClient = useQueryClient();
 
   const { data, ...rest } = useQuery<ProductDetails[]>(
     ["products"],
-    fetchProducts
+    fetchProducts,
+    { enabled: enabled }
   );
 
   const updateMutation = useMutation(updateProduct, {

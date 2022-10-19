@@ -19,7 +19,7 @@ async function GET(req: NextApiRequest, res: NextApiResponse) {
       discId: null,
       isDisc: null,
     },
-    take: 50,
+    take: 100,
   });
 
   res.status(200).json(items);
