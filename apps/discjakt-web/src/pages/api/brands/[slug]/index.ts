@@ -39,8 +39,6 @@ async function GET(req: NextApiRequest, res: NextApiResponse, slug: string) {
 async function PUT(req: NextApiRequest, res: NextApiResponse, slug: string) {
   const record = req.body as Partial<Brand>;
 
-  console.log({ record, slug });
-
   const result = await prisma.brand.update({
     where: {
       slug,
