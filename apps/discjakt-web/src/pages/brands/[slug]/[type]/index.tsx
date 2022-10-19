@@ -11,7 +11,7 @@ import {
   SimpleProduct,
 } from "src/components";
 
-import { useSortDiscs } from "src/hooks";
+import { useDiscs, useSortDiscs } from "src/hooks";
 import { prisma } from "src/lib/prisma";
 import {
   BrandDetails,
@@ -21,14 +21,18 @@ import {
 } from "src/types/prisma";
 import { serializeDisc } from "src/utils/disc";
 import { discTypeToString } from "src/utils/discType";
+import { Brand } from "@prisma/client";
+import useBrandDiscs from "src/hooks/use-brand-discs";
 
 type Props = {
-  brand: BrandDetails;
+  brand: Brand;
   type: string;
 };
 
 const BrandTypesPage: NextPage<Props> = ({ brand, type }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
+
+  const { discs, isLoading } = useBrandDiscs(brand.slug);
 
   return (
     <>
@@ -65,10 +69,12 @@ const BrandTypesPage: NextPage<Props> = ({ brand, type }) => {
 
       <hr />
 
+      {/* // TODO: Loading state */}
+
       <Section>
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
-            {brand.discs.sort(sortFn).map((disc) => (
+            {discs.sort(sortFn).map((disc) => (
               <SimpleProduct key={disc.id} disc={disc} />
             ))}
           </div>
@@ -112,7 +118,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     where: {
       slug,
     },
-    select: brandDetailsSelect,
   });
 
   if (!brand) {

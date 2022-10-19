@@ -41,7 +41,7 @@ const HomePage: NextPage<Props> = ({ trending, latest }) => {
             eller pris!
           </p>
 
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6 lg:gap-4">
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-5 lg:gap-4">
             {latest.map((disc) => (
               <SimpleProduct key={disc.id} disc={disc} />
             ))}
@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     orderBy: {
       updatedAt: "desc",
     },
-    take: 24,
+    take: 10,
   });
 
   const trendingDiscs = JSON.parse(

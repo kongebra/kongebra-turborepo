@@ -6,7 +6,7 @@ const LoadingPage = () => {
   return (
     <Container className="flex flex-1 min-h-full items-center justify-center">
       <Image
-        src="/illustrations/loading.svg"
+        src="/illustrations/loading_turtle.svg"
         alt="Laster inn siden"
         width={512}
         height={512}

@@ -7,9 +7,14 @@ import Link from "next/link";
 import { prisma } from "src/lib/prisma";
 import { Breadcrumbs, Container, Heading, Section } from "src/components";
 import { type BrandDetails, brandDetailsSelect } from "src/types/prisma";
+import { Brand } from "@prisma/client";
 
 type Props = {
-  brands: BrandDetails[];
+  brands: (Brand & {
+    _count: {
+      discs: number;
+    };
+  })[];
 };
 
 const BrandsPage: NextPage<Props> = ({ brands }) => {
@@ -43,7 +48,6 @@ const BrandsPage: NextPage<Props> = ({ brands }) => {
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {brands
-              .filter((brand) => brand.discs.length > 0)
               .sort((a, b) => a.name.localeCompare(b.name))
               .map((brand) => (
                 <Link key={brand.id} href={`/brands/${brand.slug}`} passHref>
@@ -74,7 +78,7 @@ const BrandsPage: NextPage<Props> = ({ brands }) => {
                         </span>
                       </div>
 
-                      <span>{`${brand.discs.length} disker`}</span>
+                      <span>{`${brand._count.discs} disker`}</span>
                     </div>
                   </a>
                 </Link>
@@ -88,7 +92,20 @@ const BrandsPage: NextPage<Props> = ({ brands }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const brands = await prisma.brand.findMany({
-    select: brandDetailsSelect,
+    select: {
+      id: true,
+      name: true,
+      description: true,
+      url: true,
+      imageUrl: true,
+      slug: true,
+
+      _count: {
+        select: {
+          discs: true,
+        },
+      },
+    },
   });
 
   return {

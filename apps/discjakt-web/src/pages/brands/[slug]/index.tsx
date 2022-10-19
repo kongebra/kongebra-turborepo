@@ -9,6 +9,7 @@ import {
   Breadcrumbs,
   Container,
   Heading,
+  LoadingPage,
   Section,
   SelectDiscSort,
   SimpleProduct,
@@ -26,7 +27,7 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
 
   const { discs: allDiscs, isLoading } = useDiscs();
-  const discs = allDiscs.filter((x) => x.brand.id === brand.id) || [];
+  const discs = allDiscs.filter((x) => x.brand.slug === brand.slug) || [];
 
   return (
     <>
@@ -68,19 +69,17 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
       <hr />
 
       <Section>
-        <Container>
-          {isLoading ? (
-            <div>
-              <p>Laster ...</p>
-            </div>
-          ) : (
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <Container>
             <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
               {discs.sort(sortFn).map((disc) => (
                 <SimpleProduct key={disc.id} disc={disc} />
               ))}
             </div>
-          )}
-        </Container>
+          </Container>
+        )}
       </Section>
     </>
   );

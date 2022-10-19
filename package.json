@@ -11,7 +11,7 @@
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
     "dev": "turbo run dev --parallel",
-    "dev:web": "tubro run dev --filter=discjakt-web",
+    "dev:web": "turbo run dev --filter=discjakt-web",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "generate": "turbo run generate",
     "lint": "turbo run lint",
