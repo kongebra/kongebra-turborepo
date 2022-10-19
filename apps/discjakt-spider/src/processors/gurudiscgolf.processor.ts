@@ -14,6 +14,8 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
+  return;
+
   console.time(`gurudiscgolf - ${id}`);
 
   const response = await axios.get(loc);
