@@ -48,7 +48,8 @@ const BrandsPage: NextPage<Props> = ({ brands }) => {
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {brands
-              .sort((a, b) => a.name.localeCompare(b.name))
+              .filter((brand) => brand._count.discs)
+              .sort((a, b) => b._count.discs - a._count.discs)
               .map((brand) => (
                 <Link key={brand.id} href={`/brands/${brand.slug}`} passHref>
                   <a className="group" title={brand.name}>

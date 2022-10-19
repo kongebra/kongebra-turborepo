@@ -1,3 +1,4 @@
+import { Brand } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "src/lib/prisma";
 import { getQueryStringValue } from "src/utils/query";
@@ -14,12 +15,8 @@ export default async function handler(
   switch (req.method) {
     case "GET":
       return await GET(req, res, slug);
-    case "POST":
-      return await POST(req, res);
     case "PUT":
-      return await PUT(req, res);
-    case "DELETE":
-      return await DELETE(req, res);
+      return await PUT(req, res, slug);
     default:
       return res.status(405).end("method not allowed");
   }
@@ -39,8 +36,19 @@ async function GET(req: NextApiRequest, res: NextApiResponse, slug: string) {
   res.status(200).json(brand);
 }
 
-async function POST(req: NextApiRequest, res: NextApiResponse) {}
+async function PUT(req: NextApiRequest, res: NextApiResponse, slug: string) {
+  const record = req.body as Partial<Brand>;
 
-async function PUT(req: NextApiRequest, res: NextApiResponse) {}
+  console.log({ record, slug });
 
-async function DELETE(req: NextApiRequest, res: NextApiResponse) {}
+  const result = await prisma.brand.update({
+    where: {
+      slug,
+    },
+    data: {
+      ...record,
+    },
+  });
+
+  res.status(200).json(result);
+}

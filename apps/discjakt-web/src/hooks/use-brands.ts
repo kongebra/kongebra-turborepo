@@ -6,7 +6,9 @@ import config from "src/config";
 const BASE_URL = `${config.baseUrl}/api/brands`;
 
 const fetchBrands = async () => {
-  const resp = await axios.get<Brand[]>(`${BASE_URL}`);
+  const resp = await axios.get<(Brand & { _count: { discs: number } })[]>(
+    `${BASE_URL}`
+  );
 
   return await resp.data;
 };
@@ -17,12 +19,28 @@ const createBrand = async (record: Brand) => {
   return await resp.data;
 };
 
+const updateBrand = async ({
+  record,
+}: {
+  record: Partial<Omit<Brand, "slug">> & { slug: string };
+}) => {
+  const resp = await axios.put<Brand>(`${BASE_URL}/${record.slug}`, record);
+
+  return await resp.data;
+};
+
 export default function useBrands() {
   const queryClient = useQueryClient();
 
-  const { data, ...rest } = useQuery<Brand[]>(["brands"], fetchBrands);
+  const { data, ...rest } = useQuery(["brands"], fetchBrands);
 
   const createMutation = useMutation(createBrand, {
+    onSuccess() {
+      queryClient.invalidateQueries(["brands"]);
+    },
+  });
+
+  const updateMutation = useMutation(updateBrand, {
     onSuccess() {
       queryClient.invalidateQueries(["brands"]);
     },
@@ -35,6 +53,7 @@ export default function useBrands() {
 
     mutations: {
       create: createMutation,
+      update: updateMutation,
     },
   };
 }

@@ -6,8 +6,9 @@ import DashboardLayout from "src/layout/DashboardLayout";
 import { useSession } from "next-auth/react";
 import Image from "next/future/image";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import { useBoolean } from "usehooks-ts";
+import EditBrandDrawer from "src/features/dashboard/drawers/EditBrandDrawer";
 
 const DashboardBrandsPage = () => {
   const router = useRouter();
@@ -21,6 +22,9 @@ const DashboardBrandsPage = () => {
   const { brands, isLoading } = useBrands();
 
   const createModal = useBoolean();
+  const editModal = useBoolean();
+
+  const [selectedBrand, setSelectedBrand] = useState<Brand | undefined>();
 
   const render = () => {
     if (isLoading) {
@@ -48,32 +52,42 @@ const DashboardBrandsPage = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
-          {brands.sort(sortBrand).map((brand) => (
-            <div key={brand.id} className="bg-slate-100 p-3 rounded">
-              <div className="flex gap-3">
-                <div>
-                  <Image
-                    className="rounded max-w-full h-auto"
-                    src={brand.imageUrl ? brand.imageUrl : "/placeholder.png"}
-                    alt={brand.name}
-                    width={128}
-                    height={128}
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col justify-between">
+          {brands
+            .sort((a, b) => b._count.discs - a._count.discs)
+            .map((brand) => (
+              <div key={brand.id} className="bg-slate-100 p-3 rounded">
+                <div className="flex gap-3">
                   <div>
-                    <h2 className="text-2xl font-bold">{brand.name}</h2>
-                    <p>Discs: {(brand as any)._count.discs}</p>
+                    <Image
+                      className="rounded max-w-full h-auto"
+                      src={brand.imageUrl ? brand.imageUrl : "/placeholder.png"}
+                      alt={brand.name}
+                      width={128}
+                      height={128}
+                    />
                   </div>
 
-                  <div className="flex justify-end">
-                    <Button size="sm">Edit</Button>
+                  <div className="flex flex-1 flex-col justify-between">
+                    <div>
+                      <h2 className="text-2xl font-bold">{brand.name}</h2>
+                      <p>Discs: {(brand as any)._count.discs}</p>
+                    </div>
+
+                    <div className="flex justify-end">
+                      <Button
+                        size="sm"
+                        onClick={() => {
+                          setSelectedBrand(brand);
+                          editModal.setTrue();
+                        }}
+                      >
+                        Edit
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     );
@@ -94,11 +108,20 @@ const DashboardBrandsPage = () => {
   return (
     <>
       <DashboardLayout>{render()}</DashboardLayout>
+
       <CreateBrandModal
         show={createModal.value}
         onClose={createModal.setFalse}
       />
-      /
+
+      <EditBrandDrawer
+        defaultValues={selectedBrand}
+        show={editModal.value}
+        onClose={() => {
+          editModal.setFalse();
+          setSelectedBrand(undefined);
+        }}
+      />
     </>
   );
 };
