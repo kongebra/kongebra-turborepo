@@ -45,17 +45,15 @@ storeQueues.starframe.process(starframe);
  * CRON JOBS
  */
 
-cron.schedule("*/1 * * * *", async () => {
-  console.log("## CLEAN UP QUEUE SCHEDULE");
-
-  // common
-  await commonQueue.clean(0, "completed");
-
-  // stores
-  const keys = Object.keys(storeQueues) as StoreSlug[];
-  for (const key of keys) {
-    await storeQueues[key].clean(5 * 60 * 1000, "completed");
-  }
+cron.schedule("* */1 * * *", async () => {
+  // console.log("## CLEAN UP QUEUE SCHEDULE");
+  // // common
+  // await commonQueue.clean(0, "completed");
+  // // stores
+  // const keys = Object.keys(storeQueues) as StoreSlug[];
+  // for (const key of keys) {
+  //   await storeQueues[key].clean(1000 * 60 * 5, "completed");
+  // }
 });
 
 cron.schedule("*/10 * * * *", async () => {

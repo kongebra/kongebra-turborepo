@@ -61,6 +61,7 @@ export const findMatch = (product: Product, discs: DiscDetails[]) => {
         "p",
         "m",
         "x",
+        "cosmic",
       ];
       for (const customRule of customRules) {
         if (

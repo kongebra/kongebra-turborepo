@@ -29,7 +29,7 @@ export default async function processor({
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
     description:
       $('meta[property="og:description"]').attr("content")?.trim() || "",
-    imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
+    imageUrl: $(".product.media img").first().attr("src")?.trim() || "",
   };
 
   if (!data.title && !data.imageUrl && !data.description && !priceStr) {

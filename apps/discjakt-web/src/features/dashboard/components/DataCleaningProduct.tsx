@@ -1,5 +1,5 @@
 import { Disc, Product } from "@prisma/client";
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 import Button from "src/components/Button";
 import Image from "next/future/image";
 import { useQuery } from "@tanstack/react-query";
@@ -8,6 +8,7 @@ import useProducts from "src/hooks/use-products";
 import useDiscs from "src/hooks/use-discs";
 import { DiscDetails } from "src/types/prisma";
 import { findMatch } from "../utils/find-match";
+import clsx from "clsx";
 
 type SearchResult = {
   hits: {
@@ -66,10 +67,19 @@ const DataCleaningProduct: React.FC<Props> = ({
     await updateProduct.mutateAsync({ record: copy });
   };
 
+  const discMatches = findMatches(product);
+
   return (
     <div
       key={product.id}
-      className="flex justify-between items-center gap-4 p-2 bg-white rounded-lg shadow"
+      className={clsx(
+        "flex justify-between items-center gap-4 p-2 bg-white rounded-lg shadow",
+        {
+          "bg-red-100": discMatches.length === 0,
+          "bg-green-100": discMatches.length === 1,
+          "bg-amber-100": discMatches.length > 1,
+        }
+      )}
     >
       <div className="flex gap-4">
         <Image
@@ -117,7 +127,7 @@ const DataCleaningProduct: React.FC<Props> = ({
       </div>
 
       <div className="flex gap-1">
-        {findMatches(product).map((disc) => (
+        {discMatches.map((disc) => (
           <Button
             key={disc.id}
             size="xs"
