@@ -62,6 +62,7 @@ export default async function processor({
       latestPrice: price,
       lastmod,
       updatedAt: new Date(),
+      imageUrl: data.imageUrl,
 
       prices: {
         create: {
