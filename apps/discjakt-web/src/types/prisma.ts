@@ -62,14 +62,7 @@ export const discDetailsSelect = Prisma.validator<Prisma.DiscSelect>()({
       description: true,
       imageUrl: true,
       storeId: true,
-
-      prices: {
-        select: {
-          amount: true,
-          currency: true,
-          createdAt: true,
-        },
-      },
+      latestPrice: true,
     },
   },
 });
@@ -146,6 +139,30 @@ export const brandDetailsSelect = Prisma.validator<Prisma.BrandSelect>()({
       fade: true,
 
       views: true,
+
+      brand: {
+        select: {
+          id: true,
+          name: true,
+          description: true,
+          imageUrl: true,
+          slug: true,
+          url: true,
+        },
+      },
+
+      products: {
+        select: {
+          id: true,
+          loc: true,
+          lastmod: true,
+          title: true,
+          description: true,
+          imageUrl: true,
+          storeId: true,
+          latestPrice: true,
+        },
+      },
     },
   },
 });

@@ -24,11 +24,10 @@ import { discTypeToString } from "src/utils/discType";
 
 type Props = {
   brand: BrandDetails;
-  discs: DiscDetails[];
   type: string;
 };
 
-const BrandTypesPage: NextPage<Props> = ({ brand, discs, type }) => {
+const BrandTypesPage: NextPage<Props> = ({ brand, type }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
 
   return (
@@ -69,7 +68,7 @@ const BrandTypesPage: NextPage<Props> = ({ brand, discs, type }) => {
       <Section>
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
-            {discs.sort(sortFn).map((disc) => (
+            {brand.discs.sort(sortFn).map((disc) => (
               <SimpleProduct key={disc.id} disc={disc} />
             ))}
           </div>
@@ -122,20 +121,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
-  const discsRaw = await prisma.disc.findMany({
-    where: {
-      type,
-      brandId: brand.id,
-    },
-    select: discDetailsSelect,
-  });
-
-  const discs = discsRaw.map(serializeDisc);
+  const data = JSON.parse(JSON.stringify(brand));
 
   return {
     props: {
-      brand,
-      discs,
+      brand: data,
       type,
     },
     revalidate: 60 * 5,

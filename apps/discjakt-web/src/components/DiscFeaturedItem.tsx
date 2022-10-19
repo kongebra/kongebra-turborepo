@@ -14,8 +14,7 @@ const css = { width: "100%", height: "auto" };
 const DiscFeaturedItem: React.FC<Props> = ({ disc }: Props) => {
   const lowestPrice = useMemo(() => {
     const prices = disc.products
-      ?.filter((product) => product.prices.length)
-      .map((product) => product.prices[product.prices.length - 1]?.amount!)
+      .map((product) => product.latestPrice)
       .filter((price) => price > 0);
 
     const lowest = Math.min(...prices);

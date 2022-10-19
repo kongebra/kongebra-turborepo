@@ -4,17 +4,31 @@ import Link from "next/link";
 import React, { useMemo } from "react";
 import { DiscDetails } from "src/types/prisma";
 
+type SimplifiedDisc = Pick<
+  DiscDetails,
+  | "products"
+  | "slug"
+  | "name"
+  | "imageUrl"
+  | "id"
+  | "speed"
+  | "glide"
+  | "turn"
+  | "fade"
+  | "type"
+  | "brand"
+>;
+
 type Props = {
-  disc: DiscDetails;
+  disc: SimplifiedDisc;
   featured?: boolean;
 };
 
 const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
   const lowestPrice = useMemo(() => {
     const prices = disc.products
-      ?.filter((product) => product.prices.length)
-      .map((product) => product.prices[product.prices.length - 1]?.amount!)
-      .filter((price) => price > 0);
+      .map((product) => product.latestPrice)
+      .filter((price) => price);
 
     const lowest = Math.min(...prices);
 

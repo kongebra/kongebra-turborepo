@@ -66,8 +66,7 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
       cell: (info) => {
         const products = [...info.getValue()];
         const prices = products
-          .filter((product) => product.prices.length)
-          .map((product) => product.prices[product.prices.length - 1]?.amount!)
+          .map((product) => product.latestPrice)
           .filter((price) => price > 0);
 
         const lowest = Math.min(...prices);
@@ -80,12 +79,10 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
       },
       sortingFn: (a, b) => {
         const aP = a.original.products
-          .filter((product) => product.prices.length)
-          .map((product) => product.prices[product.prices.length - 1]?.amount!)
+          .map((product) => product.latestPrice)
           .filter((price) => price > 0);
         const bP = b.original.products
-          .filter((product) => product.prices.length)
-          .map((product) => product.prices[product.prices.length - 1]?.amount!)
+          .map((product) => product.latestPrice)
           .filter((price) => price > 0);
 
         const A = Math.min(...aP);

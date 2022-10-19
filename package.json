@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:web": "turbo run build --filter=discjakt-web --include-dependencies --no-deps",
     "db:migrate:deploy": "turbo run db:migrate:deploy",
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
@@ -19,6 +20,8 @@
     "start": "turbo run start"
   },
   "devDependencies": {
+    "eslint": "^8.25.0",
+    "config": "*",
     "prettier": "^2.7.1",
     "turbo": "latest"
   },

@@ -48,21 +48,18 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
     return disc.products
       .map((product) => ({
         ...product,
-        latestPrice: product.prices.length
-          ? product.prices[product.prices.length - 1]
-          : undefined,
       }))
       .sort((a, b) => {
         if (a.latestPrice && b.latestPrice) {
-          if (a.latestPrice?.amount === 0) {
+          if (a.latestPrice === 0) {
             return 1;
           }
 
-          if (b.latestPrice.amount === 0) {
+          if (b.latestPrice === 0) {
             return -1;
           }
 
-          return a.latestPrice.amount - b.latestPrice.amount;
+          return a.latestPrice - b.latestPrice;
         }
 
         if (a.latestPrice && !b.latestPrice) {
@@ -154,9 +151,9 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
             {allProducts.map((product) => {
-              const price = [...product.prices].pop();
+              const price = product.latestPrice;
               const storeName = getStoreName(product.storeId);
-              const inStock = price && price.amount !== 0;
+              const inStock = price && price !== 0;
 
               return (
                 <a
@@ -200,12 +197,12 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                     </div>
 
                     <span
-                      title={inStock ? `${price.amount} kr` : "Ikke på lager"}
+                      title={inStock ? `${price} kr` : "Ikke på lager"}
                       className={clsx({
                         "text-red-700 font-semibold": !inStock,
                       })}
                     >
-                      {inStock ? `${price.amount} kr` : "Ikke på lager"}
+                      {inStock ? `${price} kr` : "Ikke på lager"}
                     </span>
                   </div>
                 </a>

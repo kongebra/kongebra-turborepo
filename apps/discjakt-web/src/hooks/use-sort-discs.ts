@@ -13,10 +13,17 @@ type SortValue =
   | "fade-desc"
   | string;
 
+type SimplifiedDiscType = Pick<
+  DiscDetails,
+  "speed" | "glide" | "turn" | "fade" | "name"
+>;
+
 export default function useSortDiscs() {
   const [sort, setSort] = useState<SortValue>("name");
 
-  const sortFn = useMemo<(a: DiscDetails, b: DiscDetails) => number>(() => {
+  const sortFn = useMemo<
+    (a: SimplifiedDiscType, b: SimplifiedDiscType) => number
+  >(() => {
     switch (sort) {
       case "speed-asc":
         return (a, b) => a.speed - b.speed;
