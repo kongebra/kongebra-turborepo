@@ -4,6 +4,9 @@ module.exports = {
     next: {
       rootDir: ["apps/*/", "packages/*/"],
     },
+    react: {
+      version: "detect",
+    },
   },
   rules: {
     "@next/next/no-html-link-for-pages": "off",

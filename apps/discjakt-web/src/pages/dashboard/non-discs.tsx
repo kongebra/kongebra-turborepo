@@ -24,7 +24,7 @@ const NonDiscs = () => {
       isDisc: null,
     };
 
-    await updateProduct.mutateAsync(copy);
+    await updateProduct.mutateAsync({ record: copy });
   };
 
   return (
