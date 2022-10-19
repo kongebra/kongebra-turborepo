@@ -20,35 +20,10 @@ async function GET(req: NextApiRequest, res: NextApiResponse) {
   const discs = await prisma.disc.findMany({
     include: {
       brand: true,
-      products: {
-        include: {
-          prices: true,
-        },
-      },
     },
   });
 
-  // const result = discs.map((disc) => {
-  //   return {
-  //     ...disc,
-  //     lowestPrice: disc.products
-  //       .map((product) => product.prices.map((price) => price.amount))
-  //       .flat()
-  //       .map((str) => (isNaN(Number(str)) ? 0 : Number(str)))
-  //       .reduce((prev, curr) => (curr > prev ? curr : prev), 0),
-  //   };
-  // });
-
-  const result = discs.map((disc) => ({
-    ...disc,
-    speed: Number(disc.speed),
-    glide: Number(disc.glide),
-    turn: Number(disc.turn),
-    fade: Number(disc.fade),
-    type: disc.type.toLowerCase(),
-  }));
-
-  res.status(200).json(result);
+  res.status(200).json(discs);
 }
 
 async function POST(req: NextApiRequest, res: NextApiResponse) {
@@ -60,6 +35,9 @@ async function POST(req: NextApiRequest, res: NextApiResponse) {
   const disc = await prisma.disc.create({
     data: {
       ...body,
+    },
+    include: {
+      products: true,
     },
   });
 

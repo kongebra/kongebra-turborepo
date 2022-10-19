@@ -58,24 +58,30 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
     }),
     columnHelper.accessor("products", {
       header: () => "Produkter",
-      cell: (info) => info.getValue().length,
+      cell: (info) => info.getValue()?.length || 0,
     }),
     columnHelper.accessor("products", {
       id: "price",
       header: () => "Minste pris",
       cell: (info) => {
-        const products = [...info.getValue()];
-        const prices = products
-          .map((product) => product.latestPrice)
-          .filter((price) => price > 0);
+        const value = info.getValue();
 
-        const lowest = Math.min(...prices);
+        if (value) {
+          const products = [...value];
+          const prices = products
+            .map((product) => product.latestPrice)
+            .filter((price) => price > 0);
 
-        if (lowest === Infinity) {
-          return "Ikke på lager";
+          const lowest = Math.min(...prices);
+
+          if (lowest === Infinity) {
+            return "Ikke på lager";
+          }
+
+          return `${lowest} NOK`;
         }
 
-        return `${lowest} NOK`;
+        return "Ingen produkter";
       },
       sortingFn: (a, b) => {
         const aP = a.original.products

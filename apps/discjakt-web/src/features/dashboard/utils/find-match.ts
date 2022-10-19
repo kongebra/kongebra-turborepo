@@ -39,11 +39,11 @@ export const findMatch = (product: Product, discs: DiscDetails[]) => {
     titleWords.push(...["cloud", "breaker"]);
   }
 
+  extraCheck("pa");
   extraCheck("v2");
   extraCheck("swan");
   extraCheck("banger");
   extraCheck("ringer");
-  extraCheck("pa");
 
   return discs
     .filter((disc) => {
@@ -62,6 +62,7 @@ export const findMatch = (product: Product, discs: DiscDetails[]) => {
         "m",
         "x",
         "cosmic",
+        "halo",
       ];
       for (const customRule of customRules) {
         if (
@@ -91,6 +92,7 @@ export const findMatch = (product: Product, discs: DiscDetails[]) => {
         "nuke",
         "surge",
         "crank",
+        "pro",
       ];
       for (const rule of buzzzLikeRules) {
         if (titleWords.includes(rule) && discNameWords.includes(rule)) {

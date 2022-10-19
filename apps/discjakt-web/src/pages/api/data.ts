@@ -20,6 +20,9 @@ async function GET(req: NextApiRequest, res: NextApiResponse) {
       isDisc: null,
     },
     take: 100,
+    orderBy: {
+      title: "asc",
+    },
   });
 
   res.status(200).json(items);

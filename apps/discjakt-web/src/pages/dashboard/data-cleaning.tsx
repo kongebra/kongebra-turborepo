@@ -26,7 +26,11 @@ const fetchData = async () => {
 const DashboardDataCleaingPage = () => {
   const queryClient = useQueryClient();
 
-  const { data } = useQuery<Product[]>(["data-cleaning"], fetchData, {});
+  const { data, refetch, isFetching } = useQuery<Product[]>(
+    ["data-cleaning"],
+    fetchData,
+    {}
+  );
 
   const { discs } = useDiscs();
   const { mutations } = useProducts({ enabled: false });
@@ -69,7 +73,16 @@ const DashboardDataCleaingPage = () => {
   return (
     <>
       <DashboardLayout className="bg-gray-100">
-        <div className="flex justify-end mb-3">
+        <div className="flex justify-end gap-2 mb-3">
+          <Button
+            type="button"
+            onClick={() => refetch()}
+            disabled={isFetching}
+            color="warning"
+          >
+            Refetch
+          </Button>
+
           <Button
             type="button"
             disabled={!allOneMatch || data?.length === 0 || !data}
