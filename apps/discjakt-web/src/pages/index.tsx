@@ -22,7 +22,7 @@ const HomePage: NextPage<Props> = ({ trending, latest }) => {
           </p>
         </Container>
 
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4 mb-4 px-8">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4 mb-4 lg:px-8">
           {trending.map((disc) => (
             <SimpleProduct key={disc.id} disc={disc} featured />
           ))}

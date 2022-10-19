@@ -7,14 +7,16 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const query = req.query;
   const slug = getQueryStringValue("slug", req);
+  const type = getQueryStringValue("type", req);
   if (!slug) {
     return res.status(400).json({ message: "missing slug" });
   }
 
   switch (req.method) {
     case "GET":
-      return await GET(req, res, slug);
+      return await GET(req, res, slug, type);
     case "POST":
       return await POST(req, res);
     case "PUT":
@@ -26,13 +28,31 @@ export default async function handler(
   }
 }
 
-async function GET(req: NextApiRequest, res: NextApiResponse, slug: string) {
+async function GET(
+  req: NextApiRequest,
+  res: NextApiResponse,
+  slug: string,
+  type?: string
+) {
   const discs = await prisma.disc.findMany({
-    where: {
-      brand: {
-        slug,
-      },
-    },
+    where: type
+      ? {
+          AND: [
+            {
+              brand: {
+                slug,
+              },
+            },
+            {
+              type,
+            },
+          ],
+        }
+      : {
+          brand: {
+            slug,
+          },
+        },
 
     select: discDetailsSelect,
   });

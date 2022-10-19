@@ -16,7 +16,7 @@ import { FaHeart } from "react-icons/fa";
 import { DiscDetails, discDetailsSelect } from "src/types/prisma";
 import Breadcrumbs from "src/components/Breadcrumbs";
 import { serializeDisc } from "src/utils/disc";
-import { Section } from "src/components";
+import { LoadingPage, Section } from "src/components";
 import clsx from "clsx";
 
 type Props = {
@@ -75,17 +75,21 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
   }, [disc.products]);
 
   if (isLoading) {
-    return (
-      <Container>
-        <Heading>Loading ....</Heading>
-      </Container>
-    );
+    return <LoadingPage />;
   }
 
   if (!disc) {
     return (
-      <Container>
+      <Container className="flex flex-1 min-h-full items-center justify-center">
         <Heading>Disc not found</Heading>
+        <Image
+          src="/illustrations/page_not_found.svg"
+          alt="Disc ikke funnet"
+          width={512}
+          height={512}
+          className="max-w-full h-auto"
+          priority
+        />
       </Container>
     );
   }

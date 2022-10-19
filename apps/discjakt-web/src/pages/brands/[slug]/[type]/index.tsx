@@ -32,7 +32,7 @@ type Props = {
 const BrandTypesPage: NextPage<Props> = ({ brand, type }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
 
-  const { discs, isLoading } = useBrandDiscs(brand.slug);
+  const { discs, isLoading } = useBrandDiscs({ slug: brand.slug, type });
 
   return (
     <>

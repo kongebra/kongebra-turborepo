@@ -18,6 +18,7 @@ import {
 import { prisma } from "src/lib/prisma";
 import { useDiscs, useSortDiscs } from "src/hooks";
 import { discTypeToString } from "src/utils/discType";
+import useBrandDiscs from "src/hooks/use-brand-discs";
 
 type Props = {
   brand: Brand;
@@ -26,8 +27,7 @@ type Props = {
 const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
 
-  const { discs: allDiscs, isLoading } = useDiscs();
-  const discs = allDiscs.filter((x) => x.brand.slug === brand.slug) || [];
+  const { discs, isLoading } = useBrandDiscs({ slug: brand.slug });
 
   return (
     <>
