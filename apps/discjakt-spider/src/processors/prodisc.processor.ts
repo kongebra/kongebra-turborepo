@@ -20,6 +20,9 @@ export default async function processor({
   const html = response.data;
   const $ = load(html);
 
+  const soldOutText = $(".price.price--sold-out").text();
+  const inStock = soldOutText === "";
+
   const priceStr =
     $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
 
@@ -42,7 +45,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 

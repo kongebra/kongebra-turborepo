@@ -60,6 +60,7 @@ export const discDetailsSelect = Prisma.validator<Prisma.DiscSelect>()({
       storeId: true,
       title: true,
       id: true,
+      disabled: true,
     },
   },
 });

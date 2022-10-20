@@ -1,10 +1,10 @@
 import { Job } from "bull";
-import { CommonJobItem } from "../types";
 import axios from "axios";
 import { load } from "cheerio";
-import { parsePriceString } from "../utils/price";
+
 import { prisma } from "../lib/prisma";
-import path from "path";
+import { CommonJobItem } from "../types";
+import { parsePriceString } from "../utils/price";
 
 export default async function processor({
   id,
@@ -14,13 +14,14 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  return;
-
   console.time(`gurudiscgolf - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
+
+  const outOfStockText = $(".summary .stock.out-of-stock").text();
+  const inStock = outOfStockText === "";
 
   const priceStr =
     $(".woocommerce-Price-amount.amount").first().text().trim() || "";
@@ -48,7 +49,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 

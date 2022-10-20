@@ -20,6 +20,9 @@ export default async function processor({
   const html = response.data;
   const $ = load(html);
 
+  const outOfStockText = $(".stock.out-of-stock").text();
+  const inStock = outOfStockText === "";
+
   const priceStr = $(".product-page-price .amount").text().slice(3) || "";
 
   const price = parsePriceString(priceStr);
@@ -28,7 +31,7 @@ export default async function processor({
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
     description:
       $('meta[property="og:description"]').attr("content")?.trim() || "",
-    imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
+    imageUrl: $(".product-images img").first().attr("src")?.trim() || "",
   };
 
   const product = await prisma.product.upsert({
@@ -41,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 
@@ -56,6 +59,7 @@ export default async function processor({
       latestPrice: price,
       lastmod,
       updatedAt: new Date(),
+      imageUrl: data.imageUrl,
 
       prices: {
         create: {

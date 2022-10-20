@@ -18,12 +18,18 @@ import Breadcrumbs from "src/components/Breadcrumbs";
 import { serializeDisc } from "src/utils/disc";
 import { LoadingPage, Section } from "src/components";
 import clsx from "clsx";
+import { useUser } from "src/hooks";
+import config from "src/config";
+import { useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   disc: DiscDetails;
 };
 
 const DiscDetailPage: NextPage<Props> = ({ disc }) => {
+  const { user } = useUser();
+  const queryClient = useQueryClient();
+
   const {
     query: { slug },
   } = useRouter();
@@ -154,64 +160,89 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
-            {allProducts.map((product) => {
-              const price = product.latestPrice;
-              const storeName = getStoreName(product.storeId);
-              const inStock = price && price !== 0;
+            {allProducts
+              .filter((product) => !product.disabled || user?.role === "admin")
+              .map((product) => {
+                const price = product.latestPrice;
+                const storeName = getStoreName(product.storeId);
+                const inStock = price && price !== 0;
 
-              return (
-                <a
-                  key={product.id}
-                  href={product.loc}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group"
-                  title={product.title}
-                >
-                  <div className="flex flex-col items-center">
-                    <div className="relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
-                      <Image
-                        src={
-                          product.imageUrl
-                            ? product.imageUrl
-                            : "/placeholder.png"
-                        }
-                        alt={product.title}
-                        width={512}
-                        height={512}
-                        className="max-w-full h-auto rounded group-hover:opacity-75 transition aspect-square object-contain"
-                      />
-                    </div>
-
-                    <div className="flex flex-col items-center">
-                      <span
-                        className="font-light text-gray-500"
-                        aria-label={storeName}
-                        title={storeName}
-                      >
-                        {storeName}
-                      </span>
-                      <span
-                        className="font-semibold text-lg group-hover:underline transition"
-                        aria-label={product.title}
-                        title={product.title}
-                      >
-                        {product.title}
-                      </span>
-                    </div>
-
-                    <span
-                      title={inStock ? `${price} kr` : "Ikke på lager"}
-                      className={clsx({
-                        "text-red-700 font-semibold": !inStock,
-                      })}
+                return (
+                  <div key={product.id}>
+                    <a
+                      href={product.loc}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group"
+                      title={product.title}
                     >
-                      {inStock ? `${price} kr` : "Ikke på lager"}
-                    </span>
+                      <div className="flex flex-col items-center">
+                        <div className="relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
+                          <Image
+                            src={
+                              product.imageUrl
+                                ? product.imageUrl
+                                : "/placeholder.png"
+                            }
+                            alt={product.title}
+                            width={512}
+                            height={512}
+                            className="max-w-full h-auto rounded group-hover:opacity-75 transition aspect-square object-contain"
+                          />
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                          <span
+                            className="font-light text-gray-500"
+                            aria-label={storeName}
+                            title={storeName}
+                          >
+                            {storeName}
+                          </span>
+                          <span
+                            className="font-semibold text-lg group-hover:underline transition"
+                            aria-label={product.title}
+                            title={product.title}
+                          >
+                            {product.title}
+                          </span>
+                        </div>
+
+                        <span
+                          title={inStock ? `${price} kr` : "Ikke på lager"}
+                          className={clsx({
+                            "text-red-700 font-semibold": !inStock,
+                          })}
+                        >
+                          {inStock ? `${price} kr` : "Ikke på lager"}
+                        </span>
+                      </div>
+                    </a>
+                    {user?.role === "admin" && (
+                      <Button
+                        className="mt-2"
+                        size="sm"
+                        color={product.disabled ? "success" : "danger"}
+                        onClick={async () => {
+                          await fetch(
+                            `${config.baseUrl}/api/products/${product.id}/disable`,
+                            {
+                              method: "PUT",
+                              body: JSON.stringify({
+                                disabled: !product.disabled,
+                              }),
+                            }
+                          );
+
+                          // window.location.reload();
+                        }}
+                      >
+                        {product.disabled ? "ENABLE" : "DISABLE"}
+                      </Button>
+                    )}
                   </div>
-                </a>
-              );
-            })}
+                );
+              })}
           </div>
         </Container>
       </Section>

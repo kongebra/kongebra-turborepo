@@ -1,10 +1,10 @@
-import { Job } from "bull";
-import { CommonJobItem } from "../types";
 import axios from "axios";
+import { Job } from "bull";
 import { load } from "cheerio";
-import { parsePriceString } from "../utils/price";
+
 import { prisma } from "../lib/prisma";
-import path from "path";
+import { CommonJobItem } from "../types";
+import { parsePriceString } from "../utils/price";
 
 export default async function processor({
   id,
@@ -19,6 +19,9 @@ export default async function processor({
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
+
+  const soldOutText = $(".price--sold-out").text();
+  const inStock = soldOutText === "";
 
   const priceStr =
     $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
@@ -41,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 

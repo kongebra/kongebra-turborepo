@@ -20,6 +20,9 @@ export default async function processor({
   const html = response.data;
   const $ = load(html);
 
+  const soldOutText = $(".product_stock.stock_box").text();
+  const inStock = !soldOutText.includes("**");
+
   const priceStr = $(".product-price").first()?.text()?.trim() || "";
 
   const price = parsePriceString(priceStr);
@@ -41,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 
