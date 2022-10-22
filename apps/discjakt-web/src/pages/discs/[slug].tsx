@@ -159,7 +159,7 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
             <p className="text-gray-500">Her ser du en oversikt på</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {allProducts
               .filter((product) => !product.disabled || user?.role === "admin")
               .map((product) => {
@@ -176,8 +176,8 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                       className="group"
                       title={product.title}
                     >
-                      <div className="flex flex-col items-center">
-                        <div className="relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
+                      <div className="grid grid-cols-5 lg:grid-cols-1 gap-4">
+                        <div className="col-span-2 relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
                           <Image
                             src={
                               product.imageUrl
@@ -191,7 +191,7 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                           />
                         </div>
 
-                        <div className="flex flex-col items-center">
+                        <div className="col-span-3 flex flex-col lg:items-center">
                           <span
                             className="font-light text-gray-500"
                             aria-label={storeName}
@@ -206,21 +206,22 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                           >
                             {product.title}
                           </span>
-                        </div>
 
-                        <span
-                          title={inStock ? `${price} kr` : "Ikke på lager"}
-                          className={clsx({
-                            "text-red-700 font-semibold": !inStock,
-                          })}
-                        >
-                          {inStock ? `${price} kr` : "Ikke på lager"}
-                        </span>
+                          <span
+                            title={inStock ? `${price} kr` : "Ikke på lager"}
+                            className={clsx({
+                              "text-red-700 font-semibold": !inStock,
+                            })}
+                          >
+                            {inStock ? `${price} kr` : "Ikke på lager"}
+                          </span>
+                        </div>
                       </div>
                     </a>
+
                     {user?.role === "admin" && (
                       <Button
-                        className="mt-2"
+                        className="mt-2 lg:block hidden"
                         size="sm"
                         color={product.disabled ? "success" : "danger"}
                         onClick={async () => {
