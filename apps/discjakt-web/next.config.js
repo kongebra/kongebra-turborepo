@@ -59,11 +59,11 @@ const nextConfig = {
           },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://*.discjakt.no",
+            value: "https://www.discjakt.no",
           },
           {
-            key: "Access-Control-Allow-Origin",
-            value: "https://discjakt*.vercel.app",
+            key: "Vary",
+            value: "Origin",
           },
           {
             key: "Access-Control-Allow-Methods",
