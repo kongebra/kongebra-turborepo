@@ -43,5 +43,3 @@ function App({
 }
 
 export default App;
-
-export { reportWebVitals } from "next-axiom";
