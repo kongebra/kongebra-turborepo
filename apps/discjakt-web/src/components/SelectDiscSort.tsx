@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormSelect from "./FormSelect";
 import Select from "./Select";
 
 type Props = {
@@ -8,7 +9,8 @@ type Props = {
 
 const SelectDiscSort: React.FC<Props> = ({ value = "name", onChange }) => {
   return (
-    <Select
+    <FormSelect
+      label="Sorter disker"
       placeholder="Sorter"
       aria-label="Sorter disker"
       value={value}
