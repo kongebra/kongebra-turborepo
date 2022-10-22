@@ -13,6 +13,7 @@ import config from "src/lib/react-query";
 import Layout from "src/layout/Layout";
 
 import "../styles/globals.css";
+import { DefaultSeo } from "next-seo";
 
 type AuthAppProps = AppProps<{
   session: Session;
@@ -24,12 +25,21 @@ function App({
 }: AuthAppProps) {
   const [queryClient] = useState(new QueryClient(config));
 
-  // TODO: SEO
   return (
     <SessionProvider session={session}>
       <QueryClientProvider client={queryClient}>
+        <DefaultSeo
+          openGraph={{
+            type: "website",
+            locale: "no_NB",
+            url: "https://www.discjakt.no/",
+            siteName: "Discjakt",
+            description: "", // TODO: Default description
+          }}
+        />
+
         <Head>
-          <title>DiscJakt</title>
+          <title>Discjakt</title>
         </Head>
 
         <Layout>
