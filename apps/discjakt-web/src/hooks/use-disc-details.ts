@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import config from "src/config";
+import config from "src/common/config";
 import { DiscDetails } from "src/types/prisma";
 
 const BASE_URL = `/api/discs`;

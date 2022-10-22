@@ -13,13 +13,13 @@ import {
   Section,
 } from "src/components";
 
-import config from "src/config";
+import config from "src/common/config";
 import { useSortDiscs } from "src/hooks";
 import type { DiscDetails } from "src/types/prisma";
 import { getQueryStringValue } from "src/utils/query";
 
 const fetchSearch = async (query?: string) => {
-  const url = `${config.baseUrl}/api/discs/search?q=${query || ""}`;
+  const url = `/api/discs/search?q=${query || ""}`;
   const response = await fetch(url);
   const data = await response.json();
 

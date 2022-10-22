@@ -1,7 +1,7 @@
 import { Brand } from "@prisma/client";
 import axios from "axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import config from "src/config";
+import config from "src/common/config";
 
 const BASE_URL = `/api/brands`;
 

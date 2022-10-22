@@ -1,7 +1,7 @@
 import { User } from "@prisma/client";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { signIn, signOut, useSession } from "next-auth/react";
-import config from "src/config";
+import config from "src/common/config";
 
 const BASE_URL = `/api/users/me`;
 

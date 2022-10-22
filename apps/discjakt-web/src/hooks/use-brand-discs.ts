@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import config from "src/config";
+import config from "src/common/config";
 import { DiscDetails } from "src/types/prisma";
 
 const fetchData = (slug: string, type?: string) => async () => {

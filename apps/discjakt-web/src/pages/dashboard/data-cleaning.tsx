@@ -10,13 +10,13 @@ import DataCleaningProduct from "src/features/dashboard/components/DataCleaningP
 
 import DashboardLayout from "src/layout/DashboardLayout";
 
-import config from "src/config";
+import config from "src/common/config";
 import Button from "src/components/Button";
 import { findMatch } from "src/features/dashboard/utils/find-match";
 import useDiscs from "src/hooks/use-discs";
 import useProducts from "src/hooks/use-products";
 
-const BASE_URL = `${config.baseUrl}/api/data`;
+const BASE_URL = `/api/data`;
 
 const fetchData = async () => {
   const resp = await fetch(BASE_URL);

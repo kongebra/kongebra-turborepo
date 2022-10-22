@@ -1,7 +1,7 @@
 import { Store } from "@prisma/client";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import config from "src/config";
+import config from "src/common/config";
 
 const BASE_URL = `/api/stores`;
 

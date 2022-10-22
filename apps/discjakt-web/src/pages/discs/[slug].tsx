@@ -19,7 +19,7 @@ import { serializeDisc } from "src/utils/disc";
 import { LoadingPage, Section } from "src/components";
 import clsx from "clsx";
 import { useUser } from "src/hooks";
-import config from "src/config";
+import config from "src/common/config";
 import { useQueryClient } from "@tanstack/react-query";
 
 type Props = {
@@ -225,15 +225,12 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                         size="sm"
                         color={product.disabled ? "success" : "danger"}
                         onClick={async () => {
-                          await fetch(
-                            `${config.baseUrl}/api/products/${product.id}/disable`,
-                            {
-                              method: "PUT",
-                              body: JSON.stringify({
-                                disabled: !product.disabled,
-                              }),
-                            }
-                          );
+                          await fetch(`/api/products/${product.id}/disable`, {
+                            method: "PUT",
+                            body: JSON.stringify({
+                              disabled: !product.disabled,
+                            }),
+                          });
 
                           // window.location.reload();
                         }}

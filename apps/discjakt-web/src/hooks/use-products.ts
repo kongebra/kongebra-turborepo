@@ -1,7 +1,7 @@
 import { Product, ProductPrice } from "@prisma/client";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
-import config from "src/config";
+import config from "src/common/config";
 
 const BASE_URL = `/api/products`;
 
