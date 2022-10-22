@@ -101,7 +101,13 @@ const MobileNav = () => {
         />
       </div>
 
-      <nav className="md:hidden fixed inset-x-0 bottom-0 bg-white border-t z-10">
+      <div className="lg:hidden fixed inset-x-0 top-0 bg-white border-b z-10">
+        <div className="flex py-4 items-center justify-center">
+          <span className="font-bold text-2xl">Discjakt</span>
+        </div>
+      </div>
+
+      <nav className="lg:hidden fixed inset-x-0 bottom-0 bg-white border-t z-10">
         <div className="flex">
           {mobileNavItems.map((item) => (
             <React.Fragment key={item.label}>
