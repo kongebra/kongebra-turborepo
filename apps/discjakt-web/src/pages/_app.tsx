@@ -31,7 +31,7 @@ function App({
         <DefaultSeo
           openGraph={{
             type: "website",
-            locale: "no_NB",
+            locale: "nb_NO",
             url: "https://www.discjakt.no/",
             siteName: "Discjakt",
             description: "", // TODO: Default description
