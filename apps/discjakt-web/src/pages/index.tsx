@@ -1,7 +1,13 @@
 import type { GetStaticProps, NextPage } from "next";
 import { type DiscDetails, discDetailsSelect } from "src/types/prisma";
 
-import { Container, Heading, Section, SimpleProduct } from "src/components";
+import {
+  Container,
+  Heading,
+  LoadingPage,
+  Section,
+  SimpleProduct,
+} from "src/components";
 import { prisma } from "src/lib/prisma";
 
 type Props = {

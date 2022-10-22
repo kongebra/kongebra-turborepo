@@ -3,7 +3,7 @@ import axios from "axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import config from "src/config";
 
-const BASE_URL = `${config.baseUrl}/api/brands`;
+const BASE_URL = `/api/brands`;
 
 const fetchBrands = async () => {
   const resp = await axios.get<(Brand & { _count: { discs: number } })[]>(

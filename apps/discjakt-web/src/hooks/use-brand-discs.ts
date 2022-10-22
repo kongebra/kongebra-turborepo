@@ -4,7 +4,7 @@ import { DiscDetails } from "src/types/prisma";
 
 const fetchData = (slug: string, type?: string) => async () => {
   const response = await fetch(
-    `${config.baseUrl}/api/brands/${slug}/discs${type ? `?type=${type}` : ""}`
+    `/api/brands/${slug}/discs${type ? `?type=${type}` : ""}`
   );
   const data = (await response.json()) as DiscDetails[];
 
