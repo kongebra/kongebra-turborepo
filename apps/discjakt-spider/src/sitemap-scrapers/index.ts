@@ -12,6 +12,7 @@ import dgshopSitemap from "./dgshop.sitemap";
 import frisbeefeberSitemap from "./frisbeefeber.sitemap";
 import frisbeesorSitemap from "./frisbeesor.sitemap";
 import gurudiscgolfSitemap from "./gurudiscgolf.sitemap";
+import discshopenSitemap from "./discshopen.sitemap";
 
 type Fn = () => Promise<void>;
 
@@ -27,6 +28,7 @@ const stores: Record<StoreSlug, Fn> = {
   frisbeefeber: frisbeefeberSitemap,
   frisbeesor: frisbeesorSitemap,
   gurudiscgolf: gurudiscgolfSitemap,
+  discshopen: discshopenSitemap,
 };
 
 let index = 0;
