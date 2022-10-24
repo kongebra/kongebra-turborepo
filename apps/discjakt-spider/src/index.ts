@@ -57,10 +57,10 @@ cron.schedule("* */1 * * *", async () => {
   // }
 });
 
-cron.schedule("*/10 * * * *", async () => {
+cron.schedule("*/5 * * * *", async () => {
   // run every 10 minute
   // will do the store that was
-  // await crawlLatestStoreSitemap();
+  await crawlLatestStoreSitemap();
 });
 
 /**

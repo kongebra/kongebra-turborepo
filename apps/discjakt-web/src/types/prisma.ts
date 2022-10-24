@@ -42,6 +42,8 @@ export const discDetailsSelect = Prisma.validator<Prisma.DiscSelect>()({
 
   views: true,
 
+  outOfProduction: true,
+
   brand: {
     select: {
       id: true,

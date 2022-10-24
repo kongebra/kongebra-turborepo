@@ -5,7 +5,7 @@ import { prisma } from "../lib/prisma";
 import { getQueues } from "../queue";
 import { checkLastmodUnderAge } from "../utils/lastmod";
 
-const { commonQueue } = getQueues();
+const { commonQueue, storeQueues } = getQueues();
 
 export default async function sitemap() {
   const now = new Date();
@@ -52,10 +52,15 @@ export default async function sitemap() {
 
       if (checkLastmodUnderAge(lastmod, 365) && loc.includes("/produkt/")) {
         promises.push(
-          commonQueue.add({
+          // commonQueue.add({
+          //   loc,
+          //   lastmod,
+          //   store: { id: store.id, slug: store.slug },
+          // })
+          storeQueues.discshopen.add({
             loc,
             lastmod,
-            store: { id: store.id, slug: store.slug },
+            store: { id: store.id },
           })
         );
       }

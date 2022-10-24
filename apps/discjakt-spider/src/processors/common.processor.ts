@@ -40,91 +40,93 @@ function checks({ lastmod }: CommonJobItem, product: Product) {
 export default async function common({ id, data }: Bull.Job<CommonJobItem>) {
   console.time(`common - ${id}`);
 
-  // get product from cache
-  const cachedProduct = await redis.get(data.loc);
-  // check if in cache
-  if (cachedProduct) {
-    // do checks on product
-    const [ok, reason] = checks(data, cachedProduct);
-    // checks is not ok
-    if (!ok) {
-      if (reason === "product.updatedAt") {
-        // we are a bit optimistic
-        await prisma.product.update({
-          where: {
-            id: cachedProduct.id,
-          },
-          data: {
-            updatedAt: new Date(),
+  await storeQueues[data.store.slug as StoreSlug].add(data);
 
-            prices: {
-              create: {
-                amount: cachedProduct.latestPrice,
-                currency: "NOK",
-              },
-            },
-          },
-        });
+  // // get product from cache
+  // const cachedProduct = await redis.get(data.loc);
+  // // check if in cache
+  // if (cachedProduct) {
+  //   // do checks on product
+  //   const [ok, reason] = checks(data, cachedProduct);
+  //   // checks is not ok
+  //   if (!ok) {
+  //     if (reason === "product.updatedAt") {
+  //       // we are a bit optimistic
+  //       await prisma.product.update({
+  //         where: {
+  //           id: cachedProduct.id,
+  //         },
+  //         data: {
+  //           updatedAt: new Date(),
 
-        console.timeEnd(`common - ${id}`);
-        return;
-      }
-      // add to queue for specific store
-      await storeQueues[data.store.slug as StoreSlug].add(data);
-    }
+  //           prices: {
+  //             create: {
+  //               amount: cachedProduct.latestPrice,
+  //               currency: "NOK",
+  //             },
+  //           },
+  //         },
+  //       });
 
-    console.timeEnd(`common - ${id}`);
-    // product was found i cache, not ok or ok, we dont know
-    return;
-  }
+  //       console.timeEnd(`common - ${id}`);
+  //       return;
+  //     }
+  //     // add to queue for specific store
+  //     await storeQueues[data.store.slug as StoreSlug].add(data);
+  //   }
 
-  // product not i cache, fetch from database
-  const product = await prisma.product.findFirst({
-    where: {
-      loc: data.loc,
-    },
-  });
+  //   console.timeEnd(`common - ${id}`);
+  //   // product was found i cache, not ok or ok, we dont know
+  //   return;
+  // }
 
-  // check if in database
-  if (!product) {
-    // not in database, add to queue for specific store
-    await storeQueues[data.store.slug as StoreSlug].add(data);
+  // // product not i cache, fetch from database
+  // const product = await prisma.product.findFirst({
+  //   where: {
+  //     loc: data.loc,
+  //   },
+  // });
 
-    console.timeEnd(`common - ${id}`);
-    // stop here, let specific store-processor handle it
-    return;
-  }
+  // // check if in database
+  // if (!product) {
+  //   // not in database, add to queue for specific store
+  //   await storeQueues[data.store.slug as StoreSlug].add(data);
 
-  // save to cache
-  await redis.set(data.loc, product, ONE_DAY);
-  // do checks on product from database
-  const [ok, reason] = checks(data, product);
-  if (!ok) {
-    if (reason === "product.updatedAt") {
-      // we are a bit optimistic
-      await prisma.product.update({
-        where: {
-          id: product.id,
-        },
-        data: {
-          updatedAt: new Date(),
+  //   console.timeEnd(`common - ${id}`);
+  //   // stop here, let specific store-processor handle it
+  //   return;
+  // }
 
-          prices: {
-            create: {
-              amount: product.latestPrice,
-              currency: "NOK",
-            },
-          },
-        },
-      });
+  // // save to cache
+  // await redis.set(data.loc, product, ONE_DAY);
+  // // do checks on product from database
+  // const [ok, reason] = checks(data, product);
+  // if (!ok) {
+  //   if (reason === "product.updatedAt") {
+  //     // we are a bit optimistic
+  //     await prisma.product.update({
+  //       where: {
+  //         id: product.id,
+  //       },
+  //       data: {
+  //         updatedAt: new Date(),
 
-      console.timeEnd(`common - ${id}`);
-      return;
-    }
+  //         prices: {
+  //           create: {
+  //             amount: product.latestPrice,
+  //             currency: "NOK",
+  //           },
+  //         },
+  //       },
+  //     });
 
-    // add to queue for specific store
-    await storeQueues[data.store.slug as StoreSlug].add(data);
-  }
+  //     console.timeEnd(`common - ${id}`);
+  //     return;
+  //   }
+
+  //   // add to queue for specific store
+  //   await storeQueues[data.store.slug as StoreSlug].add(data);
+  // }
 
   console.timeEnd(`common - ${id}`);
 }

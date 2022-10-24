@@ -14,15 +14,22 @@ import useDiscs from "src/frontend/hooks/use-discs";
 import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import { DiscDetails } from "src/types/prisma";
+import Badge from "src/frontend/components/Badge";
+import EditDiscImageDrawer from "src/features/dashboard/drawers/EditDiscImageDrawer";
 
 const columnHelper = createColumnHelper<DiscDetails>();
 
 type DefaultColumnsProps = {
   onEdit: (item: DiscDetails) => void;
   onDelete: (item: DiscDetails) => void;
+  onSelectImage: (item: DiscDetails) => void;
 };
 
-const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
+const defaultColumns = ({
+  onEdit,
+  onDelete,
+  onSelectImage,
+}: DefaultColumnsProps) => {
   const columns = [
     columnHelper.accessor("name", {
       header: () => "Navn",
@@ -69,7 +76,7 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
         if (value) {
           const products = [...value];
           const prices = products
-            .map((product) => product.latestPrice)
+            ?.map((product) => product.latestPrice)
             .filter((price) => price > 0);
 
           const lowest = Math.min(...prices);
@@ -85,14 +92,18 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
       },
       sortingFn: (a, b) => {
         const aP = a.original.products
-          .map((product) => product.latestPrice)
+          ?.map((product) => product.latestPrice)
           .filter((price) => price > 0);
         const bP = b.original.products
-          .map((product) => product.latestPrice)
+          ?.map((product) => product.latestPrice)
           .filter((price) => price > 0);
 
-        const A = Math.min(...aP);
-        const B = Math.min(...bP);
+        const A = Math.min(...(aP || [Infinity]));
+        const B = Math.min(...(bP || [Infinity]));
+
+        if (A === Infinity && B === Infinity) {
+          return 0;
+        }
 
         if (A === Infinity) {
           return -1;
@@ -103,6 +114,18 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
         }
 
         return A - B;
+      },
+    }),
+    columnHelper.accessor("outOfProduction", {
+      header: () => "I produksjon",
+      enableSorting: true,
+      cell: (info) => {
+        const value = info.getValue();
+        if (value) {
+          return <Badge color="red">Nei</Badge>;
+        }
+
+        return <Badge color="emerald">Ja</Badge>;
       },
     }),
     columnHelper.accessor("id", {
@@ -116,6 +139,13 @@ const defaultColumns = ({ onEdit, onDelete }: DefaultColumnsProps) => {
             onClick={() => onEdit(info.row.original)}
           >
             Edit
+          </Button>
+          <Button
+            color="primary"
+            size="sm"
+            onClick={() => onSelectImage(info.row.original)}
+          >
+            Velg bilde
           </Button>
           <Button
             color="danger"
@@ -137,6 +167,9 @@ const DashboardDiscsPage = () => {
 
   const [selectedDisc, setSelectedDisc] = useState<DiscDetails | undefined>();
   const [deleteDisc, setDeleteDisc] = useState<DiscDetails | undefined>();
+  const [selectedImageDisc, setSelectedImageDisc] = useState<
+    DiscDetails | undefined
+  >();
 
   const onEdit = (item: DiscDetails) => {
     setSelectedDisc(item);
@@ -145,7 +178,11 @@ const DashboardDiscsPage = () => {
     setDeleteDisc(item);
   };
 
-  const columns = defaultColumns({ onEdit, onDelete });
+  const onSelectImage = (item: DiscDetails) => {
+    setSelectedImageDisc(item);
+  };
+
+  const columns = defaultColumns({ onEdit, onDelete, onSelectImage });
 
   return (
     <>
@@ -180,6 +217,12 @@ const DashboardDiscsPage = () => {
           Slett
         </Button>
       </Drawer>
+
+      <EditDiscImageDrawer
+        show={selectedImageDisc !== undefined}
+        onClose={() => setSelectedImageDisc(undefined)}
+        defaultValues={selectedImageDisc}
+      />
     </>
   );
 };

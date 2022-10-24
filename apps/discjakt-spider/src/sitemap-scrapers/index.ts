@@ -31,29 +31,26 @@ const stores: Record<StoreSlug, Fn> = {
   discshopen: discshopenSitemap,
 };
 
-let index = 0;
-const keys = Object.keys(stores) as StoreSlug[];
-
 export default async function handler() {
   console.time("store sitemap crawl");
 
-  // // Pick store that latest updated
-  // const store = await prisma.store.findFirst({
-  //   take: 1,
-  //   orderBy: {
-  //     updatedAt: "asc",
-  //   },
-  // });
+  // Pick store that latest updated
+  const store = await prisma.store.findFirst({
+    take: 1,
+    orderBy: {
+      updatedAt: "asc",
+    },
+  });
 
-  // if (store) {
-  //   const func = stores[store.slug as StoreSlug];
-  //   if (func) {
-  //     // run stores function
-  //     await func();
-  //   }
-  // }
+  if (store) {
+    const func = stores[store.slug as StoreSlug];
+    if (func) {
+      // run stores function
+      await func();
+    }
+  }
 
-  await stores["gurudiscgolf"]();
+  // await stores["discshopen"]();
 
   console.timeEnd("store sitemap crawl");
 }

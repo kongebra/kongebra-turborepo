@@ -8,7 +8,7 @@ import Image from "next/future/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { discTypeToString } from "src/common/utils/discType";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { prisma } from "src/common/lib/prisma";
@@ -16,11 +16,12 @@ import { FaHeart } from "react-icons/fa";
 import { DiscDetails, discDetailsSelect } from "src/types/prisma";
 import Breadcrumbs from "src/frontend/components/Breadcrumbs";
 import { serializeDisc } from "src/common/utils/disc";
-import { LoadingPage, Section } from "src/frontend/components";
+import { FormLabel, LoadingPage, Section } from "src/frontend/components";
 import clsx from "clsx";
 import { useUser } from "src/frontend/hooks";
 import config from "src/common/config";
 import { useQueryClient } from "@tanstack/react-query";
+import Toggle from "src/frontend/components/Toggle";
 
 type Props = {
   disc: DiscDetails;
@@ -35,6 +36,16 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
   } = useRouter();
 
   const { stores, isLoading } = useStores();
+
+  const [showOnlyInStock, setShowOnlyInStock] = useState(true);
+
+  const filteredProducts = useMemo(() => {
+    if (showOnlyInStock) {
+      return disc.products.filter((disc) => disc.latestPrice > 0);
+    }
+
+    return disc.products;
+  }, [showOnlyInStock, disc.products]);
 
   const getStoreName = useCallback(
     (id: number) => {
@@ -51,7 +62,7 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
   );
 
   const allProducts = useMemo(() => {
-    return disc.products
+    return filteredProducts
       .map((product) => ({
         ...product,
       }))
@@ -78,7 +89,7 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
 
         return 0;
       });
-  }, [disc.products]);
+  }, [filteredProducts]);
 
   if (isLoading) {
     return <LoadingPage />;
@@ -156,8 +167,20 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
               Priser
             </Heading>
 
-            <p className="text-gray-500">Her ser du en oversikt på</p>
+            <p className="text-gray-500 mb-4">
+              Her ser du en oversikt på priser til {disc.name}
+            </p>
+
+            <div className="flex flex-row-reverse  justify-center gap-2">
+              <FormLabel>Vis kun på lager</FormLabel>
+              <Toggle
+                defaultValue={showOnlyInStock}
+                onChange={setShowOnlyInStock}
+              />
+            </div>
           </div>
+
+          <div></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {allProducts
@@ -177,7 +200,14 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                       title={product.title}
                     >
                       <div className="grid grid-cols-5 lg:grid-cols-1 gap-4">
-                        <div className="col-span-2 relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
+                        <div
+                          className={clsx(
+                            "col-span-2 relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2",
+                            {
+                              "border-red-500/75 ring-red-500": !inStock,
+                            }
+                          )}
+                        >
                           <Image
                             src={
                               product.imageUrl
@@ -187,7 +217,12 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                             alt={product.title}
                             width={512}
                             height={512}
-                            className="max-w-full h-auto rounded group-hover:opacity-75 transition aspect-square object-contain"
+                            className={clsx(
+                              "max-w-full h-auto rounded group-hover:opacity-100 transition aspect-square object-contain",
+                              {
+                                "opacity-50": !inStock,
+                              }
+                            )}
                           />
                         </div>
 
@@ -218,26 +253,6 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                         </div>
                       </div>
                     </a>
-
-                    {user?.role === "admin" && (
-                      <Button
-                        className="mt-2 lg:block hidden"
-                        size="sm"
-                        color={product.disabled ? "success" : "danger"}
-                        onClick={async () => {
-                          await fetch(`/api/products/${product.id}/disable`, {
-                            method: "PUT",
-                            body: JSON.stringify({
-                              disabled: !product.disabled,
-                            }),
-                          });
-
-                          // window.location.reload();
-                        }}
-                      >
-                        {product.disabled ? "ENABLE" : "DISABLE"}
-                      </Button>
-                    )}
                   </div>
                 );
               })}

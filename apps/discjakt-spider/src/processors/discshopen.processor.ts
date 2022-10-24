@@ -20,10 +20,12 @@ export default async function processor({
   const html = response.data;
   const $ = load(html);
 
-  const priceStr =
-    $(".woocommerce-Price-amount.amount").first().text().trim() || "";
+  const outOfStockText = $(".stock.out-of-stock").text();
+  const inStock = outOfStockText === "";
 
-  const price = parsePriceString(priceStr.replace("kr", ""));
+  const priceStr = $(".price").first().text().trim() || "";
+
+  const price = inStock ? parsePriceString(priceStr.replace("kr", "")) : 0;
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",

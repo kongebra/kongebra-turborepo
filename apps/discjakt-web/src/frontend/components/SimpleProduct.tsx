@@ -43,7 +43,14 @@ const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
     <Link href={`/discs/${disc.slug}`} passHref>
       <a className="group" title={disc.name}>
         <div className="flex flex-col items-center">
-          <div className="relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2">
+          <div
+            className={clsx(
+              "relative bg-white rounded-md border-4 mb-4 group-hover:ring-4 transition p-2",
+              {
+                "border-red-500": lowestPrice === 0,
+              }
+            )}
+          >
             <Image
               src={disc.imageUrl ? disc.imageUrl : "/placeholder.png"}
               alt={disc.name}
@@ -106,6 +113,9 @@ const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
           </div>
 
           <span
+            className={clsx({
+              "text-red-500 font-semibold": lowestPrice === 0,
+            })}
             title={
               lowestPrice === 0
                 ? "Ikke på lager"

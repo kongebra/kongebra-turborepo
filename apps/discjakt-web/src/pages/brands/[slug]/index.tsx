@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 
 import Link from "next/link";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -8,6 +8,7 @@ import { Brand } from "@prisma/client";
 import {
   Breadcrumbs,
   Container,
+  FormLabel,
   Heading,
   LoadingPage,
   Section,
@@ -19,6 +20,7 @@ import { prisma } from "src/common/lib/prisma";
 import { useDiscs, useSortDiscs } from "src/frontend/hooks";
 import { discTypeToString } from "src/common/utils/discType";
 import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
+import Toggle from "src/frontend/components/Toggle";
 
 type Props = {
   brand: Brand;
@@ -28,6 +30,16 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
   const { sort, setSort, sortFn } = useSortDiscs();
 
   const { discs, isLoading } = useBrandDiscs({ slug: brand.slug });
+
+  const [showOnlyInProduction, setShowOnlyInProduction] = useState(true);
+
+  const filteredDiscs = useMemo(() => {
+    if (showOnlyInProduction) {
+      return discs.filter((disc) => disc.outOfProduction === false);
+    }
+
+    return discs;
+  }, [showOnlyInProduction, discs]);
 
   return (
     <>
@@ -50,8 +62,16 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
       <Section>
         <Container className="flex flex-col lg:flex-row justify-between lg:items-center mb-4 lg:mb-16">
           <Heading className="mb-2 lg:mb-0">{brand.name}</Heading>
-          <div>
+          <div className="flex flex-col">
             <SelectDiscSort value={sort} onChange={setSort} />
+
+            <div className="flex flex-row-reverse lg:flex-col justify-end gap-2">
+              <FormLabel>Vis kun disker i produksjon</FormLabel>
+              <Toggle
+                defaultValue={showOnlyInProduction}
+                onChange={setShowOnlyInProduction}
+              />
+            </div>
           </div>
         </Container>
 
@@ -74,7 +94,7 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
         ) : (
           <Container>
             <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
-              {discs.sort(sortFn).map((disc) => (
+              {filteredDiscs.sort(sortFn).map((disc) => (
                 <SimpleProduct key={disc.id} disc={disc} />
               ))}
             </div>

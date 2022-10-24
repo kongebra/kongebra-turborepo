@@ -42,6 +42,7 @@ const nextConfig = {
       "frisbeefeber-i04.mycdn.no",
       "frisbeefeber-i05.mycdn.no",
       "frisbeefeber-i06.mycdn.no",
+      "discshopen.no",
     ],
     formats: ["image/avif", "image/webp"],
   },

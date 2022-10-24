@@ -44,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: inStock ? price : 0,
+      latestPrice: price,
       storeId,
       updatedAt: new Date(),
 

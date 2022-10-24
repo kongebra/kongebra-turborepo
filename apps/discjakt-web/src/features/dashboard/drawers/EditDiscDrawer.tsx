@@ -44,7 +44,7 @@ const EditDiscDrawer: React.FC<Props> = ({ show, onClose, defaultValues }) => {
       title="Editer  disc"
       show={show}
       onClose={onClose}
-      size="xl"
+      size="lg"
       className="flex flex-col"
     >
       <EditDiscForm

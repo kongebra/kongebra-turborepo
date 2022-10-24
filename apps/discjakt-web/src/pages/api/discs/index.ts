@@ -20,6 +20,7 @@ async function GET(req: NextApiRequest, res: NextApiResponse) {
   const discs = await prisma.disc.findMany({
     include: {
       brand: true,
+      products: true,
     },
   });
 

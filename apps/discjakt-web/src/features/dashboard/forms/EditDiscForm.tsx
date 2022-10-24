@@ -12,6 +12,7 @@ import Image from "next/future/image";
 import React, { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { DiscDetails } from "src/types/prisma";
+import Toggle from "src/frontend/components/Toggle";
 
 type Props = {
   brands: Brand[];
@@ -186,6 +187,14 @@ const EditDiscForm: React.FC<Props> = ({
               error={form.formState.errors.fade?.message}
             />
           </div>
+        </div>
+
+        <div className="flex items-center gap-2 mb-4">
+          <Toggle
+            defaultValue={form.getValues("outOfProduction")}
+            onChange={(value) => form.setValue("outOfProduction", value)}
+          />
+          <FormLabel>Ikke lengre i produksjon</FormLabel>
         </div>
 
         <div>

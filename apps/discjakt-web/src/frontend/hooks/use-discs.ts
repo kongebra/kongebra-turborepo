@@ -16,7 +16,13 @@ const createDisc = async (record: Disc) => {
   return resp.data;
 };
 
-const updateDisc = async ({ slug, record }: { slug: string; record: Disc }) => {
+const updateDisc = async ({
+  slug,
+  record,
+}: {
+  slug: string;
+  record: Partial<Disc>;
+}) => {
   const resp = await axios.put<Disc>(`${BASE_URL}/${slug}`, record);
   return resp.data;
 };
@@ -41,21 +47,21 @@ export default function useDiscs(
 
   const createMutation = useMutation(createDisc, {
     onSuccess() {
-      queryClient.resetQueries(["discs"]);
+      queryClient.invalidateQueries(["discs"]);
       queryClient.invalidateQueries(["data-cleaning"]);
     },
   });
 
   const updateMutation = useMutation(updateDisc, {
     onSuccess() {
-      queryClient.resetQueries(["discs"]);
+      queryClient.invalidateQueries(["discs"]);
       queryClient.invalidateQueries(["data-cleaning"]);
     },
   });
 
   const deleteMutation = useMutation(deleteDisc, {
     onSuccess() {
-      queryClient.resetQueries(["discs"]);
+      queryClient.invalidateQueries(["discs"]);
       queryClient.invalidateQueries(["data-cleaning"]);
     },
   });

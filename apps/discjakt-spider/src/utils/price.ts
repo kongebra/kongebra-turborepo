@@ -1,5 +1,5 @@
 export function parsePriceString(value: string): number {
-  const clean = value.replace(",-", "").replace(",", ".");
+  const clean = value.trim().replace(",-", "").replace(",", ".");
 
   const num = Number(clean);
   if (isNaN(num)) {
