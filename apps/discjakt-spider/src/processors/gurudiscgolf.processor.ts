@@ -23,6 +23,10 @@ export default async function processor({
   const outOfStockText = $(".summary .stock.out-of-stock").text();
   const inStock = outOfStockText === "";
 
+  if (!inStock) {
+    console.log(loc);
+  }
+
   const priceStr =
     $(".woocommerce-Price-amount.amount").first().text().trim() || "";
 

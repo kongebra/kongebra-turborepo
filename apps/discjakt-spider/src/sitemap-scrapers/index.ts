@@ -37,21 +37,23 @@ const keys = Object.keys(stores) as StoreSlug[];
 export default async function handler() {
   console.time("store sitemap crawl");
 
-  // Pick store that latest updated
-  const store = await prisma.store.findFirst({
-    take: 1,
-    orderBy: {
-      updatedAt: "asc",
-    },
-  });
+  // // Pick store that latest updated
+  // const store = await prisma.store.findFirst({
+  //   take: 1,
+  //   orderBy: {
+  //     updatedAt: "asc",
+  //   },
+  // });
 
-  if (store) {
-    const func = stores[store.slug as StoreSlug];
-    if (func) {
-      // run stores function
-      await func();
-    }
-  }
+  // if (store) {
+  //   const func = stores[store.slug as StoreSlug];
+  //   if (func) {
+  //     // run stores function
+  //     await func();
+  //   }
+  // }
+
+  await stores["gurudiscgolf"]();
 
   console.timeEnd("store sitemap crawl");
 }

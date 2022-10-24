@@ -24,6 +24,7 @@ export function getQueues() {
       gurudiscgolf: new Q("gurudiscgolf", config.redisUrl, queueOptions),
       spinnvilldg: new Q("spinnvilldg", config.redisUrl, queueOptions),
       krokholdgs: new Q("krokholdgs", config.redisUrl, queueOptions),
+      discshopen: new Q("discshopen", config.redisUrl, queueOptions),
       frisbeesor: new Q("frisbeesor", config.redisUrl, queueOptions),
       starframe: new Q("starframe", config.redisUrl, queueOptions),
       prodisc: new Q("prodisc", config.redisUrl, queueOptions),
