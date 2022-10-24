@@ -17,7 +17,7 @@ import krokholdgs from "./processors/krokholdgs.processor";
 import prodisc from "./processors/prodisc.processor";
 import spinnvilldg from "./processors/spinnvilldg.processor";
 import starframe from "./processors/starframe.processor";
-import { StoreSlug } from "./types";
+import discshopen from "./processors/discshopen.processor";
 
 /**
  * QUEUES
@@ -40,6 +40,7 @@ storeQueues.krokholdgs.process(krokholdgs);
 storeQueues.prodisc.process(prodisc);
 storeQueues.spinnvilldg.process(spinnvilldg);
 storeQueues.starframe.process(starframe);
+storeQueues.discshopen.process(discshopen);
 
 /**
  * CRON JOBS
