@@ -1,8 +1,8 @@
 import axios from "axios";
 import { load } from "cheerio";
-import path from "path";
-import { prisma } from "../lib/prisma";
+
 import { getQueues } from "../queue";
+import { prisma } from "../lib/prisma";
 import { checkLastmodUnderAge } from "../utils/lastmod";
 
 const { commonQueue } = getQueues();
