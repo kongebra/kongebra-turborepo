@@ -26,7 +26,7 @@ export default async function processor({
   const priceStr =
     $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
 
-  const price = parsePriceString(priceStr);
+  const price = inStock ? parsePriceString(priceStr) : 0;
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
@@ -44,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: inStock ? price : 0,
+      latestPrice: price,
       storeId,
       updatedAt: new Date(),
 

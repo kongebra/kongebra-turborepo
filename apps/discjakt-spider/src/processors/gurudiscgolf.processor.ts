@@ -30,7 +30,7 @@ export default async function processor({
   const priceStr =
     $(".woocommerce-Price-amount.amount").first().text().trim() || "";
 
-  const price = parsePriceString(priceStr.replace("kr", ""));
+  const price = inStock ? parsePriceString(priceStr.replace("kr", "")) : 0;
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
@@ -53,7 +53,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: inStock ? price : 0,
+      latestPrice: price,
       storeId,
       updatedAt: new Date(),
 

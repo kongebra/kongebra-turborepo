@@ -1,10 +1,10 @@
-import { Job } from "bull";
-import { CommonJobItem } from "../types";
 import axios from "axios";
+import { Job } from "bull";
 import { load } from "cheerio";
-import { parsePriceString } from "../utils/price";
+
 import { prisma } from "../lib/prisma";
-import path from "path";
+import { CommonJobItem } from "../types";
+import { parsePriceString } from "../utils/price";
 
 export default async function processor({
   id,
@@ -25,7 +25,7 @@ export default async function processor({
 
   const priceStr = $(".product-page-price .amount").text().slice(3) || "";
 
-  const price = parsePriceString(priceStr);
+  const price = inStock ? parsePriceString(priceStr) : 0;
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
