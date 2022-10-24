@@ -1,7 +1,7 @@
 import { Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import React, { Fragment, useRef } from "react";
-import Input from "src/components/Input";
+import Input from "src/frontend/components/Input";
 import { useOnClickOutside } from "usehooks-ts";
 
 type Props = React.PropsWithChildren<{

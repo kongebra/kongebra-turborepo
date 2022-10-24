@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import Image from "next/future/image";
 
-import useUser from "src/hooks/use-user";
+import useUser from "src/frontend/hooks/use-user";
 
 import Button from "./Button";
 import PlaceholderUserIcon from "./PlaceholderUserIcon";
@@ -18,7 +18,7 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
-import useAuth from "src/hooks/use-auth";
+import useAuth from "src/frontend/hooks/use-auth";
 
 type MenuLinkProps = {
   icon: IconType;

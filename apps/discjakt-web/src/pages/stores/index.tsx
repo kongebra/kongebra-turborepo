@@ -3,8 +3,13 @@ import { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Link from "next/link";
 import React from "react";
-import { Breadcrumbs, Container, Heading, Section } from "src/components";
-import { prisma } from "src/lib/prisma";
+import {
+  Breadcrumbs,
+  Container,
+  Heading,
+  Section,
+} from "src/frontend/components";
+import { prisma } from "src/common/lib/prisma";
 
 const storeSelect = Prisma.validator<Prisma.StoreSelect>()({
   id: true,

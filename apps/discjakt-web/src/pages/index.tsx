@@ -7,8 +7,8 @@ import {
   LoadingPage,
   Section,
   SimpleProduct,
-} from "src/components";
-import { prisma } from "src/lib/prisma";
+} from "src/frontend/components";
+import { prisma } from "src/common/lib/prisma";
 
 type Props = {
   trending: DiscDetails[];

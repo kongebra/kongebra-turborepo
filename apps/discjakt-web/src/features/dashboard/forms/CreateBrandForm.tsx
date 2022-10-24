@@ -1,13 +1,13 @@
 import { Brand } from "@prisma/client";
-import Button from "src/components/Button";
-import FormInput from "src/components/FormInput";
-import FormTextarea from "src/components/FormTextarea";
+import Button from "src/frontend/components/Button";
+import FormInput from "src/frontend/components/FormInput";
+import FormTextarea from "src/frontend/components/FormTextarea";
 import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import clsx from "clsx";
-import FormError from "src/components/FormError";
-import FormLabel from "src/components/FormLabel";
-import Input from "src/components/Input";
+import FormError from "src/frontend/components/FormError";
+import FormLabel from "src/frontend/components/FormLabel";
+import Input from "src/frontend/components/Input";
 
 type Props = {
   brands: Brand[];

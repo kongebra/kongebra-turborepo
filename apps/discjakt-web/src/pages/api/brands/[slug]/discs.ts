@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { prisma } from "src/lib/prisma";
+import { prisma } from "src/common/lib/prisma";
 import { discDetailsSelect } from "src/types/prisma";
-import { getQueryStringValue } from "src/utils/query";
+import { getQueryStringValue } from "src/common/utils/query";
 
 export default async function handler(
   req: NextApiRequest,

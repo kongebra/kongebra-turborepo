@@ -1,4 +1,4 @@
-import useUser from "src/hooks/use-user";
+import useUser from "src/frontend/hooks/use-user";
 
 const LogoutPage = () => {
   const { logout } = useUser();

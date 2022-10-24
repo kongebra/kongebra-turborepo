@@ -3,11 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { Fragment } from "react";
 import { FaSearch } from "react-icons/fa";
-import { Button } from "src/components";
-import Container from "src/components/Container";
-import Input from "src/components/Input";
-import SearchBar from "src/components/SearchBar";
-import UserAvatar from "src/components/UserAvatar";
+import { Button } from "src/frontend/components";
+import Container from "src/frontend/components/Container";
+import Input from "src/frontend/components/Input";
+import SearchBar from "src/frontend/components/SearchBar";
+import UserAvatar from "src/frontend/components/UserAvatar";
 import { useBoolean } from "usehooks-ts";
 
 const links = [

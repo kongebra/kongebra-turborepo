@@ -8,13 +8,13 @@ import CreateDiscDrawer from "src/features/dashboard/drawers/CreateDiscDrawer";
 import SelectDiscDrawer from "src/features/dashboard/drawers/SelectDiscDrawer";
 import DataCleaningProduct from "src/features/dashboard/components/DataCleaningProduct";
 
-import DashboardLayout from "src/layout/DashboardLayout";
+import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import config from "src/common/config";
-import Button from "src/components/Button";
+import Button from "src/frontend/components/Button";
 import { findMatch } from "src/features/dashboard/utils/find-match";
-import useDiscs from "src/hooks/use-discs";
-import useProducts from "src/hooks/use-products";
+import useDiscs from "src/frontend/hooks/use-discs";
+import useProducts from "src/frontend/hooks/use-products";
 
 const BASE_URL = `/api/data`;
 

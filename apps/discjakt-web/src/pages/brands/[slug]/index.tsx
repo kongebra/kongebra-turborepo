@@ -13,12 +13,12 @@ import {
   Section,
   SelectDiscSort,
   SimpleProduct,
-} from "src/components";
+} from "src/frontend/components";
 
-import { prisma } from "src/lib/prisma";
-import { useDiscs, useSortDiscs } from "src/hooks";
-import { discTypeToString } from "src/utils/discType";
-import useBrandDiscs from "src/hooks/use-brand-discs";
+import { prisma } from "src/common/lib/prisma";
+import { useDiscs, useSortDiscs } from "src/frontend/hooks";
+import { discTypeToString } from "src/common/utils/discType";
+import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
 
 type Props = {
   brand: Brand;

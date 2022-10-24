@@ -1,15 +1,15 @@
 import { Brand, Disc, Product } from "@prisma/client";
-import Button from "src/components/Button";
-import FormInput from "src/components/FormInput";
-import FormSelect from "src/components/FormSelect";
-import FormTextarea from "src/components/FormTextarea";
-import Input from "src/components/Input";
-import Select from "src/components/Select";
+import Button from "src/frontend/components/Button";
+import FormInput from "src/frontend/components/FormInput";
+import FormSelect from "src/frontend/components/FormSelect";
+import FormTextarea from "src/frontend/components/FormTextarea";
+import Input from "src/frontend/components/Input";
+import Select from "src/frontend/components/Select";
 import Image from "next/future/image";
 import React, { useMemo } from "react";
 import { useForm } from "react-hook-form";
-import FormLabel from "src/components/FormLabel";
-import FormError from "src/components/FormError";
+import FormLabel from "src/frontend/components/FormLabel";
+import FormError from "src/frontend/components/FormError";
 import clsx from "clsx";
 
 type Props = {

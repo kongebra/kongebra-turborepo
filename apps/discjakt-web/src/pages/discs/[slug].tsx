@@ -1,24 +1,24 @@
-import Button from "src/components/Button";
-import Container from "src/components/Container";
-import Heading from "src/components/Heading";
+import Button from "src/frontend/components/Button";
+import Container from "src/frontend/components/Container";
+import Heading from "src/frontend/components/Heading";
 
-import useStores from "src/hooks/use-stores";
+import useStores from "src/frontend/hooks/use-stores";
 
 import Image from "next/future/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import React, { useCallback, useMemo } from "react";
-import { discTypeToString } from "src/utils/discType";
+import { discTypeToString } from "src/common/utils/discType";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { prisma } from "src/lib/prisma";
+import { prisma } from "src/common/lib/prisma";
 import { FaHeart } from "react-icons/fa";
 import { DiscDetails, discDetailsSelect } from "src/types/prisma";
-import Breadcrumbs from "src/components/Breadcrumbs";
-import { serializeDisc } from "src/utils/disc";
-import { LoadingPage, Section } from "src/components";
+import Breadcrumbs from "src/frontend/components/Breadcrumbs";
+import { serializeDisc } from "src/common/utils/disc";
+import { LoadingPage, Section } from "src/frontend/components";
 import clsx from "clsx";
-import { useUser } from "src/hooks";
+import { useUser } from "src/frontend/hooks";
 import config from "src/common/config";
 import { useQueryClient } from "@tanstack/react-query";
 

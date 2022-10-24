@@ -9,20 +9,20 @@ import {
   Section,
   SelectDiscSort,
   SimpleProduct,
-} from "src/components";
+} from "src/frontend/components";
 
-import { useDiscs, useSortDiscs } from "src/hooks";
-import { prisma } from "src/lib/prisma";
+import { useDiscs, useSortDiscs } from "src/frontend/hooks";
+import { prisma } from "src/common/lib/prisma";
 import {
   BrandDetails,
   brandDetailsSelect,
   DiscDetails,
   discDetailsSelect,
 } from "src/types/prisma";
-import { serializeDisc } from "src/utils/disc";
-import { discTypeToString } from "src/utils/discType";
+import { serializeDisc } from "src/common/utils/disc";
+import { discTypeToString } from "src/common/utils/discType";
 import { Brand } from "@prisma/client";
-import useBrandDiscs from "src/hooks/use-brand-discs";
+import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
 
 type Props = {
   brand: Brand;

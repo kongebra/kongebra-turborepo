@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import React, { useEffect, useMemo, useRef } from "react";
 import { FaBars, FaHeart, FaSearch, FaUser } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
-import Button from "src/components/Button";
-import SearchBar from "src/components/SearchBar";
-import useUser from "src/hooks/use-user";
-import MobileDrawer from "src/layout/MobileDrawer";
+import Button from "src/frontend/components/Button";
+import SearchBar from "src/frontend/components/SearchBar";
+import useUser from "src/frontend/hooks/use-user";
+import MobileDrawer from "src/frontend/layout/MobileDrawer";
 import { useBoolean, useOnClickOutside } from "usehooks-ts";
 import MobileSearch from "./MobileSearch";
 

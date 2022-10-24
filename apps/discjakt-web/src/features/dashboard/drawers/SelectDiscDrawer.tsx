@@ -1,9 +1,9 @@
 import { Product } from "@prisma/client";
-import Autocomplete from "src/components/Autocomplete";
-import Button from "src/components/Button";
-import Drawer from "src/components/Drawer";
-import useDiscs from "src/hooks/use-discs";
-import useProducts from "src/hooks/use-products";
+import Autocomplete from "src/frontend/components/Autocomplete";
+import Button from "src/frontend/components/Button";
+import Drawer from "src/frontend/components/Drawer";
+import useDiscs from "src/frontend/hooks/use-discs";
+import useProducts from "src/frontend/hooks/use-products";
 import React, { useMemo, useState } from "react";
 import { useDebounce } from "usehooks-ts";
 import { DiscDetails } from "src/types/prisma";

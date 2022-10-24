@@ -6,7 +6,12 @@ import Image from "next/future/image";
 import { useRouter } from "next/router";
 import { signIn, useSession } from "next-auth/react";
 
-import { Button, Container, Heading, LoadingPage } from "src/components";
+import {
+  Button,
+  Container,
+  Heading,
+  LoadingPage,
+} from "src/frontend/components";
 
 const LoginPage = () => {
   const { status } = useSession();

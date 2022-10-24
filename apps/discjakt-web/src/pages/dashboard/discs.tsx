@@ -3,15 +3,15 @@ import { Brand, Disc, Product } from "@prisma/client";
 
 import { createColumnHelper } from "@tanstack/react-table";
 
-import Button from "src/components/Button";
-import Drawer from "src/components/Drawer";
-import Table from "src/components/Table";
+import Button from "src/frontend/components/Button";
+import Drawer from "src/frontend/components/Drawer";
+import Table from "src/frontend/components/Table";
 
 import EditDiscDrawer from "src/features/dashboard/drawers/EditDiscDrawer";
 
-import useDiscs from "src/hooks/use-discs";
+import useDiscs from "src/frontend/hooks/use-discs";
 
-import DashboardLayout from "src/layout/DashboardLayout";
+import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import { DiscDetails } from "src/types/prisma";
 

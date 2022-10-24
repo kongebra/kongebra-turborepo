@@ -1,8 +1,8 @@
 import { Disc, Product } from "@prisma/client";
-import Modal from "src/components/Modal";
-import useBrands from "src/hooks/use-brands";
-import useDiscs from "src/hooks/use-discs";
-import useProducts from "src/hooks/use-products";
+import Modal from "src/frontend/components/Modal";
+import useBrands from "src/frontend/hooks/use-brands";
+import useDiscs from "src/frontend/hooks/use-discs";
+import useProducts from "src/frontend/hooks/use-products";
 import React from "react";
 import CreateDiscForm from "../forms/CreateDiscForm";
 

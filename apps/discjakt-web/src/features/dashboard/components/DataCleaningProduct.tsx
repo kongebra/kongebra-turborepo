@@ -1,11 +1,11 @@
 import { Disc, Product } from "@prisma/client";
 import React, { useCallback, useMemo } from "react";
-import Button from "src/components/Button";
+import Button from "src/frontend/components/Button";
 import Image from "next/future/image";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import useProducts from "src/hooks/use-products";
-import useDiscs from "src/hooks/use-discs";
+import useProducts from "src/frontend/hooks/use-products";
+import useDiscs from "src/frontend/hooks/use-discs";
 import { DiscDetails } from "src/types/prisma";
 import { findMatch } from "../utils/find-match";
 import clsx from "clsx";

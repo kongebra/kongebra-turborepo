@@ -21,15 +21,26 @@ export default async function handler(
 }
 
 async function GET(req: NextApiRequest, res: NextApiResponse, id: number) {
-  const store = await prisma.store.findFirst({
+  const discs = await prisma.disc.findMany({
     where: {
-      id: id,
+      products: {
+        every: {
+          storeId: id,
+        },
+      },
+    },
+
+    include: {
+      brand: true,
+      products: true,
     },
   });
 
-  if (!store) {
-    return res.status(404).end("entity not found");
-  }
-
-  res.status(200).json(store);
+  res.status(200).json(discs);
 }
+
+async function POST(req: NextApiRequest, res: NextApiResponse) {}
+
+async function PUT(req: NextApiRequest, res: NextApiResponse) {}
+
+async function DELETE(req: NextApiRequest, res: NextApiResponse) {}

@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
-import useProducts from "src/hooks/use-products";
-import DashboardLayout from "src/layout/DashboardLayout";
+import useProducts from "src/frontend/hooks/use-products";
+import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import Image from "next/future/image";
-import Button from "src/components/Button";
+import Button from "src/frontend/components/Button";
 import { Product, ProductPrice } from "@prisma/client";
 
 const NonDiscs = () => {

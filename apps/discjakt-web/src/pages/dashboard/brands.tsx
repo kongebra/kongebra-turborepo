@@ -1,8 +1,8 @@
 import { Brand } from "@prisma/client";
-import Button from "src/components/Button";
+import Button from "src/frontend/components/Button";
 import CreateBrandModal from "src/features/dashboard/modals/CreateBrandModal";
-import useBrands from "src/hooks/use-brands";
-import DashboardLayout from "src/layout/DashboardLayout";
+import useBrands from "src/frontend/hooks/use-brands";
+import DashboardLayout from "src/frontend/layout/DashboardLayout";
 import { useSession } from "next-auth/react";
 import Image from "next/future/image";
 import { useRouter } from "next/router";

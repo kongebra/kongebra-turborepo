@@ -1,8 +1,8 @@
 import { Disc, Product } from "@prisma/client";
-import Drawer from "src/components/Drawer";
-import useBrands from "src/hooks/use-brands";
-import useDiscs from "src/hooks/use-discs";
-import useProducts from "src/hooks/use-products";
+import Drawer from "src/frontend/components/Drawer";
+import useBrands from "src/frontend/hooks/use-brands";
+import useDiscs from "src/frontend/hooks/use-discs";
+import useProducts from "src/frontend/hooks/use-products";
 import React from "react";
 import CreateDiscForm from "../forms/CreateDiscForm";
 import EditDiscForm from "../forms/EditDiscForm";

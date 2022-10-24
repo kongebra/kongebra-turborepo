@@ -4,8 +4,13 @@ import { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Link from "next/link";
 
-import { prisma } from "src/lib/prisma";
-import { Breadcrumbs, Container, Heading, Section } from "src/components";
+import { prisma } from "src/common/lib/prisma";
+import {
+  Breadcrumbs,
+  Container,
+  Heading,
+  Section,
+} from "src/frontend/components";
 import { type BrandDetails, brandDetailsSelect } from "src/types/prisma";
 import { Brand } from "@prisma/client";
 

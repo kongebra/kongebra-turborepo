@@ -3,8 +3,8 @@ import type { GetStaticProps, NextPage } from "next";
 import { GiFactory, GiFrisbee } from "react-icons/gi";
 import { FaBox, FaBoxOpen, FaStore } from "react-icons/fa";
 
-import { prisma } from "src/lib/prisma";
-import DashboardLayout from "src/layout/DashboardLayout";
+import { prisma } from "src/common/lib/prisma";
+import DashboardLayout from "src/frontend/layout/DashboardLayout";
 import DashboardStat from "src/features/dashboard/components/DashboardStat";
 
 type Props = {

@@ -8,9 +8,9 @@ import { SessionProvider } from "next-auth/react";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import config from "src/lib/react-query";
+import config from "src/common/lib/react-query";
 
-import Layout from "src/layout/Layout";
+import Layout from "src/frontend/layout/Layout";
 
 import "../styles/globals.css";
 import { DefaultSeo } from "next-seo";

@@ -11,12 +11,12 @@ import {
   Breadcrumbs,
   SimpleProduct,
   Section,
-} from "src/components";
+} from "src/frontend/components";
 
 import config from "src/common/config";
-import { useSortDiscs } from "src/hooks";
+import { useSortDiscs } from "src/frontend/hooks";
 import type { DiscDetails } from "src/types/prisma";
-import { getQueryStringValue } from "src/utils/query";
+import { getQueryStringValue } from "src/common/utils/query";
 
 const fetchSearch = async (query?: string) => {
   const url = `/api/discs/search?q=${query || ""}`;
