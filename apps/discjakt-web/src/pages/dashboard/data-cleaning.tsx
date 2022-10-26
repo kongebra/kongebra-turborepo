@@ -96,7 +96,7 @@ const DashboardDataCleaingPage = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {data &&
             [...data].reverse().map((product) => (
               <DataCleaningProduct

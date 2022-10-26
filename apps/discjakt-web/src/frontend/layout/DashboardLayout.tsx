@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
+import { LoadingPage } from "../components";
 
 type LinkType = {
   href: string;
@@ -66,7 +67,7 @@ const DashboardLayout: React.FC<Props> = ({ className, children }) => {
   });
 
   if (status === "loading") {
-    return <div>loading...</div>;
+    return <LoadingPage />;
   }
 
   if (session?.user.role?.toLowerCase() !== "admin") {

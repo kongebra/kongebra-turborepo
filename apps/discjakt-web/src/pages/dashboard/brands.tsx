@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useBoolean } from "usehooks-ts";
 import EditBrandDrawer from "src/features/dashboard/drawers/EditBrandDrawer";
+import { LoadingPage } from "src/frontend/components";
 
 const DashboardBrandsPage = () => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const DashboardBrandsPage = () => {
 
   const render = () => {
     if (isLoading) {
-      return <p>Loading...</p>;
+      return <LoadingPage />;
     }
 
     const sortBrand = (a: Brand, b: Brand) => {
@@ -94,7 +95,7 @@ const DashboardBrandsPage = () => {
   };
 
   if (status === "loading") {
-    return <div>loading...</div>;
+    return <LoadingPage />;
   }
 
   if (session?.user.role?.toLowerCase() !== "admin") {

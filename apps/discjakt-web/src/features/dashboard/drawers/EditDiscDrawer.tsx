@@ -28,6 +28,13 @@ const EditDiscDrawer: React.FC<Props> = ({ show, onClose, defaultValues }) => {
       ...data,
       name: data.name.trim(),
       description: data.description.trim(),
+      
+      speed: Number(data.speed),
+      glide: Number(data.glide),
+      turn: Number(data.turn),
+      fade: Number(data.fade),
+
+      brandId: Number(data.brandId),
     };
 
     delete (record as any).products;
