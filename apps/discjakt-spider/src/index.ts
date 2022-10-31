@@ -33,11 +33,11 @@ app.get("/health", (req, res) => {
   res.status(200).send("ok");
 });
 
-// app.get("/foo", async (req, res) => {
-//   await dailyPriceJob();
+app.get("/foo", async (req, res) => {
+  await dailyPriceJob();
 
-//   res.status(200).json({ messge: "crawl began" });
-// });
+  res.status(200).json({ messge: "crawl began" });
+});
 
 // app.get("/ml", async (req, res) => {
 //   const data = await ml();
