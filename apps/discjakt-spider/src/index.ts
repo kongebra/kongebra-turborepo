@@ -18,8 +18,7 @@ cron.schedule("0 3 * * *", async () => {
 
 cron.schedule("*/5 * * * *", async () => {
   // every 5th minute
-
-  await lookForNewProducts();
+  // await lookForNewProducts();
 });
 
 /**

@@ -3,6 +3,7 @@ import { load } from "cheerio";
 import { promises } from "dns";
 import { prisma } from "../../lib/prisma";
 import { checkLastmodUnderAge } from "../../utils/lastmod";
+import krokholdgs from "../new-product-page/krokholdgs";
 
 export default async function handler() {
   const now = new Date();
@@ -33,6 +34,8 @@ export default async function handler() {
 
   let newProductsFound = 0;
 
+  const promises = new Array<Promise<any>>();
+
   let sitemaps: string[] = [store.sitemapUrl];
 
   for (const sitemap of sitemaps) {
@@ -61,12 +64,15 @@ export default async function handler() {
         return;
       }
 
-      // TODO: Scrape site and create product
+      promises.push(krokholdgs({ loc, lastmod, store: { id: store.id } }));
+
       newProductsFound++;
     });
   }
 
   console.log("krokholdgs - new products found:", newProductsFound);
+
+  await Promise.all(promises);
 
   console.timeEnd(`krokholdgs - ${now.getTime()}`);
 }

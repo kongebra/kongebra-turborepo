@@ -2,6 +2,7 @@ import axios from "axios";
 import { load } from "cheerio";
 import { prisma } from "../../lib/prisma";
 import { checkLastmodUnderAge } from "../../utils/lastmod";
+import frisbeesor from "../new-product-page/frisbeesor";
 
 export default async function handler() {
   const now = new Date();
@@ -31,6 +32,8 @@ export default async function handler() {
   );
 
   let newProductsFound = 0;
+
+  const promises = new Array<Promise<any>>();
 
   const sitemapRes = await axios.get(store.sitemapUrl);
   const xml = await sitemapRes.data;
@@ -71,12 +74,15 @@ export default async function handler() {
         return;
       }
 
-      // TODO: Scrape site and create product
+      promises.push(frisbeesor({ loc, lastmod, store: { id: store.id } }));
+
       newProductsFound++;
     });
   }
 
   console.log("frisbeesor - new products found:", newProductsFound);
+
+  await Promise.all(promises);
 
   console.timeEnd(`frisbeesor - ${now.getTime()}`);
 }
