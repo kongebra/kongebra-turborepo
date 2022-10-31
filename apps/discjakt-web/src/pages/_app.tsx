@@ -10,6 +10,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import config from "src/common/lib/react-query";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import Layout from "src/frontend/layout/Layout";
 
 import "../styles/globals.css";
@@ -47,6 +49,8 @@ function App({
         </Layout>
 
         <ReactQueryDevtools position={"top-left"} />
+
+        <Analytics />
       </QueryClientProvider>
     </SessionProvider>
   );
