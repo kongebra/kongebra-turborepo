@@ -1,66 +1,25 @@
 import express from "express";
 import cron from "node-cron";
 
-import { getQueues } from "./queue";
-import crawlLatestStoreSitemap from "./sitemap-scrapers";
+import { ml } from "./ml";
 
-import common from "./processors/common.processor";
-
-import aceshop from "./processors/aceshop.processor";
-import dgshop from "./processors/dgshop.processor";
-import discoverdiscs from "./processors/discoverdiscs.processor";
-import frisbeebutikken from "./processors/frisbeebutikken.processor";
-import frisbeefeber from "./processors/frisbeefeber.processor";
-import frisbeesor from "./processors/frisbeesor.processor";
-import gurudiscgolf from "./processors/gurudiscgolf.processor";
-import krokholdgs from "./processors/krokholdgs.processor";
-import prodisc from "./processors/prodisc.processor";
-import spinnvilldg from "./processors/spinnvilldg.processor";
-import starframe from "./processors/starframe.processor";
-import discshopen from "./processors/discshopen.processor";
-
-/**
- * QUEUES
- */
-
-const { commonQueue, storeQueues } = getQueues();
-
-// common
-commonQueue.process(common);
-
-// stores
-storeQueues.aceshop.process(aceshop);
-storeQueues.dgshop.process(dgshop);
-storeQueues.discoverdiscs.process(discoverdiscs);
-storeQueues.frisbeebutikken.process(frisbeebutikken);
-storeQueues.frisbeefeber.process(frisbeefeber);
-storeQueues.frisbeesor.process(frisbeesor);
-storeQueues.gurudiscgolf.process(gurudiscgolf);
-storeQueues.krokholdgs.process(krokholdgs);
-storeQueues.prodisc.process(prodisc);
-storeQueues.spinnvilldg.process(spinnvilldg);
-storeQueues.starframe.process(starframe);
-storeQueues.discshopen.process(discshopen);
+import dailyPriceJob from "./cron/daily-price-job";
+import lookForNewProducts from "./cron/look-for-new-products";
 
 /**
  * CRON JOBS
  */
 
-cron.schedule("* */1 * * *", async () => {
-  // console.log("## CLEAN UP QUEUE SCHEDULE");
-  // // common
-  // await commonQueue.clean(0, "completed");
-  // // stores
-  // const keys = Object.keys(storeQueues) as StoreSlug[];
-  // for (const key of keys) {
-  //   await storeQueues[key].clean(1000 * 60 * 5, "completed");
-  // }
+cron.schedule("0 3 * * *", async () => {
+  // every night 3'o clock
+
+  await dailyPriceJob();
 });
 
 cron.schedule("*/5 * * * *", async () => {
-  // run every 10 minute
-  // will do the store that was
-  await crawlLatestStoreSitemap();
+  // every 5th minute
+
+  await lookForNewProducts();
 });
 
 /**
@@ -74,11 +33,17 @@ app.get("/health", (req, res) => {
   res.status(200).send("ok");
 });
 
-app.post("/crawlStoreSitemaps", async (req, res) => {
-  await crawlLatestStoreSitemap();
+// app.get("/foo", async (req, res) => {
+//   await dailyPriceJob();
 
-  res.status(200).json({ messge: "crawl began" });
-});
+//   res.status(200).json({ messge: "crawl began" });
+// });
+
+// app.get("/ml", async (req, res) => {
+//   const data = await ml();
+
+//   res.status(200).json(data);
+// });
 
 app.listen(port, () => {
   console.log("discjakt-spider is running!");

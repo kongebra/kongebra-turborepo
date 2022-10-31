@@ -38,6 +38,8 @@ model Product {
   disc        Disc?          @relation(fields: [discId], references: [id])
   store       Store          @relation(fields: [storeId], references: [id])
   prices      ProductPrice[]
+  plasticId   Int?
+  plastic     Plastic?       @relation(fields: [plasticId], references: [id])
 }
 
 model ProductPrice {
@@ -80,6 +82,16 @@ model Disc {
   brand           Brand               @relation(fields: [brandId], references: [id])
   products        Product[]
   users           UserDiscFavorites[]
+}
+
+model Plastic {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  slug        String    @unique
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  products    Product[]
 }
 
 model UserDiscFavorites {
