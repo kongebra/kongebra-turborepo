@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,23 +14,24 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`discoverdiscs - ${id}`);
+  console.time(`prodisc - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const soldOutText = $(".price--sold-out").text();
+  const soldOutText = $(".price.price--sold-out").text();
   const inStock = soldOutText === "";
 
   const priceStr =
     $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
 
-  const price = inStock ? parsePriceString(priceStr) : 0;
+  const price = parsePriceString(priceStr);
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
-    description: $('meta[name="description"]').attr("content")?.trim() || "",
+    description:
+      $('meta[property="og:description"]').attr("content")?.trim() || "",
     imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
   };
 
@@ -44,7 +45,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 
@@ -69,6 +70,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`discoverdiscs - ${id}`);
+  console.timeEnd(`prodisc - ${id}`);
   return product;
 }

@@ -1,10 +1,10 @@
 import Bull from "bull";
 import { Product } from "@prisma/client";
 
-import { getQueues } from "../queue";
-import { redisClient } from "../redis";
-import { prisma } from "../lib/prisma";
-import { CommonJobItem, StoreSlug } from "../types";
+import { getQueues } from "../../queue";
+import { redisClient } from "../../redis";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem, StoreSlug } from "../../types";
 
 const redis = redisClient<Product>();
 

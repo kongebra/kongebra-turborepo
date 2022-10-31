@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,15 +14,19 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`aceshop - ${id}`);
+  console.time(`discoverdiscs - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const priceStr = $(".product-price")?.text()?.trim() || "";
+  const soldOutText = $(".price--sold-out").text();
+  const inStock = soldOutText === "";
 
-  const price = parsePriceString(priceStr);
+  const priceStr =
+    $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
+
+  const price = inStock ? parsePriceString(priceStr) : 0;
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
@@ -65,6 +69,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`aceshop - ${id}`);
+  console.timeEnd(`discoverdiscs - ${id}`);
   return product;
 }

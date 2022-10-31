@@ -1,10 +1,10 @@
-import axios from "axios";
 import { Job } from "bull";
+import axios from "axios";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,24 +14,33 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`frisbeefeber - ${id}`);
+  console.time(`gurudiscgolf - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const soldOutText = $(".product_stock.stock_box").text();
-  const inStock = !soldOutText.includes("**");
+  const outOfStockText = $(".summary .stock.out-of-stock").text();
+  const inStock = outOfStockText === "";
 
-  const priceStr = $(".product-price").first()?.text()?.trim() || "";
+  if (!inStock) {
+    console.log(loc);
+  }
 
-  const price = parsePriceString(priceStr);
+  const priceStr =
+    $(".woocommerce-Price-amount.amount").first().text().trim() || "";
+
+  const price = inStock ? parsePriceString(priceStr.replace("kr", "")) : 0;
 
   const data = {
-    title: $("h1").first().text()?.trim() || "",
-    description: $(".product-information .panel-body").text()?.trim() || "",
+    title: $('meta[property="og:title"]').attr("content")?.trim() || "",
+    description:
+      $('meta[property="og:description"]').attr("content")?.trim() || "",
     imageUrl:
-      $(".product_image_price_row img").first().attr("src")?.trim() || "",
+      $(".woocommerce-product-gallery__wrapper img")
+        .first()
+        .attr("src")
+        ?.trim() || "",
   };
 
   const product = await prisma.product.upsert({
@@ -44,7 +53,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: inStock ? price : 0,
+      latestPrice: price,
       storeId,
       updatedAt: new Date(),
 
@@ -69,6 +78,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`frisbeefeber - ${id}`);
+  console.timeEnd(`gurudiscgolf - ${id}`);
   return product;
 }

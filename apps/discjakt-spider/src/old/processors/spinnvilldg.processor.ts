@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,

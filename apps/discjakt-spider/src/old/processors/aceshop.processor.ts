@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,24 +14,20 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`frisbeesor - ${id}`);
+  console.time(`aceshop - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const outOfStockText = $(".stock.out-of-stock").text();
-  const inStock = outOfStockText === "";
+  const priceStr = $(".product-price")?.text()?.trim() || "";
 
-  const priceStr = $(".product-page-price .amount").text().slice(3) || "";
-
-  const price = inStock ? parsePriceString(priceStr) : 0;
+  const price = parsePriceString(priceStr);
 
   const data = {
     title: $('meta[property="og:title"]').attr("content")?.trim() || "",
-    description:
-      $('meta[property="og:description"]').attr("content")?.trim() || "",
-    imageUrl: $(".product-images img").first().attr("src")?.trim() || "",
+    description: $('meta[name="description"]').attr("content")?.trim() || "",
+    imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
   };
 
   const product = await prisma.product.upsert({
@@ -59,7 +55,6 @@ export default async function processor({
       latestPrice: price,
       lastmod,
       updatedAt: new Date(),
-      imageUrl: data.imageUrl,
 
       prices: {
         create: {
@@ -70,6 +65,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`frisbeesor - ${id}`);
+  console.timeEnd(`aceshop - ${id}`);
   return product;
 }

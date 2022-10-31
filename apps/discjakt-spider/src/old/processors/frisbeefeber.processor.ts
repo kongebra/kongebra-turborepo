@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,21 +14,24 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`krokholdgs - ${id}`);
+  console.time(`frisbeefeber - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const priceStr = $("span.product-price")?.text()?.trim() || "";
+  const soldOutText = $(".product_stock.stock_box").text();
+  const inStock = !soldOutText.includes("**");
+
+  const priceStr = $(".product-price").first()?.text()?.trim() || "";
 
   const price = parsePriceString(priceStr);
 
   const data = {
-    title: $('meta[property="og:title"]').attr("content")?.trim() || "",
-    description:
-      $('meta[property="og:description"]').attr("content")?.trim() || "",
-    imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
+    title: $("h1").first().text()?.trim() || "",
+    description: $(".product-information .panel-body").text()?.trim() || "",
+    imageUrl:
+      $(".product_image_price_row img").first().attr("src")?.trim() || "",
   };
 
   const product = await prisma.product.upsert({
@@ -41,7 +44,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: price,
+      latestPrice: inStock ? price : 0,
       storeId,
       updatedAt: new Date(),
 
@@ -66,6 +69,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`krokholdgs - ${id}`);
+  console.timeEnd(`frisbeefeber - ${id}`);
   return product;
 }

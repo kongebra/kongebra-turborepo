@@ -2,9 +2,9 @@ import axios from "axios";
 import { Job } from "bull";
 import { load } from "cheerio";
 
-import { prisma } from "../lib/prisma";
-import { CommonJobItem } from "../types";
-import { parsePriceString } from "../utils/price";
+import { prisma } from "../../lib/prisma";
+import { CommonJobItem } from "../../types";
+import { parsePriceString } from "../../utils/price";
 
 export default async function processor({
   id,
@@ -14,17 +14,13 @@ export default async function processor({
     store: { id: storeId },
   },
 }: Job<CommonJobItem>) {
-  console.time(`prodisc - ${id}`);
+  console.time(`krokholdgs - ${id}`);
 
   const response = await axios.get(loc);
   const html = response.data;
   const $ = load(html);
 
-  const soldOutText = $(".price.price--sold-out").text();
-  const inStock = soldOutText === "";
-
-  const priceStr =
-    $('meta[property="og:price:amount"]').attr("content")?.trim() || "";
+  const priceStr = $("span.product-price")?.text()?.trim() || "";
 
   const price = parsePriceString(priceStr);
 
@@ -45,7 +41,7 @@ export default async function processor({
       imageUrl: data.imageUrl,
       loc,
       lastmod,
-      latestPrice: inStock ? price : 0,
+      latestPrice: price,
       storeId,
       updatedAt: new Date(),
 
@@ -70,6 +66,6 @@ export default async function processor({
     },
   });
 
-  console.timeEnd(`prodisc - ${id}`);
+  console.timeEnd(`krokholdgs - ${id}`);
   return product;
 }

@@ -1,8 +1,6 @@
 import express from "express";
 import cron from "node-cron";
 
-import { ml } from "./ml";
-
 import dailyPriceJob from "./cron/daily-price-job";
 import lookForNewProducts from "./cron/look-for-new-products";
 
@@ -18,7 +16,7 @@ cron.schedule("0 3 * * *", async () => {
 
 cron.schedule("*/5 * * * *", async () => {
   // every 5th minute
-  // await lookForNewProducts();
+  await lookForNewProducts();
 });
 
 /**
@@ -32,16 +30,10 @@ app.get("/health", (req, res) => {
   res.status(200).send("ok");
 });
 
-app.get("/foo", async (req, res) => {
-  await dailyPriceJob();
+// app.get("/foo", async (req, res) => {
+//   await dailyPriceJob();
 
-  res.status(200).json({ messge: "crawl began" });
-});
-
-// app.get("/ml", async (req, res) => {
-//   const data = await ml();
-
-//   res.status(200).json(data);
+//   res.status(200).json({ messge: "crawl began" });
 // });
 
 app.listen(port, () => {
