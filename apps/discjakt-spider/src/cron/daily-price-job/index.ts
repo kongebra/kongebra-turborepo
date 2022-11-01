@@ -20,16 +20,26 @@ import config from "../../config";
 const queue = new Bull<Product & { store: Store }>("daily", config.redisUrl, {
   defaultJobOptions: {
     removeOnComplete: 10,
+    attempts: 2,
   },
 });
 
 queue.process(async ({ data, id }) => {
-  return await scrapeProductPage(data);
+  try {
+    console.time(`${id} - ${data.loc}`);
+    await scrapeProductPage(data);
+    console.timeEnd(`${id} - ${data.loc}`);
+  } catch (ex) {
+    console.error(ex);
+  }
 });
 
 export default async function handler() {
   console.time("fetch all products");
   const products = await prisma.product.findMany({
+    where: {
+      disabled: false,
+    },
     include: {
       store: true,
     },
@@ -37,7 +47,7 @@ export default async function handler() {
   console.timeEnd("fetch all products");
 
   console.time("queue.addBulk");
-  queue.addBulk(products.map((product) => ({ data: product })));
+  queue.addBulk(products.map((product) => ({ data: product, opts: {} })));
   console.timeEnd("queue.addBulk");
 }
 

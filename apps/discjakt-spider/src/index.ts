@@ -4,6 +4,8 @@ import cron from "node-cron";
 import dailyPriceJob from "./cron/daily-price-job";
 import lookForNewProducts from "./cron/look-for-new-products";
 
+console.log({ NODE_ENV: process.env.NODE_ENV });
+
 /**
  * CRON JOBS
  */
@@ -16,7 +18,10 @@ cron.schedule("0 3 * * *", async () => {
 
 cron.schedule("*/5 * * * *", async () => {
   // every 5th minute
-  await lookForNewProducts();
+
+  if (process.env.NODE_ENV === "production") {
+    await lookForNewProducts();
+  }
 });
 
 /**

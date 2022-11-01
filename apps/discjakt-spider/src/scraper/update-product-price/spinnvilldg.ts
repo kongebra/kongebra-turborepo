@@ -6,6 +6,20 @@ import { parsePriceString } from "../../utils/price";
 
 export default async function handler(product: Product & { store: Store }) {
   const response = await axios.get(product.loc);
+  if (response.status !== 200) {
+    await prisma.product.update({
+      where: {
+        loc: product.loc,
+      },
+      data: {
+        disabled: true,
+        updatedAt: new Date(),
+      },
+    });
+
+    return;
+  }
+
   const html = response.data;
   const $ = load(html);
 
