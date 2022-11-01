@@ -24,7 +24,7 @@ async function GET(req: NextApiRequest, res: NextApiResponse, id: number) {
   const discs = await prisma.disc.findMany({
     where: {
       products: {
-        every: {
+        some: {
           storeId: id,
         },
       },
