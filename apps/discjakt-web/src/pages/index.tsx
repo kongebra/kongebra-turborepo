@@ -32,13 +32,13 @@ const HomePage: NextPage<Props> = ({ trending, latest }) => {
           <p className="text-gray-500 mb-8">
             Dette er de diskene som blir sett på mest av våre brukere.
           </p>
-        </Container>
 
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4 mb-4 lg:px-8 px-4">
-          {trending.map((disc) => (
-            <SimpleProduct key={disc.id} disc={disc} featured />
-          ))}
-        </div>
+          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-4 mb-4">
+            {trending.map((disc) => (
+              <SimpleProduct key={disc.id} disc={disc} featured />
+            ))}
+          </div>
+        </Container>
       </Section>
 
       <hr />

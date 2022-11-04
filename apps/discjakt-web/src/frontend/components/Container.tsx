@@ -13,7 +13,7 @@ const Container = React.forwardRef<HTMLDivElement, Props>(
       <div
         ref={ref}
         className={clsx(
-          "lg:px-0 px-4",
+          "px-4",
           fullWidth === true ? "max-w-full" : "max-w-7xl mx-auto",
           className
         )}

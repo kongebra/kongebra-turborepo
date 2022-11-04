@@ -16,6 +16,7 @@ import Layout from "src/frontend/layout/Layout";
 
 import "../styles/globals.css";
 import { DefaultSeo } from "next-seo";
+import Script from "next/script";
 
 type AuthAppProps = AppProps<{
   session: Session;
@@ -28,31 +29,44 @@ function App({
   const [queryClient] = useState(new QueryClient(config));
 
   return (
-    <SessionProvider session={session}>
-      <QueryClientProvider client={queryClient}>
-        <DefaultSeo
-          openGraph={{
-            type: "website",
-            locale: "nb_NO",
-            url: "https://www.discjakt.no/",
-            siteName: "Discjakt",
-            description: "", // TODO: Default description
-          }}
-        />
+    <>
+      <Script
+        id="Adsense-id"
+        async
+        onError={(e) => {
+          console.error("Script failed to load", e);
+        }}
+        strategy="afterInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9129463609546926"
+        crossOrigin="anonymous"
+      />
 
-        <Head>
-          <title>Discjakt</title>
-        </Head>
+      <SessionProvider session={session}>
+        <QueryClientProvider client={queryClient}>
+          <DefaultSeo
+            openGraph={{
+              type: "website",
+              locale: "nb_NO",
+              url: "https://www.discjakt.no/",
+              siteName: "Discjakt",
+              description: "", // TODO: Default description
+            }}
+          />
 
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+          <Head>
+            <title>Discjakt</title>
+          </Head>
 
-        <ReactQueryDevtools position={"top-left"} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
 
-        <Analytics />
-      </QueryClientProvider>
-    </SessionProvider>
+          <ReactQueryDevtools position={"top-left"} />
+
+          <Analytics />
+        </QueryClientProvider>
+      </SessionProvider>
+    </>
   );
 }
 

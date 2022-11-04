@@ -53,6 +53,14 @@ const links: LinkType[] = [
       border: "border-lime-500",
     },
   },
+  {
+    href: "/dashboard/plastics",
+    label: "Plastics",
+    color: {
+      hover: "hover:border-red-500",
+      border: "border-red-500",
+    },
+  },
 ];
 
 const DashboardLayout: React.FC<Props> = ({ className, children }) => {

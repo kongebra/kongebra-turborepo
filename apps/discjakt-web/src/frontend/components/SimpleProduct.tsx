@@ -54,9 +54,10 @@ const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
             <Image
               src={disc.imageUrl ? disc.imageUrl : "/placeholder.png"}
               alt={disc.name}
-              width={512}
-              height={512}
+              width={350}
+              height={350}
               className="max-w-full h-auto aspect-square object-contain rounded group-hover:opacity-75 transition"
+              priority={featured}
             />
 
             <div

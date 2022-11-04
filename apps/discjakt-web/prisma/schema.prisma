@@ -52,15 +52,16 @@ model ProductPrice {
 }
 
 model Brand {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   name        String
   description String
   url         String
-  imageUrl    String   @db.VarChar(255)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  slug        String   @unique
+  imageUrl    String    @db.VarChar(255)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  slug        String    @unique
   discs       Disc[]
+  Plastic     Plastic[]
 }
 
 model Disc {
@@ -91,6 +92,8 @@ model Plastic {
   slug        String    @unique
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+  brand       Brand     @relation(fields: [brandId], references: [id])
+  brandId     Int
   products    Product[]
 }
 
