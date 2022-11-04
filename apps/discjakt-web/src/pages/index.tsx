@@ -77,6 +77,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
     where: {
       isDisc: true,
+      disabled: false,
     },
     distinct: ["discId"],
     orderBy: {
