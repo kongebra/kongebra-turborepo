@@ -30,17 +30,6 @@ function App({
 
   return (
     <>
-      <Script
-        id="Adsense-id"
-        async
-        onError={(e) => {
-          console.error("Script failed to load", e);
-        }}
-        strategy="afterInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9129463609546926"
-        crossOrigin="anonymous"
-      />
-
       <SessionProvider session={session}>
         <QueryClientProvider client={queryClient}>
           <DefaultSeo

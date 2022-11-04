@@ -10,6 +10,7 @@ import {
 } from "src/frontend/components";
 import { prisma } from "src/common/lib/prisma";
 import { NextSeo } from "next-seo";
+import GoogleAdsensContainer from "src/frontend/components/GoogleAdsensContainer";
 
 type Props = {
   trending: DiscDetails[];
