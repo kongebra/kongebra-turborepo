@@ -11,13 +11,13 @@ import UserAvatar from "src/frontend/components/UserAvatar";
 import { useBoolean } from "usehooks-ts";
 
 const links = [
-  // {
-  //   label: "Discer",
-  //   href: "/discs",
-  // },
   {
     label: "Forsiden",
     href: "/",
+  },
+  {
+    label: "Discer",
+    href: "/discs",
   },
   {
     label: "Merker",

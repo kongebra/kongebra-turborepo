@@ -12,7 +12,10 @@ import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import config from "src/common/config";
 import Button from "src/frontend/components/Button";
-import { findMatch } from "src/features/dashboard/utils/find-match";
+import {
+  findMatch,
+  findMatchV2,
+} from "src/features/dashboard/utils/find-match";
 import useDiscs from "src/frontend/hooks/use-discs";
 import useProducts from "src/frontend/hooks/use-products";
 
@@ -32,7 +35,6 @@ const DashboardDataCleaingPage = () => {
     {}
   );
 
-  const { discs } = useDiscs();
   const { mutations } = useProducts({ enabled: false });
 
   const [selectedProduct, setSelectedProduct] = useState<Product | undefined>();
@@ -42,16 +44,18 @@ const DashboardDataCleaingPage = () => {
 
   const allOneMatch = useMemo(() => {
     if (data) {
-      return data.every((product) => findMatch(product, discs).length === 1);
+      return data.every(
+        async (product) => (await findMatchV2(product)).length === 1
+      );
     }
 
     return false;
-  }, [data, discs]);
+  }, [data]);
 
   const superpower = async () => {
     if (data && allOneMatch) {
       data.forEach(async (product) => {
-        const matches = findMatch(product, discs);
+        const matches = await findMatchV2(product);
 
         if (matches.length === 1) {
           const match = matches[0]!;

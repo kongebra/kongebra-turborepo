@@ -7,8 +7,13 @@ import axios from "axios";
 import useProducts from "src/frontend/hooks/use-products";
 import useDiscs from "src/frontend/hooks/use-discs";
 import { DiscDetails } from "src/types/prisma";
-import { findMatch } from "../utils/find-match";
+import { findMatch, findMatchV2 } from "../utils/find-match";
 import clsx from "clsx";
+
+const fetchMatchData = async (title: string): Promise<Disc[]> => {
+  const resp = await fetch(`/api/products/find-disc?title=${title}`);
+  return await resp.json();
+};
 
 type SearchResult = {
   hits: {
@@ -36,17 +41,17 @@ const DataCleaningProduct: React.FC<Props> = ({
   onClickSelectDisc,
   globalLoading,
 }) => {
-  const { discs } = useDiscs();
+  // const { discs } = useDiscs();
   const {
     mutations: { update: updateProduct },
   } = useProducts({ enabled: false });
 
-  const findMatches = useCallback(
-    (product: Product) => {
-      return findMatch(product, discs);
-    },
-    [discs]
-  );
+  // const findMatches = useCallback(
+  //   (product: Product) => {
+  //     return findMatch(product, discs);
+  //   },
+  //   [discs]
+  // );
 
   const onMatchClicked = async (product: Product, discId: number) => {
     const copy = {
@@ -67,17 +72,34 @@ const DataCleaningProduct: React.FC<Props> = ({
     await updateProduct.mutateAsync({ record: copy });
   };
 
-  const discMatches = findMatches(product);
+  const { data: discMatches, isLoading } = useQuery(
+    ["data-cleaning", { title: product.title }],
+    () => findMatchV2(product),
+    {}
+  );
 
+  if (isLoading) {
+    return null;
+  }
+
+  if (!discMatches) {
+    return (
+      <div>
+        <p>error</p>
+      </div>
+    );
+  }
+
+  // const discMatches = findMatches(product);
   return (
     <div
       key={product.id}
       className={clsx(
         "flex justify-between items-center gap-4 p-2 bg-white rounded-lg shadow",
         {
-          "bg-red-100": discMatches.length === 0,
-          "bg-green-100": discMatches.length === 1,
-          "bg-amber-100": discMatches.length > 1,
+          "bg-red-100": discMatches?.length === 0,
+          "bg-green-100": discMatches?.length === 1,
+          "bg-amber-100": discMatches?.length > 1,
         }
       )}
     >
@@ -127,7 +149,7 @@ const DataCleaningProduct: React.FC<Props> = ({
       </div>
 
       <div className="flex gap-1">
-        {discMatches.map((disc) => (
+        {discMatches?.map((disc) => (
           <Button
             key={disc.id}
             size="xs"

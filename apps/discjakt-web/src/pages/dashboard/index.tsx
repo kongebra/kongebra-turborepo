@@ -6,6 +6,7 @@ import { FaBox, FaBoxOpen, FaStore } from "react-icons/fa";
 import { prisma } from "src/common/lib/prisma";
 import DashboardLayout from "src/frontend/layout/DashboardLayout";
 import DashboardStat from "src/features/dashboard/components/DashboardStat";
+import { Heading } from "src/frontend/components";
 
 type Props = {
   stats: {
@@ -56,9 +57,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const DashboardPage: NextPage<Props> = ({ stats }) => {
   return (
     <DashboardLayout className="bg-gray-100">
-      <h1 className="text-4xl font-bold mb-3">Dashboard</h1>
+      <Heading className="mb-3">Dashboard</Heading>
 
-      <div className="grid grid-cols-5 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
         <DashboardStat
           title="Antall discer"
           value={stats.count.discs || 0}

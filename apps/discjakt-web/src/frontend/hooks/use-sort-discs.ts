@@ -1,16 +1,17 @@
 import { useMemo, useState } from "react";
 import { DiscDetails } from "src/types/prisma";
+import { SelectOption } from "../components/Select";
 
 type SortValue =
   | "name"
-  | "speed-asc"
-  | "speed-desc"
-  | "glide-asc"
-  | "glide-desc"
-  | "turn-asc"
-  | "turn-desc"
-  | "fade-asc"
-  | "fade-desc"
+  | "speed"
+  | "!speed"
+  | "glide"
+  | "!glide"
+  | "turn"
+  | "!turn"
+  | "fade"
+  | "!fade"
   | string;
 
 type SimplifiedDiscType = Pick<
@@ -18,38 +19,87 @@ type SimplifiedDiscType = Pick<
   "speed" | "glide" | "turn" | "fade" | "name"
 >;
 
-export default function useSortDiscs() {
-  const [sort, setSort] = useState<SortValue>("name");
+export default function useSortDiscs(defaultValue: string = "name") {
+  const [sort, setSort] = useState<SortValue>(defaultValue);
+
+  const selectOptions: SelectOption[] = [
+    {
+      value: "updatedAt",
+      label: "Sist oppdatert",
+    },
+    {
+      value: "name",
+      label: "Navn - stigende",
+    },
+    {
+      value: "!name",
+      label: "Navn - synkende",
+    },
+    {
+      value: "speed",
+      label: "Speed lav-høy",
+    },
+    {
+      value: "!speed",
+      label: "Speed høy-lav",
+    },
+    {
+      value: "glide",
+      label: "Glide lav-høy",
+    },
+    {
+      value: "!glide",
+      label: "Glide høy-lav",
+    },
+    {
+      value: "turn",
+      label: "Turn lav-høy",
+    },
+    {
+      value: "!turn",
+      label: "Turn høy-lav",
+    },
+    {
+      value: "fade",
+      label: "Fade lav-høy",
+    },
+    {
+      value: "!fade",
+      label: "Fade høy-lav",
+    },
+  ];
 
   const sortFn = useMemo<
     (a: SimplifiedDiscType, b: SimplifiedDiscType) => number
   >(() => {
     switch (sort) {
-      case "speed-asc":
+      case "speed":
         return (a, b) => a.speed - b.speed;
-      case "speed-desc":
+      case "!speed":
         return (a, b) => b.speed - a.speed;
 
-      case "glide-asc":
+      case "glide":
         return (a, b) => a.glide - b.glide;
-      case "glide-desc":
+      case "!glide":
         return (a, b) => b.glide - a.glide;
 
-      case "turn-asc":
+      case "turn":
         return (a, b) => a.turn - b.turn;
-      case "turn-desc":
+      case "!turn":
         return (a, b) => b.turn - a.turn;
 
-      case "fade-asc":
+      case "fade":
         return (a, b) => a.fade - b.fade;
-      case "fade-desc":
+      case "!fade":
         return (a, b) => b.fade - a.fade;
 
+      case "!name":
+        return (a, b) => b.name.localeCompare(a.name);
       case "name":
       default:
         return (a, b) => a.name.localeCompare(b.name);
     }
   }, [sort]);
 
-  return { sort, setSort, sortFn };
+  return { sort, setSort, sortFn, selectOptions };
 }

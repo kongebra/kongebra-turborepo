@@ -28,7 +28,6 @@
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^1.2.1",
     "cors": "^2.8.5",
-    "ml5": "^0.12.2",
     "next": "12.3.0",
     "next-auth": "^4.10.3",
     "next-connect": "^0.13.0",
@@ -39,7 +38,8 @@
     "react-hook-form": "^7.36.1",
     "react-icons": "^4.4.0",
     "sharp": "^0.31.1",
-    "usehooks-ts": "^2.7.1"
+    "usehooks-ts": "^2.7.1",
+    "discjakt-utils": "*"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

@@ -1,10 +1,58 @@
+import { Disc, Product } from "@prisma/client";
+import { findDiscMatch } from "discjakt-utils";
 import express from "express";
 import cron from "node-cron";
 
 import dailyPriceJob from "./cron/daily-price-job";
 import lookForNewProducts from "./cron/look-for-new-products";
+import { prisma } from "./lib/prisma";
+import { getQueues } from "./queue";
 
-console.log({ NODE_ENV: process.env.NODE_ENV });
+/**
+ * QUEUE WORKERS
+ */
+const { findDiscQueue } = getQueues();
+
+findDiscQueue.process(async (job) => {
+  const { data } = job;
+
+  const matches = await findDiscMatch(
+    data.title,
+    async (haystack: string[]) => {
+      return await prisma.disc.findMany({
+        where: {
+          OR: [
+            {
+              name: {
+                in: haystack,
+                mode: "insensitive",
+              },
+            },
+            {
+              slug: {
+                in: haystack,
+                mode: "insensitive",
+              },
+            },
+          ],
+        },
+      });
+    }
+  );
+
+  if (matches.length === 1) {
+    await prisma.product.update({
+      where: {
+        id: data.id,
+      },
+      data: {
+        discId: matches[0]!.id,
+      },
+    });
+  } else {
+    console.log({ product: data, matches });
+  }
+});
 
 /**
  * CRON JOBS

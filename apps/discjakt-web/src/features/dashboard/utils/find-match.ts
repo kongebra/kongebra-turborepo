@@ -1,5 +1,10 @@
-import { Product } from "@prisma/client";
+import { Disc, Product } from "@prisma/client";
 import { DiscDetails } from "src/types/prisma";
+
+export const findMatchV2 = async (product: Product): Promise<Disc[]> => {
+  const resp = await fetch(`/api/products/find-disc-v2?title=${product.title}`);
+  return await resp.json();
+};
 
 export const findMatch = (product: Product, discs: DiscDetails[]) => {
   const titleWords = product.title.toLowerCase().split(" ");
