@@ -2,7 +2,7 @@ import { Disc, Product } from "@prisma/client";
 import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import { NextPage } from "next";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { prisma } from "src/common/lib/prisma";
 import { findMatchV2 } from "src/features/dashboard/utils/find-match";
 import { Heading, Section } from "src/frontend/components";
@@ -11,18 +11,13 @@ import DashboardLayout from "src/frontend/layout/DashboardLayout";
 export const getServerSideProps = async () => {
   const products = await prisma.product.findMany({
     where: {
-      disc: {
-        brandId: 34,
-      },
+      isDisc: true,
     },
     include: {
       disc: true,
     },
-    orderBy: {
-      disc: {
-        slug: "asc",
-      },
-    },
+    take: 500,
+    skip: 500 * 12,
   });
 
   return {
@@ -39,13 +34,33 @@ type Props = {
 const ProductSuggestion = ({
   product,
   correct,
+  onGuess,
 }: {
   product: Product;
   correct?: string;
+  onGuess: (correct: boolean) => void;
 }) => {
   const { data, isInitialLoading } = useQuery(
     ["dashboard", "testing", product.id],
-    () => findMatchV2(product)
+    () => findMatchV2(product),
+    {
+      onSuccess(data) {
+        const g = data?.map((item) => item.name).join(", ");
+        if (!correct && !g) {
+          return onGuess(true);
+        }
+
+        if (correct) {
+          return onGuess(g === correct);
+        } else {
+          if (g) {
+            return onGuess(false);
+          }
+        }
+
+        console.log("we should not be here!", { g, correct });
+      },
+    }
   );
 
   const guess = data?.map((item) => item.name).join(", ");
@@ -57,6 +72,18 @@ const ProductSuggestion = ({
 
   if (!data) {
     return <span className="text-red-600">Error: {product.id}</span>;
+  }
+
+  if (data.length === 0) {
+    return (
+      <span
+        className={clsx({
+          "font-bold text-green-600": !correct,
+        })}
+      >
+        Ingen treff
+      </span>
+    );
   }
 
   return (
@@ -71,9 +98,15 @@ const ProductSuggestion = ({
 };
 
 const DashboardTesting: NextPage<Props> = ({ products }) => {
+  const [errorCount, setErrorCount] = useState<[number, number]>([0, 0]);
+
   return (
     <DashboardLayout className="bg-gray-100">
       <Section>
+        <p>
+          Errors: {[errorCount[0]]}/{errorCount[1]}
+        </p>
+
         <table className="w-full">
           <thead className="text-left bg-teal-100">
             <tr className="border-b">
@@ -93,9 +126,15 @@ const DashboardTesting: NextPage<Props> = ({ products }) => {
                   <ProductSuggestion
                     product={product}
                     correct={product?.disc?.name}
+                    onGuess={(correct) => {
+                      setErrorCount((prev) => [
+                        prev[0] + (correct ? 0 : 1),
+                        prev[1] + 1,
+                      ]);
+                    }}
                   />
                 </td>
-                <td>{product?.disc?.name}</td>
+                <td>{product?.disc ? product?.disc?.name : "Ikke disc"}</td>
               </tr>
             ))}
           </tbody>

@@ -59,7 +59,7 @@ const DashboardPage: NextPage<Props> = ({ stats }) => {
     <DashboardLayout className="bg-gray-100">
       <Heading className="mb-3">Dashboard</Heading>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-5">
         <DashboardStat
           title="Antall discer"
           value={stats.count.discs || 0}

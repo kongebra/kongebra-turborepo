@@ -1,7 +1,10 @@
 import axios from "axios";
 import { load } from "cheerio";
 import { prisma } from "../../lib/prisma";
+import { getQueues } from "../../queue";
 import { parsePriceString } from "../../utils/price";
+
+const { findDiscQueue } = getQueues();
 
 export default async function handler({
   loc,
@@ -28,7 +31,7 @@ export default async function handler({
     imageUrl: $('meta[property="og:image"]').attr("content")?.trim() || "",
   };
 
-  await prisma.product.create({
+  const product = await prisma.product.create({
     data: {
       title: data.title,
       description: data.description,
@@ -47,4 +50,6 @@ export default async function handler({
       },
     },
   });
+
+  await findDiscQueue.add(product);
 }

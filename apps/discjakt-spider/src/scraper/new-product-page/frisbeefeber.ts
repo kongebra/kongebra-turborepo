@@ -1,7 +1,10 @@
 import axios from "axios";
 import { load } from "cheerio";
 import { prisma } from "../../lib/prisma";
+import { getQueues } from "../../queue";
 import { parsePriceString } from "../../utils/price";
+
+const { findDiscQueue } = getQueues();
 
 export default async function handler({
   loc,

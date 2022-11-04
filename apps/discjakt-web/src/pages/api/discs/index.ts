@@ -30,9 +30,6 @@ async function GET(req: NextApiRequest, res: NextApiResponse) {
 async function POST(req: NextApiRequest, res: NextApiResponse) {
   const body = req.body as Disc;
 
-  // azure subscription is down :'(
-  // body.imageUrl = await downloadAndUploadImage(body.imageUrl);
-
   const disc = await prisma.disc.create({
     data: {
       ...body,

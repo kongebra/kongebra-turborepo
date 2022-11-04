@@ -105,6 +105,7 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
   ].map((filter) => filter.toLowerCase());
 
   const specialRules: [string, string][] = [
+    // needs to be first
     ["reko x-out", "reko"],
 
     ["[", " "],
@@ -114,6 +115,7 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["-", " "],
     [",", " "],
 
+    // discraft
     ["banger gt", "banger-gt"],
     ["ringer gt", "ringer-gt"],
     ["avenger ss", "avenger-ss"],
@@ -127,9 +129,8 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["challenger ss", "challenger-ss"],
     ["challenger os", "challenger-os"],
     ["captain's raptor", "captains-raptor"],
-    ["mako 3", "mako3"],
-    ["roc 3", "roc3"],
 
+    // prodigy
     ["h1v2", "h1-v2"],
     ["h2v2", "h2-v2"],
     ["h3v2", "h3-v2"],
@@ -175,11 +176,17 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["pa 5", "pa-5"],
     ["px 3", "px-3"],
 
+    // discmania
+    ["cloudbreaker", "dd3"],
+    ["cloud breaker", "dd3"],
+    ["cloud-breaker", "dd3"],
     ["sea serpent", "sea-serpent"],
     ["sun crow", "sun-crow"],
 
+    // dynamic discs
     ["sockibomb slammer", "sockibomb-slammer"],
 
+    // innova
     ["aviar x3", "aviarx3"],
     ["rhyno x", "rhyno-x"],
     ["beast x", "beast-x"],
@@ -193,7 +200,10 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["destroyer raptor", "destroyer"],
     ["thundervant", "thunderbird"],
     ["firebid", "firebird"],
+    ["mako 3", "mako3"],
+    ["roc 3", "roc3"],
 
+    // kastaplast
     ["st�l", "stål"],
     ["j�rn", "järn"],
     ["jârn", "järn"],
@@ -205,10 +215,12 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["kaxe z", "kaxe-z"],
     ["rask z version", "rask-z-version"],
 
+    // latitude 64
     ["ballista pro", "ballista-pro"],
     ["river pro", "river-pro"],
     ["saint pro", "saint-pro"],
 
+    // westside discs
     // TODO: What to do with these stores that just call it "swan"?
     ["swan 1", "swan-1"],
     ["swan 2", "swan-2"],
@@ -216,6 +228,7 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["swan2", "swan-2"],
     ["war horse", "war-horse"],
 
+    // gateway?
     ["silent cruiser", "silent-cruiser"],
     ["diamond slayer", "slayer"],
     ["slayer diamond", "slayer"],
@@ -226,6 +239,7 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["wizard pure white", "wizard"],
     ["warrior diamond", "warrior"],
 
+    // guru
     ["flow motion", "flow-motion"],
     ["mad mission", "mad-mission"],
     ["night trooper", "night-trooper"],
@@ -236,7 +250,77 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["orion ls", "orion-ls"],
   ];
 
+  // mest mulig riktig ting her, slipper db kall da
+  const redFlags = [
+    "sekk",
+    "backpack",
+    "mini berg",
+    "berg mini",
+    "mini reko",
+    "Reko Mini",
+    "core bag",
+    "rain cover",
+    "towel",
+    "flexfit",
+    "bag",
+    "regntrekk",
+    "starter",
+    "markør",
+    "skolepakke",
+    "caps",
+    "paraply",
+    "traveler target",
+    "gloves",
+    "world peace mini",
+    "opto set",
+    "Latitude 64 Core",
+    "Umbrella",
+    "Mini Marker",
+    "veggskilt",
+    "patch",
+    "håndkle",
+    "Hundefrisbee",
+    "t-shirt",
+    "mikrofiber",
+    "Polo",
+    "Throw and Catch Disc",
+    "nano",
+    "macro",
+    "T-skjorte",
+    "Nybegynnersett",
+    "flashlight",
+    "basket",
+    "snapback",
+    "water bottle",
+    "Disc Golf Set",
+    "Hydrogen Mini",
+    "BIRDIE CARD",
+    "hoodie",
+    "genser",
+    "Putterpakke",
+    "grip eq",
+    "mini tesla",
+    "tesla mini",
+    "grip6",
+    "Disc Gator",
+    "Metal Mini",
+    "Sack",
+    "Mercy Mini",
+    " cap ",
+    "ultra star",
+    "Vinyls",
+    "MINI World",
+    "DyeMax",
+    "Footbag",
+  ].map((flag) => flag.toLowerCase());
+
   let filteredTitle = title.toLowerCase();
+
+  for (const redFlag of redFlags) {
+    if (filteredTitle.includes(redFlag)) {
+      return [];
+    }
+  }
 
   // 1st: apply special rules
   specialRules.forEach(([find, replace]) => {
@@ -282,15 +366,11 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
 
   // 3rd: super special rules
   superSpecialRules.forEach(([find, replace]) => {
-    const index = haystack.findIndex((word) => word === find);
+    const index = haystack.findIndex((word) => word === find.toLowerCase());
     if (index !== -1) {
       haystack[index] = replace;
     }
   });
-
-  if (title.toLowerCase().includes("raptor")) {
-    console.log(haystack);
-  }
 
   const discs = await findMany(haystack);
 

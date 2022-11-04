@@ -11,48 +11,48 @@ import { getQueues } from "./queue";
 /**
  * QUEUE WORKERS
  */
-const { findDiscQueue } = getQueues();
+// const { findDiscQueue } = getQueues();
 
-findDiscQueue.process(async (job) => {
-  const { data } = job;
+// findDiscQueue.process(async (job) => {
+//   const { data } = job;
 
-  const matches = await findDiscMatch(
-    data.title,
-    async (haystack: string[]) => {
-      return await prisma.disc.findMany({
-        where: {
-          OR: [
-            {
-              name: {
-                in: haystack,
-                mode: "insensitive",
-              },
-            },
-            {
-              slug: {
-                in: haystack,
-                mode: "insensitive",
-              },
-            },
-          ],
-        },
-      });
-    }
-  );
+//   const matches = await findDiscMatch(
+//     data.title,
+//     async (haystack: string[]) => {
+//       return await prisma.disc.findMany({
+//         where: {
+//           OR: [
+//             {
+//               name: {
+//                 in: haystack,
+//                 mode: "insensitive",
+//               },
+//             },
+//             {
+//               slug: {
+//                 in: haystack,
+//                 mode: "insensitive",
+//               },
+//             },
+//           ],
+//         },
+//       });
+//     }
+//   );
 
-  if (matches.length === 1) {
-    await prisma.product.update({
-      where: {
-        id: data.id,
-      },
-      data: {
-        discId: matches[0]!.id,
-      },
-    });
-  } else {
-    console.log({ product: data, matches });
-  }
-});
+//   if (matches.length === 1) {
+//     await prisma.product.update({
+//       where: {
+//         id: data.id,
+//       },
+//       data: {
+//         discId: matches[0]!.id,
+//       },
+//     });
+//   } else {
+//     console.log({ product: data, matches });
+//   }
+// });
 
 /**
  * CRON JOBS

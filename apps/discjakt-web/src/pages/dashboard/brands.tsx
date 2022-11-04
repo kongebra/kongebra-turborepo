@@ -52,7 +52,7 @@ const DashboardBrandsPage = () => {
           <Button onClick={createModal.setTrue}>Lag nytt brand</Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-3">
           {brands
             .sort((a, b) => b._count.discs - a._count.discs)
             .map((brand) => (
