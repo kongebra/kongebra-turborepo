@@ -25,6 +25,7 @@ import { discTypeToString } from "src/common/utils/discType";
 import { Brand } from "@prisma/client";
 import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
 import Toggle from "src/frontend/components/Toggle";
+import { NextSeo } from "next-seo";
 
 type Props = {
   brand: Brand;
@@ -48,6 +49,13 @@ const BrandTypesPage: NextPage<Props> = ({ brand, type }) => {
 
   return (
     <>
+      <NextSeo
+        title={`${discTypeToString(type)} | ${brand.name} | Discjakt`}
+        description={`Her får du en oversikt over alle ${discTypeToString(
+          type
+        )} fra ${brand.name} i norske nettbutikker`}
+      />
+
       <Breadcrumbs
         items={[
           {

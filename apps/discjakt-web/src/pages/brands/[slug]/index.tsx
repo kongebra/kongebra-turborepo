@@ -21,6 +21,7 @@ import { useDiscs, useSortDiscs } from "src/frontend/hooks";
 import { discTypeToString } from "src/common/utils/discType";
 import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
 import Toggle from "src/frontend/components/Toggle";
+import { NextSeo } from "next-seo";
 
 type Props = {
   brand: Brand;
@@ -43,6 +44,11 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
 
   return (
     <>
+      <NextSeo
+        title={`${brand.name} | Discjakt`}
+        description={`Her får du en oversikt over ${brand.name} sine discer som er i salg i norske nettbutikker`}
+      />
+
       <Breadcrumbs
         items={[
           {

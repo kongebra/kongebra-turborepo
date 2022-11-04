@@ -11,6 +11,7 @@ import DiscMultiFilter, {
 } from "src/frontend/components/DiscMultiFilter";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { NextSeo } from "next-seo";
 
 const fetchData = async (
   value?: DiscMultiFilterValue & {
@@ -40,33 +41,40 @@ const DiscsPage: NextPage = () => {
   );
 
   return (
-    <Container>
-      <div className="grid grid-cols-5">
-        <div className="">
-          <DiscMultiFilter onChange={setMultiFilter} />
-        </div>
+    <>
+      <NextSeo
+        title="Discer | Discjakt"
+        description="Her kan du søke på mange søkeparameter for å finne riktig disc for deg!"
+      />
 
-        <div className="col-span-4">
-          <DataView
-            items={data?.items || []}
-            // TODO: Lag en list item komponent
-            renderItem={(item, layout) =>
-              layout === "grid" ? (
-                <SimpleProduct disc={item as any} />
-              ) : (
-                <div></div>
-              )
-            }
-            sort={{
-              options: selectOptions,
-              value: sort,
-              setValue: setSort,
-            }}
-            itemKey={(item) => (item as any).id}
-          />
+      <Container>
+        <div className="grid grid-cols-5">
+          <div className="">
+            <DiscMultiFilter onChange={setMultiFilter} />
+          </div>
+
+          <div className="col-span-4">
+            <DataView
+              items={data?.items || []}
+              // TODO: Lag en list item komponent
+              renderItem={(item, layout) =>
+                layout === "grid" ? (
+                  <SimpleProduct disc={item as any} />
+                ) : (
+                  <div></div>
+                )
+              }
+              sort={{
+                options: selectOptions,
+                value: sort,
+                setValue: setSort,
+              }}
+              itemKey={(item) => (item as any).id}
+            />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 

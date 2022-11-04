@@ -13,6 +13,7 @@ import {
 } from "src/frontend/components";
 import { type BrandDetails, brandDetailsSelect } from "src/types/prisma";
 import { Brand } from "@prisma/client";
+import { NextSeo } from "next-seo";
 
 type Props = {
   brands: (Brand & {
@@ -25,6 +26,11 @@ type Props = {
 const BrandsPage: NextPage<Props> = ({ brands }) => {
   return (
     <>
+      <NextSeo
+        title="Merker | Discjakt"
+        description="Her får du en full oversikt over alle merker som er tilgjengelig i norske nettbutikker"
+      />
+
       <Breadcrumbs
         items={[
           {

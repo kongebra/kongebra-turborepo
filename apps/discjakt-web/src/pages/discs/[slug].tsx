@@ -22,6 +22,7 @@ import { useUser } from "src/frontend/hooks";
 import config from "src/common/config";
 import { useQueryClient } from "@tanstack/react-query";
 import Toggle from "src/frontend/components/Toggle";
+import { NextSeo } from "next-seo";
 
 type Props = {
   disc: DiscDetails;
@@ -113,6 +114,11 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
 
   return (
     <>
+      <NextSeo
+        title={`${disc.name} | ${disc.brand.name} | Discjakt`}
+        description={`Her ser alle tilgjengelige produkter for ${disc.name} fra ${disc.brand.name} via Discjakt.no`}
+      />
+
       <Breadcrumbs
         items={[
           {

@@ -1,5 +1,6 @@
 import { Disc, Product, Store } from "@prisma/client";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { NextSeo } from "next-seo";
 import React, { useCallback, useMemo, useState } from "react";
 import { prisma } from "src/common/lib/prisma";
 
@@ -88,10 +89,15 @@ const StoreBySlugPage: NextPage<Props> = ({ store }) => {
     }
 
     return discs;
-  }, [discs, showOnlyInStock]);
+  }, [discs, isInStock, showOnlyInStock]);
 
   return (
     <>
+      <NextSeo
+        title={`${store.name} | Discjakt`}
+        description={`Her får du en oversikt over disker som er tilgjengelig hos ${store.name}.`}
+      />
+
       <Section>
         <Container className="flex flex-col lg:flex-row justify-between lg:items-center mb-4 lg:mb-16">
           <Heading className="mb-2 lg:mb-0">{store.name}</Heading>

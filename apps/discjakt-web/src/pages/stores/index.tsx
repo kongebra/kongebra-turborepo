@@ -10,6 +10,7 @@ import {
   Section,
 } from "src/frontend/components";
 import { prisma } from "src/common/lib/prisma";
+import { NextSeo } from "next-seo";
 
 const storeSelect = Prisma.validator<Prisma.StoreSelect>()({
   id: true,
@@ -49,6 +50,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const StoreIndex: NextPage<Props> = ({ stores }) => {
   return (
     <>
+      <NextSeo
+        title={`Nettbutikker | Discjakt`}
+        description={`Her får du en oversikt over alle nettbutikker som er på Discjakt.no`}
+      />
+
       <Breadcrumbs
         items={[
           {

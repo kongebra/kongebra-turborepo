@@ -9,6 +9,7 @@ import {
   SimpleProduct,
 } from "src/frontend/components";
 import { prisma } from "src/common/lib/prisma";
+import { NextSeo } from "next-seo";
 
 type Props = {
   trending: DiscDetails[];
@@ -18,6 +19,11 @@ type Props = {
 const HomePage: NextPage<Props> = ({ trending, latest }) => {
   return (
     <>
+      <NextSeo
+        title="Discjakt"
+        description="Finn din favoritt-disc til best mulig pris! Få en notifikasjon når prisen endrer seg, eller når discen blir tilgjengelig for kjøp igjen via Discjakt.no"
+      />
+
       <Section>
         <Container className="text-center mb-8">
           <Heading className="mb-4" aria-label="Populære disker">
