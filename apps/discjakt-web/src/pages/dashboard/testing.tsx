@@ -10,14 +10,13 @@ import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 export const getServerSideProps = async () => {
   const products = await prisma.product.findMany({
-    where: {
-      isDisc: true,
-    },
     include: {
       disc: true,
     },
-    take: 500,
-    skip: 500 * 12,
+    take: 10,
+    orderBy: {
+      updatedAt: "desc",
+    },
   });
 
   return {
@@ -64,7 +63,7 @@ const ProductSuggestion = ({
   );
 
   const guess = data?.map((item) => item.name).join(", ");
-  const correctGuess = guess === correct;
+  const correctGuess = correct ? guess === correct : !guess;
 
   if (isInitialLoading) {
     return <span className="text-sky-600">Loading...</span>;
@@ -79,6 +78,7 @@ const ProductSuggestion = ({
       <span
         className={clsx({
           "font-bold text-green-600": !correct,
+          "font-bold text-red-600": !correctGuess,
         })}
       >
         Ingen treff
@@ -90,6 +90,7 @@ const ProductSuggestion = ({
     <span
       className={clsx({
         "font-bold text-green-600": correctGuess,
+        "font-bold text-red-600": !correctGuess,
       })}
     >
       {data.map((item) => item.name).join(", ")}
@@ -104,7 +105,8 @@ const DashboardTesting: NextPage<Props> = ({ products }) => {
     <DashboardLayout className="bg-gray-100">
       <Section>
         <p>
-          Errors: {[errorCount[0]]}/{errorCount[1]}
+          Errors: {[errorCount[0]]}/{errorCount[1]} (
+          {((errorCount[0] / (errorCount[1] || 1)) * 100).toFixed(1)}%)
         </p>
 
         <table className="w-full">

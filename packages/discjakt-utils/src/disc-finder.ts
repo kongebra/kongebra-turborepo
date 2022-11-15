@@ -248,6 +248,8 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     ["code x", "code-x"],
 
     ["orion ls", "orion-ls"],
+
+    ["sea otter", "sea-otter"],
   ];
 
   // mest mulig riktig ting her, slipper db kall da
@@ -312,6 +314,7 @@ export const findDiscMatch = async (title: string, findMany: FindManyFn) => {
     "MINI World",
     "DyeMax",
     "Footbag",
+    "mystery box",
   ].map((flag) => flag.toLowerCase());
 
   let filteredTitle = title.toLowerCase();
