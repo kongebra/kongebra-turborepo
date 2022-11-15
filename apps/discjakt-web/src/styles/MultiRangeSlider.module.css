@@ -1,0 +1,7 @@
+.range {
+  @apply absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer;
+}
+
+.range::-webkit-slider-thumb {
+  @apply w-4 h-4 appearance-none pointer-events-auto;
+}

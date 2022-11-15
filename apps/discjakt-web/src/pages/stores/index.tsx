@@ -22,6 +22,9 @@ const storeSelect = Prisma.validator<Prisma.StoreSelect>()({
       products: {
         where: {
           isDisc: true,
+          latestPrice: {
+            gt: 0,
+          },
         },
       },
     },
@@ -117,7 +120,7 @@ const StoreIndex: NextPage<Props> = ({ stores }) => {
                       </span>
                     </div>
 
-                    <span>{`${store._count.products} disker`}</span>
+                    <span>{`${store._count.products} disker på lager`}</span>
                   </div>
                 </Link>
               );

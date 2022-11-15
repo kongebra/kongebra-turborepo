@@ -3,6 +3,7 @@ import { useDebounce } from "usehooks-ts";
 import { useBrands } from "../hooks";
 import Heading from "./Heading";
 import Input from "./Input";
+import MultiRangeSlider from "./MultiRangeSlider";
 import Select from "./Select";
 
 export type DiscMultiFilterValue = {
@@ -78,7 +79,7 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
 
   useEffect(() => {
     onChange(debounceValue);
-  }, [debounceValue]);
+  }, [debounceValue, onChange]);
 
   return (
     <div className="p-4">
@@ -88,21 +89,14 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
             Pris
           </Heading>
 
-          <div className="flex items-center gap-2">
-            <Input
-              type="number"
-              name="price-min"
-              value={minPrice}
-              onChange={(event) => setMinPrice(+event.currentTarget.value)}
-            />
-            <span>-</span>
-            <Input
-              type="number"
-              name="price-max"
-              value={maxPrice}
-              onChange={(event) => setMaxPrice(+event.currentTarget.value)}
-            />
-          </div>
+          <MultiRangeSlider
+            min={0}
+            max={1000}
+            onChange={({ min, max }) => {
+              setMinPrice(min);
+              setMaxPrice(max);
+            }}
+          />
         </section>
 
         <section>
@@ -146,23 +140,15 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
             Speed
           </Heading>
 
-          <div className="flex items-center gap-2">
-            <Input
-              type="number"
-              name="speed-min"
-              value={minSpeed}
-              onChange={(event) => setMinSpeed(+event.currentTarget.value)}
-              step={0.5}
-            />
-            <span>-</span>
-            <Input
-              type="number"
-              name="speed-max"
-              value={maxSpeed}
-              onChange={(event) => setMaxSpeed(+event.currentTarget.value)}
-              step={0.5}
-            />
-          </div>
+          <MultiRangeSlider
+            min={1}
+            max={15}
+            step={0.5}
+            onChange={({ min, max }) => {
+              setMinSpeed(min);
+              setMaxSpeed(max);
+            }}
+          />
         </section>
 
         <section className="">
@@ -170,23 +156,15 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
             Glide
           </Heading>
 
-          <div className="flex items-center gap-2">
-            <Input
-              type="number"
-              name="Glide-min"
-              value={minGlide}
-              onChange={(event) => setMinGlide(+event.currentTarget.value)}
-              step={0.5}
-            />
-            <span>-</span>
-            <Input
-              type="number"
-              name="Glide-max"
-              value={maxGlide}
-              onChange={(event) => setMaxGlide(+event.currentTarget.value)}
-              step={0.5}
-            />
-          </div>
+          <MultiRangeSlider
+            min={1}
+            max={7}
+            step={0.5}
+            onChange={({ min, max }) => {
+              setMinGlide(min);
+              setMaxGlide(max);
+            }}
+          />
         </section>
 
         <section className="">
@@ -194,23 +172,15 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
             Turn
           </Heading>
 
-          <div className="flex items-center gap-2">
-            <Input
-              type="number"
-              name="Turn-min"
-              value={minTurn}
-              onChange={(event) => setMinTurn(+event.currentTarget.value)}
-              step={0.5}
-            />
-            <span>-</span>
-            <Input
-              type="number"
-              name="Turn-max"
-              value={maxTurn}
-              onChange={(event) => setMaxTurn(+event.currentTarget.value)}
-              step={0.5}
-            />
-          </div>
+          <MultiRangeSlider
+            min={-4}
+            max={1}
+            step={0.5}
+            onChange={({ min, max }) => {
+              setMinTurn(min);
+              setMaxTurn(max);
+            }}
+          />
         </section>
 
         <section className="">
@@ -218,23 +188,15 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
             Fade
           </Heading>
 
-          <div className="flex items-center gap-2">
-            <Input
-              type="number"
-              name="Fade-min"
-              value={minFade}
-              onChange={(event) => setMinFade(+event.currentTarget.value)}
-              step={0.5}
-            />
-            <span>-</span>
-            <Input
-              type="number"
-              name="Fade-max"
-              value={maxFade}
-              onChange={(event) => setMaxFade(+event.currentTarget.value)}
-              step={0.5}
-            />
-          </div>
+          <MultiRangeSlider
+            min={0}
+            max={6}
+            step={0.5}
+            onChange={({ min, max }) => {
+              setMinFade(min);
+              setMaxFade(max);
+            }}
+          />
         </section>
       </div>
     </div>
