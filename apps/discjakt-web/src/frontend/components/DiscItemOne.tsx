@@ -1,6 +1,6 @@
 import { Disc } from "discjakt-db";
 import React from "react";
-import Image from "next/future/image";
+import Image from "next/image";
 
 type Props = {
   disc: Disc;

@@ -27,15 +27,14 @@ const Menu: React.FC<MenuProps> = ({ button, links }) => {
             <M.Item as={React.Fragment} disabled={link.disabled}>
               {({ active }) => (
                 <div>
-                  <Link href={link.href} passHref>
-                    <a
-                      className={clsx(
-                        "group flex w-full items-center rounded-md px-2 py-2 text-sm",
-                        active ? "bg-gray-500 text-white" : "text-gray-900"
-                      )}
-                    >
-                      {link.label}
-                    </a>
+                  <Link
+                    href={link.href}
+                    className={clsx(
+                      "group flex w-full items-center rounded-md px-2 py-2 text-sm",
+                      active ? "bg-gray-500 text-white" : "text-gray-900"
+                    )}
+                  >
+                    {link.label}
                   </Link>
                 </div>
               )}

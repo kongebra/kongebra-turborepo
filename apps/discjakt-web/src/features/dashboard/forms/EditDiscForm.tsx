@@ -8,7 +8,7 @@ import FormSelect from "src/frontend/components/FormSelect";
 import FormTextarea from "src/frontend/components/FormTextarea";
 import Input from "src/frontend/components/Input";
 import Select from "src/frontend/components/Select";
-import Image from "next/future/image";
+import Image from "next/image";
 import React, { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { DiscDetails } from "src/types/prisma";

@@ -1,7 +1,7 @@
 import { Disc, Product } from "discjakt-db";
 import React, { useCallback, useMemo } from "react";
 import Button from "src/frontend/components/Button";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import useProducts from "src/frontend/hooks/use-products";

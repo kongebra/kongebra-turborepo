@@ -1,7 +1,7 @@
 import React from "react";
 
 import { GetStaticProps, NextPage } from "next";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import { prisma } from "src/common/lib/prisma";
@@ -62,37 +62,38 @@ const BrandsPage: NextPage<Props> = ({ brands }) => {
               .filter((brand) => brand._count.discs)
               .sort((a, b) => b._count.discs - a._count.discs)
               .map((brand) => (
-                <Link key={brand.id} href={`/brands/${brand.slug}`} passHref>
-                  <a className="group" title={brand.name}>
-                    <div className="flex flex-col items-center">
-                      <Image
-                        src={
-                          brand.imageUrl ? brand.imageUrl : "/placeholder.png"
-                        }
-                        alt={brand.name}
-                        width={512}
-                        height={512}
-                        className="max-w-full h-auto rounded-md border-4 mb-4 group-hover:ring-4 aspect-square object-contain"
-                      />
+                <Link
+                  key={brand.id}
+                  href={`/brands/${brand.slug}`}
+                  className="group"
+                  title={brand.name}
+                >
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src={brand.imageUrl ? brand.imageUrl : "/placeholder.png"}
+                      alt={brand.name}
+                      width={512}
+                      height={512}
+                      className="max-w-full h-auto rounded-md border-4 mb-4 group-hover:ring-4 aspect-square object-contain"
+                    />
 
-                      <div className="flex flex-col items-center">
-                        {/* <span
+                    <div className="flex flex-col items-center">
+                      {/* <span
                           className="font-light text-gray-500"
                           aria-label={brand.brand.name}
                         >
                           {brand.brand.name}
                         </span> */}
-                        <span
-                          className="font-semibold text-lg group-hover:underline"
-                          aria-label={brand.name}
-                        >
-                          {brand.name}
-                        </span>
-                      </div>
-
-                      <span>{`${brand._count.discs} disker`}</span>
+                      <span
+                        className="font-semibold text-lg group-hover:underline"
+                        aria-label={brand.name}
+                      >
+                        {brand.name}
+                      </span>
                     </div>
-                  </a>
+
+                    <span>{`${brand._count.discs} disker`}</span>
+                  </div>
                 </Link>
               ))}
           </div>

@@ -112,11 +112,12 @@ const MobileNav = () => {
           {mobileNavItems.map((item) => (
             <React.Fragment key={item.label}>
               {item.href ? (
-                <Link href={item.href} passHref>
-                  <a className="flex-1 flex flex-col items-center gap-1  py-4">
-                    <item.icon />
-                    <span aria-label={item.label}>{item.label}</span>
-                  </a>
+                <Link
+                  href={item.href}
+                  className="flex-1 flex flex-col items-center gap-1  py-4"
+                >
+                  <item.icon />
+                  <span aria-label={item.label}>{item.label}</span>
                 </Link>
               ) : (
                 <button

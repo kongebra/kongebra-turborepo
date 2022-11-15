@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { signIn, useSession } from "next-auth/react";
 

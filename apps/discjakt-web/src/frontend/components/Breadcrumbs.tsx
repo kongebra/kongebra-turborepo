@@ -20,13 +20,12 @@ const Breadcrumbs: React.FC<Props> = ({ items }) => {
                 <span className="text-gray-500 mr-2 lg:mr-4">{"/"}</span>
               )}
               {item.href ? (
-                <Link href={item.href} passHref>
-                  <a
-                    className="ml-1 text-sm font-medium hover:text-gray-800"
-                    title={item.label}
-                  >
-                    {item.label}
-                  </a>
+                <Link
+                  href={item.href}
+                  className="ml-1 text-sm font-medium hover:text-gray-800"
+                  title={item.label}
+                >
+                  {item.label}
                 </Link>
               ) : (
                 <span

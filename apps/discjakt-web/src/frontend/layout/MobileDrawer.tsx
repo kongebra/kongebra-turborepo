@@ -57,18 +57,18 @@ const MobileDrawer: React.FC<Props> = ({ title, show, onClose }) => {
 
               <div className="flex flex-col gap-4">
                 {menu.map((item) => (
-                  <Link key={item.href} href={item.href} passHref>
-                    <a
-                      className={clsx(
-                        "rounded p-4 flex gap-2 items-center text-2xl",
-                        router.asPath === item.href
-                          ? "bg-gray-500 text-white font-bold"
-                          : "bg-gray-100 font-semibold"
-                      )}
-                    >
-                      {item?.icon && <item.icon />}
-                      <span>{item.label}</span>
-                    </a>
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={clsx(
+                      "rounded p-4 flex gap-2 items-center text-2xl",
+                      router.asPath === item.href
+                        ? "bg-gray-500 text-white font-bold"
+                        : "bg-gray-100 font-semibold"
+                    )}
+                  >
+                    {item?.icon && <item.icon />}
+                    <span>{item.label}</span>
                   </Link>
                 ))}
               </div>

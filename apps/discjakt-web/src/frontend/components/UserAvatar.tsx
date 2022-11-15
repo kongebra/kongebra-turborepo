@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import Image from "next/future/image";
+import Image from "next/image";
 
 import useUser from "src/frontend/hooks/use-user";
 
@@ -30,15 +30,14 @@ const MenuLink = ({ icon, href, text }: MenuLinkProps) => {
   const Icon = icon;
 
   return (
-    <Link href={href} passHref>
-      <a
-        className={clsx(
-          "group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100 text-gray-900"
-        )}
-      >
-        <Icon className="mr-2" />
-        {text}
-      </a>
+    <Link
+      href={href}
+      className={clsx(
+        "group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-gray-100 text-gray-900"
+      )}
+    >
+      <Icon className="mr-2" />
+      {text}
     </Link>
   );
 };

@@ -4,7 +4,7 @@ import CreateBrandModal from "src/features/dashboard/modals/CreateBrandModal";
 import useBrands from "src/frontend/hooks/use-brands";
 import DashboardLayout from "src/frontend/layout/DashboardLayout";
 import { useSession } from "next-auth/react";
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useBoolean } from "usehooks-ts";

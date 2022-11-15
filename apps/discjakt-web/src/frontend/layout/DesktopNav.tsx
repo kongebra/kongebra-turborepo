@@ -31,13 +31,12 @@ const links = [
 
 const NavLink = ({ href, label }: { href: string; label: string }) => {
   return (
-    <Link href={href} passHref>
-      <a
-        className="px-4 font-semibold text-gray-600 hover:text-black hover:underline transition"
-        aria-label={label}
-      >
-        {label}
-      </a>
+    <Link
+      href={href}
+      className="px-4 font-semibold text-gray-600 hover:text-black hover:underline transition"
+      aria-label={label}
+    >
+      {label}
     </Link>
   );
 };
@@ -51,13 +50,12 @@ const DesktopNav = () => {
     <nav className="hidden md:block bg-white border-b">
       <Container className="flex items-center justify-between py-4">
         <div className="flex items-center gap-4">
-          <Link href="/" passHref>
-            <a
-              className="text-2xl font-bold text-gray-500 hover:text-black transition"
-              aria-label="DiscJakt"
-            >
-              DiscJakt
-            </a>
+          <Link
+            href="/"
+            className="text-2xl font-bold text-gray-500 hover:text-black transition"
+            aria-label="DiscJakt"
+          >
+            DiscJakt
           </Link>
         </div>
 

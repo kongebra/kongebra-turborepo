@@ -4,7 +4,7 @@ import Heading from "src/frontend/components/Heading";
 
 import useStores from "src/frontend/hooks/use-stores";
 
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -215,6 +215,7 @@ const DiscDetailPage: NextPage<Props> = ({ disc }) => {
                           )}
                         >
                           <Image
+                            unoptimized
                             src={
                               product.imageUrl
                                 ? product.imageUrl

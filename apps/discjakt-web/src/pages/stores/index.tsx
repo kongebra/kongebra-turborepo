@@ -1,6 +1,6 @@
 import { Prisma } from "discjakt-db";
 import { GetStaticProps, NextPage } from "next";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import {
@@ -87,35 +87,38 @@ const StoreIndex: NextPage<Props> = ({ stores }) => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stores.map((store) => {
               return (
-                <Link key={store.id} href={`/stores/${store.slug}`} passHref>
-                  <a className="group" title={store.name}>
+                <Link
+                  key={store.id}
+                  href={`/stores/${store.slug}`}
+                  className="group"
+                  title={store.name}
+                >
+                  <div className="flex flex-col items-center">
+                    <Image
+                      src={"/placeholder.png"} //  TODO: Få inn bilde
+                      alt={store.name}
+                      width={512}
+                      height={512}
+                      className="max-w-full h-auto rounded-md border-4 mb-4 group-hover:ring-4 aspect-square object-contain"
+                    />
+
                     <div className="flex flex-col items-center">
-                      <Image
-                        src={"/placeholder.png"} //  TODO: Få inn bilde
-                        alt={store.name}
-                        width={512}
-                        height={512}
-                        className="max-w-full h-auto rounded-md border-4 mb-4 group-hover:ring-4 aspect-square object-contain"
-                      />
-
-                      <div className="flex flex-col items-center">
-                        <span
-                          className="font-light text-gray-500"
-                          aria-label={store.baseUrl}
-                        >
-                          {store.baseUrl}
-                        </span>
-                        <span
-                          className="font-semibold text-lg group-hover:underline"
-                          aria-label={store.name}
-                        >
-                          {store.name}
-                        </span>
-                      </div>
-
-                      <span>{`${store._count.products} disker`}</span>
+                      <span
+                        className="font-light text-gray-500"
+                        aria-label={store.baseUrl}
+                      >
+                        {store.baseUrl}
+                      </span>
+                      <span
+                        className="font-semibold text-lg group-hover:underline"
+                        aria-label={store.name}
+                      >
+                        {store.name}
+                      </span>
                     </div>
-                  </a>
+
+                    <span>{`${store._count.products} disker`}</span>
+                  </div>
                 </Link>
               );
             })}

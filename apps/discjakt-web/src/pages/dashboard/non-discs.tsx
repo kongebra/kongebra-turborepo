@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import useProducts from "src/frontend/hooks/use-products";
 import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
-import Image from "next/future/image";
+import Image from "next/image";
 import Button from "src/frontend/components/Button";
 import { Product, ProductPrice } from "discjakt-db";
 

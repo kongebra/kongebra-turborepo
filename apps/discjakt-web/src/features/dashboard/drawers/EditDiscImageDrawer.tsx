@@ -4,6 +4,7 @@ import React from "react";
 import { Drawer, LoadingPage } from "src/frontend/components";
 import { useDiscs } from "src/frontend/hooks";
 import { DiscDetails, productDetailsSelect } from "src/types/prisma";
+import Image from "next/image";
 
 type Props = {
   show: boolean;
@@ -81,7 +82,8 @@ const EditDiscImageDrawer: React.FC<Props> = ({
                 }
               }}
             >
-              <img
+              <Image
+                unoptimized
                 src={product.imageUrl}
                 alt={product.title}
                 className={clsx(

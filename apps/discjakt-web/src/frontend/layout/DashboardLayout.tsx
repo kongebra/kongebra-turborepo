@@ -93,19 +93,18 @@ const DashboardLayout: React.FC<Props> = ({ className, children }) => {
           <ul className="flex flex-col flex-wrap py-3 px-2">
             {links.map((link) => (
               <li key={link.href} className="mr-3 flex-1">
-                <Link href={link.href} passHref>
-                  <a
-                    className={clsx(
-                      "block py-3 pl-1 align-middle no-underline hover:text-slate-900 border-b-2",
-                      link.color.hover,
+                <Link
+                  href={link.href}
+                  className={clsx(
+                    "block py-3 pl-1 align-middle no-underline hover:text-slate-900 border-b-2",
+                    link.color.hover,
 
-                      pathname === link.href
-                        ? `${link.color.border} text-slate-900`
-                        : "border-slate-200 text-slate-500"
-                    )}
-                  >
-                    {link.label}
-                  </a>
+                    pathname === link.href
+                      ? `${link.color.border} text-slate-900`
+                      : "border-slate-200 text-slate-500"
+                  )}
+                >
+                  {link.label}
                 </Link>
               </li>
             ))}

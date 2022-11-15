@@ -83,10 +83,12 @@ const BrandDetailsPage: NextPage<Props> = ({ brand }) => {
 
         <Container className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {["putter", "midrage", "fairway", "distance"].map((type) => (
-            <Link key={type} href={`/brands/${brand.slug}/${type}`} passHref>
-              <a className="border hover:ring-4 text-center flex items-center justify-center rounded-md text-lg lg:text-2xl font-semibold py-4 lg:py-8">
-                {discTypeToString(type)}
-              </a>
+            <Link
+              key={type}
+              href={`/brands/${brand.slug}/${type}`}
+              className="border hover:ring-4 text-center flex items-center justify-center rounded-md text-lg lg:text-2xl font-semibold py-4 lg:py-8"
+            >
+              {discTypeToString(type)}
             </Link>
           ))}
         </Container>
