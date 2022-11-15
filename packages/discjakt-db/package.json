@@ -8,6 +8,7 @@
     "generate": "prisma generate && tsup",
     "build": "npm run generate",
     "dev": "npm run generate",
+    "migrate": "prisma migrate dev --name npm",
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
