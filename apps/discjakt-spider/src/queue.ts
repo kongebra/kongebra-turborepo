@@ -1,24 +1,32 @@
 import config from "./config";
-import Q from "bull";
+import Bull from "bull";
 import { CommonJobItem } from "./types";
 import { Product } from "discjakt-db";
 
-export const queueOptions: Q.QueueOptions = {
+export const queueOptions: Bull.QueueOptions = {
   defaultJobOptions: {
     removeOnComplete: 10,
   },
 };
 
-let commonQueue: Q.Queue<CommonJobItem>;
-let findDiscQueue: Q.Queue<Product>;
+let commonQueue: Bull.Queue<CommonJobItem>;
+let findDiscQueue: Bull.Queue<Product>;
 
 export function getQueues() {
   if (!commonQueue) {
-    commonQueue = new Q<CommonJobItem>("common", config.redisUrl, queueOptions);
+    commonQueue = new Bull<CommonJobItem>(
+      "common",
+      config.redisUrl,
+      queueOptions
+    );
   }
 
   if (!findDiscQueue) {
-    findDiscQueue = new Q<Product>("find-disc", config.redisUrl, queueOptions);
+    findDiscQueue = new Bull<Product>(
+      "find-disc",
+      config.redisUrl,
+      queueOptions
+    );
   }
 
   return {
