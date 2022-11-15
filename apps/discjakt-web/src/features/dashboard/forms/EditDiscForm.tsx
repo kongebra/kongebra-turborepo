@@ -1,4 +1,4 @@
-import { Brand, Disc } from "@prisma/client";
+import { Brand, Disc } from "discjakt-db";
 import clsx from "clsx";
 import Button from "src/frontend/components/Button";
 import FormError from "src/frontend/components/FormError";

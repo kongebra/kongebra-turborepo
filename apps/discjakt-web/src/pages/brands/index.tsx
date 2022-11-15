@@ -12,7 +12,7 @@ import {
   Section,
 } from "src/frontend/components";
 import { type BrandDetails, brandDetailsSelect } from "src/types/prisma";
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 import { NextSeo } from "next-seo";
 
 type Props = {

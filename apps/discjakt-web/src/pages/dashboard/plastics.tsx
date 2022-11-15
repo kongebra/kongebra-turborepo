@@ -1,4 +1,4 @@
-import { Plastic } from "@prisma/client";
+import { Plastic } from "discjakt-db";
 import { createColumnHelper } from "@tanstack/react-table";
 import React from "react";
 import { Heading, Table } from "src/frontend/components";

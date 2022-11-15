@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "discjakt-db";
 
 let prisma: PrismaClient;
 

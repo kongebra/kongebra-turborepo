@@ -1,4 +1,4 @@
-import { Disc } from "@prisma/client";
+import { Disc } from "discjakt-db";
 import React from "react";
 import Image from "next/future/image";
 import Button from "./Button";

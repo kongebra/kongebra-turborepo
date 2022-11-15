@@ -1,4 +1,4 @@
-import { Product, Store } from "@prisma/client";
+import { Product, Store } from "discjakt-db";
 import axios from "axios";
 import { load } from "cheerio";
 import { prisma } from "../../lib/prisma";

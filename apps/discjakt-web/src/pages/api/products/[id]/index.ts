@@ -1,4 +1,4 @@
-import { Product } from "@prisma/client";
+import { Product } from "discjakt-db";
 import { prisma } from "src/common/lib/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getQueryNumberValue } from "src/common/utils/query";

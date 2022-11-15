@@ -1,4 +1,4 @@
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "src/common/lib/prisma";
 import { getQueryStringValue } from "src/common/utils/query";

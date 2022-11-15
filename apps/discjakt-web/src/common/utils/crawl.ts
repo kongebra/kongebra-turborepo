@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "src/common/lib/prisma";
-import { Product, ProductPrice, Store } from "@prisma/client";
+import { Product, ProductPrice, Store } from "discjakt-db";
 import { CheerioAPI, load } from "cheerio";
 import { StoreDetails, storeDetailsSelect } from "src/types/prisma";
 

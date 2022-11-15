@@ -1,4 +1,4 @@
-import { Prisma } from "@prisma/client";
+import { Prisma } from "discjakt-db";
 
 export const discWithBrandSelect = Prisma.validator<Prisma.DiscSelect>()({
   id: true,

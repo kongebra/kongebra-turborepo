@@ -4,7 +4,7 @@ import DashboardLayout from "src/frontend/layout/DashboardLayout";
 
 import Image from "next/future/image";
 import Button from "src/frontend/components/Button";
-import { Product, ProductPrice } from "@prisma/client";
+import { Product, ProductPrice } from "discjakt-db";
 
 const NonDiscs = () => {
   const {

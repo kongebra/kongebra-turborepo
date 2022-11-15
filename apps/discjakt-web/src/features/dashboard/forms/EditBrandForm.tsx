@@ -1,4 +1,4 @@
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 import Button from "src/frontend/components/Button";
 import FormInput from "src/frontend/components/FormInput";
 import FormTextarea from "src/frontend/components/FormTextarea";

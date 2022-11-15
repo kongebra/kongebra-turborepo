@@ -1,4 +1,4 @@
-import { Disc, Product } from "@prisma/client";
+import { Disc, Product } from "discjakt-db";
 import { DiscDetails } from "src/types/prisma";
 
 export const findMatchV2 = async (product: Product): Promise<Disc[]> => {

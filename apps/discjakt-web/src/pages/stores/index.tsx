@@ -1,4 +1,4 @@
-import { Prisma } from "@prisma/client";
+import { Prisma } from "discjakt-db";
 import { GetStaticProps, NextPage } from "next";
 import Image from "next/future/image";
 import Link from "next/link";

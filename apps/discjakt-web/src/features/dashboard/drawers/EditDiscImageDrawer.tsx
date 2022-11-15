@@ -1,4 +1,4 @@
-import { Disc } from "@prisma/client";
+import { Disc } from "discjakt-db";
 import clsx from "clsx";
 import React from "react";
 import { Drawer, LoadingPage } from "src/frontend/components";

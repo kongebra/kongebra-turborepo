@@ -1,4 +1,4 @@
-import { Disc, Product } from "@prisma/client";
+import { Disc, Product } from "discjakt-db";
 import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import { NextPage } from "next";

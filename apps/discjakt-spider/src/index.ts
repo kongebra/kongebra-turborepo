@@ -1,4 +1,4 @@
-import { Disc, Product } from "@prisma/client";
+import { Disc, Product } from "discjakt-db";
 import { findDiscMatch } from "discjakt-utils";
 import express from "express";
 import cron from "node-cron";

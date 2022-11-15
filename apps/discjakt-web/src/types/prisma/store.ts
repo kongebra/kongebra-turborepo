@@ -1,4 +1,4 @@
-import { Prisma, Store } from "@prisma/client";
+import { Prisma, Store } from "discjakt-db";
 
 export type StoreDefault = Store;
 

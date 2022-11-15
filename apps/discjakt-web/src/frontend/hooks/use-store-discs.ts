@@ -1,4 +1,4 @@
-import { Brand, Disc, Product } from "@prisma/client";
+import { Brand, Disc, Product } from "discjakt-db";
 import { useQuery } from "@tanstack/react-query";
 
 const fetchData = async (

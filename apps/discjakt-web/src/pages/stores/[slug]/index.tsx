@@ -1,4 +1,4 @@
-import { Disc, Product, Store } from "@prisma/client";
+import { Disc, Product, Store } from "discjakt-db";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
 import React, { useCallback, useMemo, useState } from "react";

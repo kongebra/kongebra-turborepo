@@ -22,7 +22,7 @@ import {
 } from "src/types/prisma";
 import { serializeDisc } from "src/common/utils/disc";
 import { discTypeToString } from "src/common/utils/discType";
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 import useBrandDiscs from "src/frontend/hooks/use-brand-discs";
 import Toggle from "src/frontend/components/Toggle";
 import { NextSeo } from "next-seo";

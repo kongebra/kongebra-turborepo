@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Brand, Disc, Product } from "@prisma/client";
+import { Brand, Disc, Product } from "discjakt-db";
 
 import { createColumnHelper } from "@tanstack/react-table";
 

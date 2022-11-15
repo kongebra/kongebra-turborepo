@@ -1,4 +1,4 @@
-import { Brand, Disc, Product } from "@prisma/client";
+import { Brand, Disc, Product } from "discjakt-db";
 import Modal from "src/frontend/components/Modal";
 import useBrands from "src/frontend/hooks/use-brands";
 import React from "react";

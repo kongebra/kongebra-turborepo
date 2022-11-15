@@ -1,4 +1,4 @@
-import { Plastic } from "@prisma/client";
+import { Plastic } from "discjakt-db";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 const fetchData = async () => {

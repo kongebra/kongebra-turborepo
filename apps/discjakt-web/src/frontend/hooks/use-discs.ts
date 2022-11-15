@@ -1,4 +1,4 @@
-import { Brand, Disc, Product, ProductPrice } from "@prisma/client";
+import { Brand, Disc, Product, ProductPrice } from "discjakt-db";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import config from "src/common/config";

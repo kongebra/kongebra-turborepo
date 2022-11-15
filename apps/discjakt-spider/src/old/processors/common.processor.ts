@@ -1,5 +1,5 @@
 import Bull from "bull";
-import { Product } from "@prisma/client";
+import { Product } from "discjakt-db";
 
 import { getQueues } from "../../queue";
 import { redisClient } from "../../redis";

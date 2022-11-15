@@ -1,4 +1,4 @@
-import { Disc, Product } from "@prisma/client";
+import { Disc, Product } from "discjakt-db";
 import React, { useCallback, useMemo } from "react";
 import Button from "src/frontend/components/Button";
 import Image from "next/future/image";

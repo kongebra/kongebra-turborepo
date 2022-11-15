@@ -1,4 +1,4 @@
-import { Store } from "@prisma/client";
+import { Store } from "discjakt-db";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import config from "src/common/config";

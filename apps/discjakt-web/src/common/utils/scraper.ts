@@ -1,4 +1,4 @@
-import { Product, Store } from "@prisma/client";
+import { Product, Store } from "discjakt-db";
 import { CheerioAPI, load } from "cheerio";
 
 export type ScraperArgs = {

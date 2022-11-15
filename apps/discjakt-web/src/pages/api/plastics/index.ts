@@ -1,4 +1,4 @@
-import { Plastic } from "@prisma/client";
+import { Plastic } from "discjakt-db";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "src/common/lib/prisma";
 

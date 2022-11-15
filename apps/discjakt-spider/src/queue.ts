@@ -1,7 +1,7 @@
 import config from "./config";
 import Q from "bull";
 import { CommonJobItem } from "./types";
-import { Product } from "@prisma/client";
+import { Product } from "discjakt-db";
 
 export const queueOptions: Q.QueueOptions = {
   defaultJobOptions: {

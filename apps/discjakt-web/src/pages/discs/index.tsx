@@ -1,7 +1,7 @@
 import Container from "src/frontend/components/Container";
 import React, { useMemo, useState } from "react";
 import DataView from "src/frontend/components/DataView";
-import { Disc } from "@prisma/client";
+import { Disc } from "discjakt-db";
 import { NextPage } from "next";
 import { SimpleProduct } from "src/frontend/components";
 import { prisma } from "src/common/lib/prisma";

@@ -1,4 +1,4 @@
-import { Disc, Product } from "@prisma/client";
+import { Disc, Product } from "discjakt-db";
 import Drawer from "src/frontend/components/Drawer";
 import useBrands from "src/frontend/hooks/use-brands";
 import useDiscs from "src/frontend/hooks/use-discs";
@@ -28,7 +28,7 @@ const EditDiscDrawer: React.FC<Props> = ({ show, onClose, defaultValues }) => {
       ...data,
       name: data.name.trim(),
       description: data.description.trim(),
-      
+
       speed: Number(data.speed),
       glide: Number(data.glide),
       turn: Number(data.turn),

@@ -1,4 +1,4 @@
-import { Disc } from "@prisma/client";
+import { Disc } from "discjakt-db";
 import { prisma } from "src/common/lib/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
 

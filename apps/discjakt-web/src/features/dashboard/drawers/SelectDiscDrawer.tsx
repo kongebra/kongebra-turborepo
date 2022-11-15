@@ -1,4 +1,4 @@
-import { Product } from "@prisma/client";
+import { Product } from "discjakt-db";
 import Autocomplete from "src/frontend/components/Autocomplete";
 import Button from "src/frontend/components/Button";
 import Drawer from "src/frontend/components/Drawer";

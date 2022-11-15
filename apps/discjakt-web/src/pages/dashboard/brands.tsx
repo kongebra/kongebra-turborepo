@@ -1,4 +1,4 @@
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 import Button from "src/frontend/components/Button";
 import CreateBrandModal from "src/features/dashboard/modals/CreateBrandModal";
 import useBrands from "src/frontend/hooks/use-brands";

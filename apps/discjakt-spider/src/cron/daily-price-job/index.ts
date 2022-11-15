@@ -1,4 +1,4 @@
-import { Product, Store } from "@prisma/client";
+import { Product, Store } from "discjakt-db";
 import { prisma } from "../../lib/prisma";
 
 import aceshop from "../../scraper/update-product-price/aceshop";

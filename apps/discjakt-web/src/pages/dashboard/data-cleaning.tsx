@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useBoolean } from "usehooks-ts";
 
-import { Product } from "@prisma/client";
+import { Product } from "discjakt-db";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 import CreateDiscDrawer from "src/features/dashboard/drawers/CreateDiscDrawer";

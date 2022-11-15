@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 import Link from "next/link";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import { Brand } from "@prisma/client";
+import { Brand } from "discjakt-db";
 
 import {
   Breadcrumbs,

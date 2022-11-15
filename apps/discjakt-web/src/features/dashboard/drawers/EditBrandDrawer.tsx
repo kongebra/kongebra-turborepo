@@ -1,4 +1,4 @@
-import { Brand, Disc, Product } from "@prisma/client";
+import { Brand, Disc, Product } from "discjakt-db";
 import Drawer from "src/frontend/components/Drawer";
 import useBrands from "src/frontend/hooks/use-brands";
 import useDiscs from "src/frontend/hooks/use-discs";
