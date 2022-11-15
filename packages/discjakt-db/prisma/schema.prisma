@@ -40,6 +40,7 @@ model Product {
   prices      ProductPrice[]
   plasticId   Int?
   plastic     Plastic?       @relation(fields: [plasticId], references: [id])
+  confirmed   Boolean        @default(false)
 }
 
 model ProductPrice {
