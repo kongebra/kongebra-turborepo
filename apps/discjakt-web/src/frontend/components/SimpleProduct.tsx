@@ -22,9 +22,11 @@ type SimplifiedDisc = Pick<
 type Props = {
   disc: SimplifiedDisc;
   featured?: boolean;
+
+  unoptimized?: boolean;
 };
 
-const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
+const SimpleProduct: React.FC<Props> = ({ disc, featured, unoptimized }) => {
   const lowestPrice = useMemo(() => {
     const prices = disc.products
       .map((product) => product.latestPrice)
@@ -57,6 +59,7 @@ const SimpleProduct: React.FC<Props> = ({ disc, featured }) => {
             height={350}
             className="max-w-full h-auto aspect-square object-contain rounded group-hover:opacity-75 transition"
             priority={featured}
+            unoptimized={unoptimized}
           />
 
           <div

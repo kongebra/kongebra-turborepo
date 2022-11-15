@@ -56,7 +56,7 @@ const HomePage: NextPage<Props> = ({ trending, latest }) => {
 
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-5 lg:gap-4">
             {latest.map((disc) => (
-              <SimpleProduct key={disc.id} disc={disc} />
+              <SimpleProduct key={disc.id} disc={disc} unoptimized />
             ))}
           </div>
         </Container>
