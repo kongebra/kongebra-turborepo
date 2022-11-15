@@ -84,7 +84,7 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
   return (
     <div className="p-4">
       <div className="flex flex-col gap-8">
-        <section className="">
+        {/* <section className="">
           <Heading as="h5" className="mb-2">
             Pris
           </Heading>
@@ -97,7 +97,7 @@ const DiscMultiFilter: React.FC<Props> = ({ onChange }) => {
               setMaxPrice(max);
             }}
           />
-        </section>
+        </section> */}
 
         <section>
           <Heading as="h5" className="mb-2">
