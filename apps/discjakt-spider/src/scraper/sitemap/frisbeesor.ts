@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import frisbeesor from "../new-product-page/frisbeesor";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`frisbeesor - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`frisbeesor - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -80,9 +80,11 @@ export default async function handler() {
     });
   }
 
-  console.log("frisbeesor - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("frisbeesor - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`frisbeesor - ${now.getTime()}`);
+  // console.timeEnd(`frisbeesor - ${now.getTime()}`);
 }

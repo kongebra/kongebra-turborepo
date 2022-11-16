@@ -14,14 +14,15 @@ import spinnvilldg from "../../scraper/sitemap/spinnvilldg";
 import starframe from "../../scraper/sitemap/starframe";
 
 export default async function handler() {
-  console.time("look for new products");
+  // console.time("look for new products");
 
   const stores = await prisma.store.findMany();
 
   for (const store of stores) {
     await lookForNewProducts(store.slug);
   }
-  console.timeEnd("look for new products");
+
+  // console.timeEnd("look for new products");
 }
 
 async function lookForNewProducts(slug: string) {

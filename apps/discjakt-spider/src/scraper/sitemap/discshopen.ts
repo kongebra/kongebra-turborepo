@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import discshopen from "../new-product-page/discshopen";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`discshopen - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`discshopen - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -81,9 +81,11 @@ export default async function handler() {
     });
   }
 
-  console.log("discshopen - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("discshopen - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`discshopen - ${now.getTime()}`);
+  // console.timeEnd(`discshopen - ${now.getTime()}`);
 }

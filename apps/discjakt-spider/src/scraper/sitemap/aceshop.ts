@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import aceshop from "../new-product-page/aceshop";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`aceshop - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`aceshop - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -70,9 +70,11 @@ export default async function handler() {
     });
   }
 
-  console.log("aceshop - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("aceshop - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`aceshop - ${now.getTime()}`);
+  // console.timeEnd(`aceshop - ${now.getTime()}`);
 }

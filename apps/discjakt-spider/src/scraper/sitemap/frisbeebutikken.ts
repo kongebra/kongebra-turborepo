@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import frisbeebutikken from "../new-product-page/frisbeebutikken";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`frisbeebutikken - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`frisbeebutikken - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -69,9 +69,11 @@ export default async function handler() {
     });
   }
 
-  console.log("frisbeebutikken - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("frisbeebutikken - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`frisbeebutikken - ${now.getTime()}`);
+  // console.timeEnd(`frisbeebutikken - ${now.getTime()}`);
 }

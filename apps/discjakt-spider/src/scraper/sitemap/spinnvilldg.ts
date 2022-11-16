@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import spinnvilldg from "../new-product-page/spinnvilldg";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`spinnvilldg - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`spinnvilldg - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -80,9 +80,11 @@ export default async function handler() {
     });
   }
 
-  console.log("spinnvilldg - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("spinnvilldg - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`spinnvilldg - ${now.getTime()}`);
+  // console.timeEnd(`spinnvilldg - ${now.getTime()}`);
 }

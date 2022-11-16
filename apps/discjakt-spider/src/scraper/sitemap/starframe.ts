@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import starframe from "../new-product-page/starframe";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`starframe - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`starframe - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -69,9 +69,11 @@ export default async function handler() {
     });
   }
 
-  console.log("starframe - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("starframe - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`starframe - ${now.getTime()}`);
+  // console.timeEnd(`starframe - ${now.getTime()}`);
 }

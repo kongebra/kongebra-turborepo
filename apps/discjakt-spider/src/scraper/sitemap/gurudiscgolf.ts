@@ -5,8 +5,8 @@ import { checkLastmodUnderAge } from "../../utils/lastmod";
 import gurudiscgolf from "../new-product-page/gurudiscgolf";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`gurudiscgolf - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`gurudiscgolf - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -80,9 +80,11 @@ export default async function handler() {
     });
   }
 
-  console.log("gurudiscgolf - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("gurudiscgolf - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`gurudiscgolf - ${now.getTime()}`);
+  // console.timeEnd(`gurudiscgolf - ${now.getTime()}`);
 }

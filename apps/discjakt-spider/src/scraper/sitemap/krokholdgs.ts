@@ -1,13 +1,12 @@
 import axios from "axios";
 import { load } from "cheerio";
-import { promises } from "dns";
 import { prisma } from "../../lib/prisma";
 import { checkLastmodUnderAge } from "../../utils/lastmod";
 import krokholdgs from "../new-product-page/krokholdgs";
 
 export default async function handler() {
-  const now = new Date();
-  console.time(`krokholdgs - ${now.getTime()}`);
+  // const now = new Date();
+  // console.time(`krokholdgs - ${now.getTime()}`);
 
   const store = await prisma.store.upsert({
     where: {
@@ -70,9 +69,11 @@ export default async function handler() {
     });
   }
 
-  console.log("krokholdgs - new products found:", newProductsFound);
+  if (newProductsFound) {
+    console.log("krokholdgs - new products found:", newProductsFound);
+  }
 
   await Promise.all(promises);
 
-  console.timeEnd(`krokholdgs - ${now.getTime()}`);
+  // console.timeEnd(`krokholdgs - ${now.getTime()}`);
 }
